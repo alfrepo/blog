@@ -1,19 +1,24 @@
-TODOs:
+# URL
+
+https://skipidar.github.io/Blog/
+
+
+# TODO
 
 - configure GitHub actions
 
 
-Ideas:
+# Ideas:
 
 
-# Software development in an organization
+## Software development in an organization
 - Architecture?
 - Who tracks quality?
 - Wwho expresses what is needed?
 - Who makes sure the solutions do fit together in an enterprise
 - and why S.A.F.E. is good for enterprises
 
-# IAM solutions in the cloud. Comparison.
+## IAM solutions in the cloud. Comparison.
 - different IAM solutions in cloud: AD, LDAP, 
 - how to enforce?
 - how to maintain?
@@ -21,7 +26,7 @@ Ideas:
 - custom or off the shelf?
 
 
-# Deployment
+## Deployment
 - Kubernetes - Kubernitis
 - Containers
 - Serverless
