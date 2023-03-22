@@ -1,0 +1,2 @@
+mkdocs-codeinclude-plugin
+mkdocs-blog-plugin

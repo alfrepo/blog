@@ -1,0 +1,20 @@
+site_name: A Blog
+
+plugins:
+  - blog:
+      blog_toc: true
+      blog_dir: posts
+      post_date_format: yyyy/MM/dd
+      post_url_format: "{date}/{slug}"
+      post_slugify_separator: "-"
+      post_url_max_categories: 2
+      post_readtime: true
+      archive_name: Archive
+      archive_date_format: yyyy
+      archive_url_format: "archive/{date}"
+      categories_name: Categories
+      draft: true
+      draft_on_serve: false
+
+
+docs_dir: docs
