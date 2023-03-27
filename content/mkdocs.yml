@@ -1,5 +1,7 @@
 site_name: Alfs notes
 
+site_url: https://skipidar.github.io/Blog/
+
 plugins:
   - glightbox
   - blogging:
