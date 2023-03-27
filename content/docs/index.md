@@ -1,3 +1,3 @@
-nav:
-  - Blog:
-    - blog/index.md 
+# Home
+
+{{ blog_content }}
