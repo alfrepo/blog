@@ -4,6 +4,6 @@ hide:
   - toc
 ---
 
-# The notes in blog form
+# Overview of all tags
 
-{{ blog_content }}
+{{ tag_content }}

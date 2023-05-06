@@ -1,14 +1,20 @@
 site_name: Alfs notes
 
-site_url: https://skipidar.github.io/Blog/
+site_url: https://alfrepo.github.io/blog/
 
 plugins:
   - glightbox
   - blogging:
+      theme:
+        name: button
       features:
         tags: {}
       dirs: # The directories to be included
-        - blog
+        - notes
+      paging: true
+      size: 10
+      sort: 
+        from: new
   - search
 markdown_extensions:
   - attr_list
@@ -47,13 +53,32 @@ theme:
   name: material
   features:
     - toc.follow
+    - navigation.tabs
   language: en # The language your site is written in
   palette:
-    primary: 'light blue' # Used as the main color for the site top bar,
-                          # links, etc...
-    accent: 'deep orange' # Used as the highlight color for the site
+    - scheme: default
+      primary: blue grey
+      accent: yellow
+      toggle:
+        name: Switch to light mode
+        icon: material/weather-sunny
+    - scheme: slate
+      primary: grey
+      accent: yellow
+      toggle:
+        name: Switch to dark mode
+        icon: material/weather-night
+
   logo: 'assets/logo.png' # This is the location of an image
                           # for use as the site logo in the theme you choose
   favicon: 'assets/favicon.ico' # This is the image used by browsers to identify
                              # your tab to the user
 
+nav:
+  - Articles: index.md
+  - Overview: overview_tags.md
+
+
+locale: en         # The locale for time localizations, default: system's locale
+time_format: '%Y-%m-%d %H:%M:%S' # The format used to display the time
+meta_time_format: '%Y-%m-%d %H:%M:%S' # The format used to parse the time from meta

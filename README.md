@@ -1,6 +1,6 @@
 # URL
 
-https://skipidar.github.io/Blog/
+https://alfrepo.github.io/Blog/
 
 
 # TODO
@@ -14,6 +14,15 @@ mkdocs new [dir-name] - Create a new project.
 mkdocs serve - Start the live-reloading docs server.
 mkdocs build - Build the documentation site.
 mkdocs -h - Print help message and exit.
+```
+
+
+## Local development
+
+```
+# Start the live-reloading docs server.
+mkdocs serve --config-file ./content/mkdocs.yml --dev-addr 0.0.0.0:8080
+
 ```
 
 
