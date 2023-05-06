@@ -4,6 +4,6 @@ hide:
   - toc
 ---
 
-# The notes in blog form
+# Articles, Notes, Drafts
 
 {{ blog_content }}
