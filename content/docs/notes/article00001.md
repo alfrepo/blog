@@ -1,29 +1,26 @@
 ---
 title: Syntax template for mkdocs' markdown
-time: 2023-05-06
+time: 2023-05-06 20:00:00
 description: My template with syntax for mkdocs. Every useful feature I have installed so far.
 tags:
   - mkdocs
 ---
 
-# "mkdocs" syntax template
+## "mkdocs" syntax template
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-massa, nec semper lorem quam in massa.
+MKDOCS examples.
+
+See [https://squidfunk.github.io/mkdocs-material/reference/admonitions/](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
 
 ## Image left and right
 
 ![Image title](https://dummyimage.com/300x300/eee/aaa){ align=left }
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 
-
 ![Image title](https://dummyimage.com/300x200/eee/aaa){ align=right }
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 
-
 ## Image with caption
-
 
 <figure markdown>
   ![Image title](https://dummyimage.com/600x400/){ width="300" }
@@ -33,7 +30,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 ## Image relative path
 
 ![Alt Text](zelda-light-world.png)
-
 
 ## Formatting
 
@@ -47,7 +43,6 @@ Formatting can also be applied to blocks by putting the opening and closing
 tags on separate lines and adding new lines between the tags and the content.
 
 ==}
-
 
 ## Diagrams
 
@@ -75,7 +70,6 @@ erDiagram
   }
   CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
 ```
-
 
 ``` mermaid
 classDiagram
@@ -106,8 +100,6 @@ classDiagram
   }
 ```
 
-
-
 ``` mermaid
 sequenceDiagram
   autonumber
@@ -133,21 +125,16 @@ graph LR
 ## Notes
 
 !!! note
-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-
 
 ??? note
-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 
-
 ???+ note
-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
@@ -181,6 +168,3 @@ def bubble_sort(items):
 | `GET`       | :material-check:     Fetch resource  |
 | `PUT`       | :material-check-all: Update resource |
 | `DELETE`    | :material-close:     Delete resource |
-
-
-
