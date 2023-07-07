@@ -10,18 +10,19 @@ tags:
 
 ## Intro and strategical goals
 
-If one defined an enterprise, as TOGAF does:
+If one would accept TOGAF's definition of an "enterprise":
 
-`any collection of organizations that has a common set of goals and/or a single bottom line. In that sense, an enterprise can be a government agency, a whole corporation, a division of a corporation, a single department, or a chain of geographically distant organizations linked together by common ownership.`
+ > any **collection of organizations** that has a **common set of goals** and/or a single bottom line. In that sense, an enterprise can be a government agency, a whole corporation, a division of a corporation, a single department, or a chain of geographically distant organizations linked together by common ownership.`
 
-then, in a collection of organizations, the **crowd management** is key.
+then, **crowd management** must be a key concern in an evolving enterprise architecture. I will try to explain why below:
 
-This is confirmed by [Accelerate - The Science of Lean Software and Devops, by Nicole Forsgren, Jez Humble, Gene Kim 2018, Chapter 5 Architecture](https://kevinvecmanis.io/books/management/2020/11/20/Accelerate-Book-Review.html#architecture), where it is stated, that the Key-Indicators for top-performing teams is, when they can say:
+This statement is indirectly confirmed by [Accelerate - The Science of Lean Software and Devops, by Nicole Forsgren, Jez Humble, Gene Kim 2018, Chapter 5 Architecture](https://kevinvecmanis.io/books/management/2020/11/20/Accelerate-Book-Review.html#architecture) where it is stated,
+that the following **statements corelate with top-performing developer-teams**:
 
- 1. We can do most of our **testing without requiring an integrated environment**.
- 1. We can and do **deploy or release our application independently of other applications/services it depends on**.
+ > 1. We can do most of our **testing without requiring an integrated environment**.
+ > 1. We can and do **deploy or release our application independently of other applications/services it depends on**.
 
-Achieving above statements can be handled as **"strategical goals"** for the architecture.
+Hence achieving above statements for dev-teams must be handled as on of **"strategical goals"** for an enterprise-architecture, to achieve top performing dev-teams.
 
 ### Tactical goals
 

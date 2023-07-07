@@ -13,3 +13,5 @@ resources/sass/.sass-cache/
 resources/.arch-internal-preview.css
 .arch-internal-preview.css
 site
+/content/docs/notes/article00003/*.bkp
+/content/docs/notes/article00003/*.dtmp
