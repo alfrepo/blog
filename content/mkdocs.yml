@@ -69,6 +69,9 @@ theme:
         name: Switch to dark mode
         icon: material/weather-night
 
+  extra_css:
+    - stylesheets/extra.css
+
   logo: 'assets/logo.png' # This is the location of an image
                           # for use as the site logo in the theme you choose
   favicon: 'assets/favicon.ico' # This is the image used by browsers to identify
