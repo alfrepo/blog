@@ -1,5 +1,5 @@
 ---
-title: Enterprise cloud systems in practice A - the vision
+title: the how of enterprise cloud systems - Part A "the vision"
 time: 2023-05-07 20:00:00
 description: Event sourcing - step 1 - macro (enterprise) architecture
 tags:
