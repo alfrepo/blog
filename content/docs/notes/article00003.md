@@ -43,11 +43,11 @@ Hence achieving above statements for dev-teams must be handled as on of **"strat
 
 ![Vision](article0003/../article00003/idea.drawio.png)
 
-- modules for independent development
+- modules for independent development, testing and deployment
       - Use **services**, as **modules for backend**.
       - Use **apps**, as **modules for frontend**.
-- Use the `Event sourcing` pattern, to introduce interfaces between services.
-- Use synchronous-apis, to introduce interfaces between apps and services.
+- Use the `Event sourcing` pattern, to introduce **loosely coupled** interfaces between services. To make sure the `*ilities` can be realised easier.
+- Use apis, to introduce `synchronous interfaces` between apps and services.
 
 How exactly to set-up the communication between modules
 e.g. to keep the horizontal scaling and consistancy - will be the topic of further articles.
@@ -55,6 +55,7 @@ e.g. to keep the horizontal scaling and consistancy - will be the topic of furth
 ## Links
 
 - On `Event sourcing` pattern [by Azure](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)
+- On `ilities` [by Wikipedia](https://en.wikipedia.org/wiki/List_of_system_quality_attributes#:~:text=Within%20systems%20engineering%2C%20quality%20attributes,many%20of%20the%20words%20share.)
 
 ## Next
 
