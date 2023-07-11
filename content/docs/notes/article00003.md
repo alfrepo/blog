@@ -29,22 +29,23 @@ Hence achieving above statements for dev-teams must be handled as on of **"strat
 ## Tactical goals
 
 1. **modularization**
-   - with a **team-distribution-key**, to assign module-responsibility to a single teams.
-   - To ensure, that each team is enabled to develop independently from anothers.
-   - To ensure clearly defined interfaces between modules and teams.
+      - with a **team-distribution-key**, to assign module-responsibility to a single teams.
+      - To ensure, that each team is enabled to develop independently from anothers.
+      - To ensure clearly defined interfaces between modules and teams.
 
 2. **continuous deployment** of each module separately
-   - To enable the team, to deploy its module independently
+      - To enable the team, to deploy its module independently
 
 3. **service virtualization**
-   - To be able of testing on module-level.
+      - To be able to test in isolation on module-level.
 
 ## Draft the Solution - very high level
 
 ![Vision](article0003/../article00003/idea.drawio.png)
 
-- Use services, as modules for backend.
-- Use apps, as frontend modules.
+- modules for independent development
+      - Use **services**, as **modules for backend**.
+      - Use **apps**, as **modules for frontend**.
 - Use the `Event sourcing` pattern, to introduce interfaces between services.
 - Use synchronous-apis, to introduce interfaces between apps and services.
 
@@ -54,3 +55,7 @@ e.g. to keep the horizontal scaling and consistancy - will be the topic of furth
 ## Links
 
 - On `Event sourcing` pattern [by Azure](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)
+
+## Next
+
+Next we should expand different facettes of the draft and processes around it.
