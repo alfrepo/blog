@@ -1,16 +1,20 @@
 ---
-title: The how of enterprise cloud systems - Part A "the vision"
+title: Compare prices of Maps SDK providers
 time: 2023-05-07 20:00:00
-description: Event sourcing - step 1 - macro (enterprise) architecture
+description: Compare prices of Maps SDK providers
 tags:
-  - event_sourcing
   - architecture
----| 
-
+  - pricing
+  - maps
+---|
 
 ## Intro
 
 Lets compare the prices for the major Map-SDK providers
+
+- AWS Locations
+- Azure Maps
+- Google Maps
 
 ### Use Case
 
@@ -51,6 +55,8 @@ Lets look at the prices:
 ### Conclusion
 
 Looks like the following is the case.
+
+Probably this comparison is indicative also for the other Maps-related services, I have not looked at them in detail.
 
 #### AWS
 
