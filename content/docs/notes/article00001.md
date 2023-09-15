@@ -1,6 +1,6 @@
 ---
 title: Syntax template for mkdocs' markdown
-time: 2023-05-06 20:00:00
+time: 06 Mai, 2023 20:00:00
 description: My template with syntax for mkdocs. Every useful feature I have installed so far.
 tags:
   - mkdocs
@@ -29,7 +29,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 
 ## Image relative path
 
-![Alt Text](zelda-light-world.png)
+![Alt Text](article00001/zelda-light-world.png)
 
 ## Formatting
 
