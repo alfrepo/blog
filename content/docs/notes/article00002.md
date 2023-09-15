@@ -1,6 +1,6 @@
 ---
 title: S3 signed URLs
-time: 2023-01-13 20:00:00
+time: 2023-01-14 20:00:00
 description: Authorisation options, when using signed URLs with S3.
 tags:
   - aws
@@ -8,7 +8,7 @@ tags:
   - onepager
   - s3_signed_url
 ---
-
+<!-- YYYY-MM-DD HH:MM:SS -->
 
 ## Intro
 

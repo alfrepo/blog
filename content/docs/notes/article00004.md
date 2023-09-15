@@ -1,6 +1,6 @@
 ---
 title: Compare prices of Maps SDK providers
-time: 15 September, 2023 20:00:00
+time: 2023-09-20 20:00:00
 description: Compare prices of Maps SDK providers
 tags:
   - architecture

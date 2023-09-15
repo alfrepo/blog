@@ -1,6 +1,6 @@
 ---
 title: Syntax template for mkdocs' markdown
-time: 2023-13-01 20:00:00
+time: 2023-01-13 20:00:00
 description: My template with syntax for mkdocs. Every useful feature I have installed so far.
 tags:
   - mkdocs
