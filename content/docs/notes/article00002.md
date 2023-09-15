@@ -1,6 +1,6 @@
 ---
 title: S3 signed URLs
-time: 2023-05-07 20:00:00
+time: 07 Mai, 2019 13:57:28
 description: Authorisation options, when using signed URLs with S3.
 tags:
   - aws
