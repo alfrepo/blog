@@ -32,7 +32,7 @@ Lets understand the model behind the behind S3 versioning.
 
 ![Vision](article0003/../article00005/s3-rules-terminology.drawio.png)
 
-### noncurrent versions of objects - move between storage classes
+### Noncurrent versions of objects - move between storage classes
 
 | Subject  | Action |
 |---|---|
@@ -80,14 +80,14 @@ resource "aws_s3_bucket_lifecycle_configuration" "alf_digital_backup-config" {
 
 ```
 
-### **current versions** of objects - **expire**
+### current versions of objects - expire
 
 | Subject  | Action | |
 |---|---|---|
 | current versions of objects | expire | For version-enabled buckets, Amazon S3 **adds a delete marker** and the current version of an object is retained as a noncurrent version. |
 | unversioned object | expire | For non-versioned buckets, Amazon S3 **permanently removes** the object. |
 
-### **noncurrent versions** of objects - **permanently delete**
+### Noncurrent versions of objects - permanently delete
 
 | Subject  | Action | |
 |---|---|---|
