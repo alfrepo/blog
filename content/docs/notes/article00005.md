@@ -1,6 +1,6 @@
 ---
 title: AWS S3 lifecycle rules
-time: 2023-09-20 20:00:00
+time: 2023-10-06 20:00:00
 description: AWS S3 lifecycle rules - Illustrations
 tags:
   - aws
@@ -86,6 +86,23 @@ resource "aws_s3_bucket_lifecycle_configuration" "alf_digital_backup-config" {
 |---|---|---|
 | current versions of objects | expire | For version-enabled buckets, Amazon S3 **adds a delete marker** and the current version of an object is retained as a noncurrent version. |
 | unversioned object | expire | For non-versioned buckets, Amazon S3 **permanently removes** the object. |
+
+### **noncurrent versions** of objects - **permanently delete**
+
+| Subject  | Action | |
+|---|---|---|
+| noncurrent versions of objects | permanently delete | If you wanna delete the noncurrent versions. |
+
+Configurations available
+
+- after **x days**, after they have become non current
+- **keep N** of the noncurrent versions
+
+### Summary
+
+- All in all the interface would have been more understandable, if there would be more structure in formulation : `Subject - action`.
+- Consistancy between wording of UI and terraform: `move / transition`
+- The work "expire" with different behaviour for versioned / non versioned buckets wouldnt be used
 
 ## Links
 
