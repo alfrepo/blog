@@ -80,7 +80,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "alf_digital_backup-config" {
 
 ```
 
-### current versions of objects - expire
+### Current versions of objects - expire
 
 | Subject  | Action | |
 |---|---|---|
