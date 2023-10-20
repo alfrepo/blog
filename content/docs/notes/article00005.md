@@ -1,7 +1,12 @@
 ---
 title: AWS S3 lifecycle rules
 time: 2023-10-06 20:00:00
-description: AWS S3 lifecycle rules - Illustrations
+description: > 
+  AWS S3 lifecycle rules - illustrations.
+  Explanation of terms like "noncurrent version", "expire", "permanently delete", "move", transition.
+authors:
+    - Alexander Friesen
+# og_image: media/scoop-update.png
 tags:
   - aws
   - s3
@@ -24,7 +29,7 @@ There are following oftions, which uncover further configurations:
 They seem intuitive, but in detail its less clear:
 
 - how "delete markers" interfer with "versions"
-- what does "expire" mean for current 
+- what does "expire" mean for current.
 
 ### The model behind S3 versioning
 
