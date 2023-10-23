@@ -1,6 +1,6 @@
 ---
-title: AWS S3 lifecycle rules
-time: 2023-10-06 20:00:00
+title: Architecture Decision Record (ADR) template example
+time: 2023-10-23 20:00:00
 description: > 
   Architecture Decision Record (ADR).
   Template to write ADRs.
