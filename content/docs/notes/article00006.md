@@ -31,7 +31,7 @@ tags:
 
 ### Who is affected
 
-*Which teams, verticals, layers, ... are affected?*
+*Which teams, services, layers, ... are affected?*
 
 ### Considered scenarios
 
@@ -56,13 +56,13 @@ tags:
 ### Action Items
 
 - CloudApp: Link to RTC item including a brief description
-- Vertical: Link to RTC item including a brief description
+- Service: Link to RTC item including a brief description
 - System architecture: Link to RTC item including a brief description
 
 ## Decision Drivers
 
 Quality attributes and stakeholders are taken from the "Quality Tree" document provided by system test. Only a subset is
-listed below. Add additional as required.
+listed below. Add additional as required e.g. from the ilities list https://en.wikipedia.org/wiki/List_of_system_quality_attributes
 
 For the decision outcome, please mark the options in the header row, for which is decided for / not decided for:
 
