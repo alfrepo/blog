@@ -1,6 +1,6 @@
 ---
 title: Data Mesh terminology
-time: 2023-10-06 20:00:00
+time: 2023-10-25 20:00:00
 description: > 
   Data Mesh terminology.
   How does "DataMesh" work?
