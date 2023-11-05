@@ -238,7 +238,11 @@ Component Diagram
 
 Package Diagram
 
-``` mermaid
+![Vision](article0003/../article00009/package-diagram.png)
+
+
+<!-- mermaid wont render namespaces -->
+<!-- ``` mermaid
 classDiagram
 
 namespace Package_UserManagement {
@@ -268,7 +272,7 @@ namespace Package_AnalyticsReporting {
     class DashboardVisualization
 }
 
-```
+``` -->
 
 
 ### 4. Physical View
