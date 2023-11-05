@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Next install mkdocs
 pip install mkdocs[i18n]
 
@@ -18,6 +20,9 @@ pip3 install mkdocs-blogging-plugin
 
 # zoom image
 pip install mkdocs-glightbox
+
+# table of content 
+pip install mkdocs-toc-sidebar-plugin
 
 # mermaid as https://github.com/fralau/mkdocs-mermaid2-plugin
 pip install mkdocs-mermaid2-plugin

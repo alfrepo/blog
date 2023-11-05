@@ -33,8 +33,14 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - name: Install MkDocs and Material for MkDocs
-        run: pip install mkdocs[i18n] mkdocs-material markdown-include mkdocs-awesome-pages-plugin mkdocs-material-extensions mkdocs-blogging-plugin mkdocs-glightbox mkdocs-toc-sidebar-plugin
+      - name: ls
+        run: ls
+      - name: Install MkDocs and Material for MkDocs via script
+        run: bash ./shell/install.sh
+
+#      - name: Install MkDocs and Material for MkDocs
+#        run: pip install mkdocs[i18n] mkdocs-material markdown-include mkdocs-awesome-pages-plugin mkdocs-material-extensions mkdocs-blogging-plugin mkdocs-glightbox mkdocs-toc-sidebar-plugin mkdocs-mermaid2-plugin
+
       - name: Install Pillow and CairoSVG (required for social card generation)
         run: pip install pillow cairosvg
       - name: Setup caching
