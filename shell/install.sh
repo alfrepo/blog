@@ -18,3 +18,6 @@ pip3 install mkdocs-blogging-plugin
 
 # zoom image
 pip install mkdocs-glightbox
+
+# mermaid as https://github.com/fralau/mkdocs-mermaid2-plugin
+pip install mkdocs-mermaid2-plugin
