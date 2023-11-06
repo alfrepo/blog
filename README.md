@@ -1,6 +1,6 @@
 # URL
 
-https://alfrepo.github.io/Blog/
+https://alfrepo.github.io/blog/
 
 ## TODO
 
@@ -20,6 +20,15 @@ mkdocs -h - Print help message and exit.
 ``` shell
 # Start the live-reloading docs server.
 mkdocs serve --config-file ./content/mkdocs.yml --dev-addr 0.0.0.0:8080
+
+```
+
+## CI CD
+
+GitHub actions config file under ``   .github\workflows\deploy-github-pages.yml``
+
+``` shell
+# uses shell\installmkdocs.sh
 
 ```
 

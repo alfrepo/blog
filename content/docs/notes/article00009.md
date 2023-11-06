@@ -242,7 +242,7 @@ Package Diagram
 
 
 <!-- mermaid wont render namespaces -->
-``` mermaid
+<!-- ``` mermaid
 classDiagram
 
 namespace Package_UserManagement {
@@ -272,7 +272,7 @@ namespace Package_AnalyticsReporting {
     class DashboardVisualization
 }
 
-```
+``` -->
 
 
 ### 4. Physical View

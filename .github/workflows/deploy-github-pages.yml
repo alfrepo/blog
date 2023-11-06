@@ -36,8 +36,9 @@ jobs:
       - name: ls
         run: ls
       - name: Install MkDocs and Material for MkDocs via script
-        run: bash ./shell/install.sh
+        run: bash ./shell/installmkdocs.sh
 
+# not needed anymore . Using install.sh
 #      - name: Install MkDocs and Material for MkDocs
 #        run: pip install mkdocs[i18n] mkdocs-material markdown-include mkdocs-awesome-pages-plugin mkdocs-material-extensions mkdocs-blogging-plugin mkdocs-glightbox mkdocs-toc-sidebar-plugin mkdocs-mermaid2-plugin
 

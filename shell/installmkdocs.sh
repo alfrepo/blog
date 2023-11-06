@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# script to install mkdocs and mkdocs-material and plugins.
+# can be used locally and is also used in CI CD
+
 # Next install mkdocs
 pip install mkdocs[i18n]
 
@@ -23,6 +26,3 @@ pip install mkdocs-glightbox
 
 # table of content 
 pip install mkdocs-toc-sidebar-plugin
-
-# mermaid as https://github.com/fralau/mkdocs-mermaid2-plugin
-pip install mkdocs-mermaid2-plugin
