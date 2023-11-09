@@ -1,9 +1,10 @@
 ---
-title: Example of a 4+1 View Documentation
-time: 2023-11-05 20:00:00
+title: Diagram about arc42 4+1 TOGAF similarities in creeation of solution architecture documentation
+time: 2023-11-09 20:00:00
 description: > 
   4+1 view model
   arc42 view model
+  TOGAF ADM model
 authors:
     - Alexander Friesen
 
