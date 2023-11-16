@@ -3,6 +3,7 @@ title: Kubernetes nodes
 time: 2023-11-16 20:00:00
 description: > 
   kubernetes notes
+  summary about basics
 authors:
     - Alexander Friesen
 
