@@ -2,7 +2,7 @@
 title: Terraform skeleton
 time: 2023-11-14 20:00:00
 description: > 
-  terraofmr skeleton
+  terraform skeleton
 authors:
     - Alexander Friesen
 
