@@ -2,7 +2,7 @@
 title: Kubernetes nodes
 time: 2023-11-16 20:00:00
 description: > 
-  kubernetes nodes
+  kubernetes notes
 authors:
     - Alexander Friesen
 
