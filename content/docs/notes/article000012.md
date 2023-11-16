@@ -1,13 +1,13 @@
 ---
-title: Terraform skeleton
+title: Kubernetes nodes
 time: 2023-11-16 20:00:00
 description: > 
-  terraofmr skeleton
+  kubernetes nodes
 authors:
     - Alexander Friesen
 
 tags:
-  - terraform
+  - kubernetes
 ---
 
 
