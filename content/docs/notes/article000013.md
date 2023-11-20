@@ -32,9 +32,10 @@ https://github.com/alfrepo/kubernetes-eks-spring-boot-prototype/tree/main
 "Current user or role does not have access to Kubernetes objects on this EKS Cluster"
 
 
-When the cluster is just provisioned, <br>
+When the EKS cluster is just provisioned, <br>
+following https://auth0.com/blog/terraform-eks-java-microservices/ <br>
 authorized by a ``federated role`` <br>
-then your federated role will NOT have access to EKS AWS Console<br> resulting in an error ``Your current IAM principal doesnt have access to Kubernetes objects on this cluster``. <br>
+then your federated role will NOT have access to EKS on AWS Console<br> resulting in an error ``Your current IAM principal doesnt have access to Kubernetes objects on this cluster``. <br>
 
 As I am loging in into the console via IAM 
 
@@ -45,7 +46,7 @@ You can follow the howto, to fix that
 https://aws.amazon.com/de/blogs/containers/a-quick-path-to-amazon-eks-single-sign-on-using-aws-sso/
 
 
-At the end this command does the fix:
+At the end this command empwers your role to use EKS on AWS console.
 ``` shell
 eksctl create iamidentitymapping \
     --cluster $clustername \
@@ -54,15 +55,26 @@ eksctl create iamidentitymapping \
     --group system:masters
 ```
 
+Where the role is retrieved via
+
+```shell
+# ssorole
+# get only the role
+aws sts get-caller-identity --query Arn --output text --profile default | cut -d/ -f2
+
+AWSReservedSSO_AdministratorAccess-unrestricted_58c9bbf239970a34
+
+```
+
 
 ## Terraform ##
 
 You can execute this script via terraform e.g. like this
 
-E.g. by passing it to terraform script
 
-Shell script: `enableRoleForEksIdempotent.sh`
 
+
+Save the Shell script: `enableRoleForEksIdempotent.sh` <br>
 Here the environment variables ``rolename,accountId,clustername``  must be set from outside.
 
 ``` shell
@@ -75,7 +87,7 @@ Here the environment variables ``rolename,accountId,clustername``  must be set f
 eksctl_search_role=$(eksctl get iamidentitymapping  --cluster $clustername 2>&1)
 echo $eksctl_search_role
 
-
+# make the command idempotent, otherwise the role will be added every time again
 if [[ $eksctl_search_role == *"$rolename"* ]]; then
     echo "Found the role. Dont recreate"
 else
@@ -90,7 +102,7 @@ fi
 ```
 
 
-Terraform code via exec
+Use Terraform code with ``local-exec``
 ```shell
 
 # Define a null_resource to trigger the script after the EKS cluster is created
@@ -98,6 +110,7 @@ resource "null_resource" "enable_federated_role_for_eksconsole_script" {
   # This resource depends on the creation of the EKS cluster
   depends_on = [module.eks.cluster_id]
 
+  # triggered when the module.eks.cluster_id is modified
   triggers = {
     eks_cluster_id = module.eks.cluster_id
   }
@@ -114,7 +127,6 @@ resource "null_resource" "enable_federated_role_for_eksconsole_script" {
     }
   }
 }
-
 
 ```
 
