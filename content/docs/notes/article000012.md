@@ -14,7 +14,7 @@ tags:
 
 ## Intro
 
-Kubernetes architecture notes.
+Kubernetes basic architecture. Notes.
 
 https://medium.com/techbeatly/kubernetes-architecture-deep-dive-520218da0a26
 

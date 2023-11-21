@@ -1,8 +1,9 @@
 ---
-title: AWS Kubernetes on EKS basic fonfiguration
-time: 2023-11-16 20:00:00
-description: > 
-  kubernetes on aws with terraform - basic configuration
+title: AWS Kubernetes on EKS - Part1 - deploy cluster
+time: 2023-11-21 20:00:00
+description: >
+  Part1 deploy the AWS EKS Kubernetes cluster 
+  with terraform
 authors:
     - Alexander Friesen
 
@@ -17,11 +18,10 @@ How to configure Kubernetes on AWS to run some experiments,
 deploy a service in Spring-Boot
 
 
-### Deploy EKS with Terraform
-
 When configuring the EKS with terraform I was following 
 https://auth0.com/blog/terraform-eks-java-microservices/
 
+### Resulting GitHub project
 
 My implementation is located here:
 https://github.com/alfrepo/kubernetes-eks-spring-boot-prototype/tree/main
@@ -135,7 +135,17 @@ And then it works
 ![Vision](article0003/../article00013/aws-console-eks-visible.png)
 
 
-And when checking the ``aws-auth config-map`` where the IAM roles are mapped to EKS credentials
+And when checking the ``aws-auth config-map``, where <br>
+the ``AWS IAM roles`` <br>
+are mapped to ``EKS credentials``.
+
+In this case the
+federated AWS-IAM-role `arn:aws:iam::112233445566:role/initial-eks-node-group-20231120121054428200000006` is mapped to act as /to get permissions of <br>
+EKS-user `admin` <br>
+EKS-group `system:masters`.
+
+
+To see the AWS Config Map do:
 
     kubectl edit configmap/aws-auth -n kube-system``
 
@@ -170,6 +180,111 @@ This is how it looks like
       uid: e4e9eccd-0ea4-41de-83eb-8531f6601cd5
 
 ```
+
+To get all clusterroles of EKS (including "admin") do
+
+```js
+kubectl get clusterroles
+
+
+NAME                                                                   CREATED AT
+admin                                                                  2023-11-19T11:19:04Z
+aws-load-balancer-controller-role                                      2023-11-19T11:33:18Z
+aws-node                                                               2023-11-19T11:19:15Z
+cluster-admin                                                          2023-11-19T11:19:04Z
+ebs-csi-node-role                                                      2023-11-19T11:35:25Z
+ebs-external-attacher-role                                             2023-11-19T11:35:24Z
+ebs-external-provisioner-role                                          2023-11-19T11:35:25Z
+ebs-external-resizer-role                                              2023-11-19T11:35:25Z
+ebs-external-snapshotter-role                                          2023-11-19T11:35:25Z
+edit                                                                   2023-11-19T11:19:04Z
+eks-console-dashboard-full-access-clusterrole                          2023-11-19T11:47:18Z
+eks:addon-manager                                                      2023-11-19T11:19:15Z
+eks:az-poller                                                          2023-11-19T11:19:09Z
+eks:certificate-controller-approver                                    2023-11-19T11:19:09Z
+eks:certificate-controller-signer                                      2023-11-19T11:19:09Z
+eks:cloud-controller-manager                                           2023-11-19T11:19:09Z
+eks:cloud-provider-extraction-migration                                2023-11-19T11:19:10Z
+eks:cloudwatch-agent-role                                              2023-11-19T11:19:09Z
+eks:cluster-event-watcher                                              2023-11-19T11:19:10Z
+eks:fargate-manager                                                    2023-11-19T11:19:15Z
+eks:fargate-scheduler                                                  2023-11-19T11:19:10Z
+eks:k8s-metrics                                                        2023-11-19T11:19:10Z
+eks:network-policy-controller                                          2023-11-19T11:19:20Z
+eks:node-bootstrapper                                                  2023-11-19T11:19:15Z
+eks:node-manager                                                       2023-11-19T11:19:15Z
+eks:nodewatcher                                                        2023-11-19T11:19:10Z
+eks:pod-identity-mutating-webhook                                      2023-11-19T11:19:10Z
+eks:service-operations                                                 2023-11-19T11:19:10Z
+eks:tagging-controller                                                 2023-11-19T11:19:10Z
+system:aggregate-to-admin                                              2023-11-19T11:19:04Z
+system:aggregate-to-edit                                               2023-11-19T11:19:04Z
+system:aggregate-to-view                                               2023-11-19T11:19:04Z
+system:auth-delegator                                                  2023-11-19T11:19:04Z
+system:basic-user                                                      2023-11-19T11:19:04Z
+system:certificates.k8s.io:certificatesigningrequests:nodeclient       2023-11-19T11:19:04Z
+system:certificates.k8s.io:certificatesigningrequests:selfnodeclient   2023-11-19T11:19:04Z
+system:certificates.k8s.io:kube-apiserver-client-approver              2023-11-19T11:19:04Z
+system:certificates.k8s.io:kube-apiserver-client-kubelet-approver      2023-11-19T11:19:04Z
+system:certificates.k8s.io:kubelet-serving-approver                    2023-11-19T11:19:04Z
+system:certificates.k8s.io:legacy-unknown-approver                     2023-11-19T11:19:04Z
+system:controller:attachdetach-controller                              2023-11-19T11:19:04Z
+system:controller:certificate-controller                               2023-11-19T11:19:04Z
+system:controller:clusterrole-aggregation-controller                   2023-11-19T11:19:04Z
+system:controller:cronjob-controller                                   2023-11-19T11:19:04Z
+system:controller:daemon-set-controller                                2023-11-19T11:19:04Z
+system:controller:deployment-controller                                2023-11-19T11:19:04Z
+system:controller:disruption-controller                                2023-11-19T11:19:04Z
+system:controller:endpoint-controller                                  2023-11-19T11:19:04Z
+system:controller:endpointslice-controller                             2023-11-19T11:19:04Z
+system:controller:endpointslicemirroring-controller                    2023-11-19T11:19:04Z
+system:controller:ephemeral-volume-controller                          2023-11-19T11:19:04Z
+system:controller:expand-controller                                    2023-11-19T11:19:04Z
+system:controller:generic-garbage-collector                            2023-11-19T11:19:04Z
+system:controller:horizontal-pod-autoscaler                            2023-11-19T11:19:04Z
+system:controller:job-controller                                       2023-11-19T11:19:04Z
+system:controller:namespace-controller                                 2023-11-19T11:19:04Z
+system:controller:node-controller                                      2023-11-19T11:19:04Z
+system:controller:persistent-volume-binder                             2023-11-19T11:19:04Z
+system:controller:pod-garbage-collector                                2023-11-19T11:19:04Z
+system:controller:pv-protection-controller                             2023-11-19T11:19:04Z
+system:controller:pvc-protection-controller                            2023-11-19T11:19:04Z
+system:controller:replicaset-controller                                2023-11-19T11:19:04Z
+system:controller:replication-controller                               2023-11-19T11:19:04Z
+system:controller:resourcequota-controller                             2023-11-19T11:19:04Z
+system:controller:root-ca-cert-publisher                               2023-11-19T11:19:04Z
+system:controller:route-controller                                     2023-11-19T11:19:04Z
+system:controller:service-account-controller                           2023-11-19T11:19:04Z
+system:controller:service-controller                                   2023-11-19T11:19:04Z
+system:controller:statefulset-controller                               2023-11-19T11:19:04Z
+system:controller:ttl-after-finished-controller                        2023-11-19T11:19:04Z
+system:controller:ttl-controller                                       2023-11-19T11:19:04Z
+system:coredns                                                         2023-11-19T11:19:15Z
+system:discovery                                                       2023-11-19T11:19:04Z
+system:heapster                                                        2023-11-19T11:19:04Z
+system:kube-aggregator                                                 2023-11-19T11:19:04Z
+system:kube-controller-manager                                         2023-11-19T11:19:04Z
+system:kube-dns                                                        2023-11-19T11:19:04Z
+system:kube-scheduler                                                  2023-11-19T11:19:04Z
+system:kubelet-api-admin                                               2023-11-19T11:19:04Z
+system:metrics-server                                                  2023-11-19T11:33:16Z
+system:metrics-server-aggregated-reader                                2023-11-19T11:33:16Z
+system:monitoring                                                      2023-11-19T11:19:04Z
+system:node                                                            2023-11-19T11:19:04Z
+system:node-bootstrapper                                               2023-11-19T11:19:04Z
+system:node-problem-detector                                           2023-11-19T11:19:04Z
+system:node-proxier                                                    2023-11-19T11:19:04Z
+system:persistent-volume-provisioner                                   2023-11-19T11:19:04Z
+system:public-info-viewer                                              2023-11-19T11:19:04Z
+system:service-account-issuer-discovery                                2023-11-19T11:19:04Z
+system:volume-scheduler                                                2023-11-19T11:19:04Z
+view                                                                   2023-11-19T11:19:04Z
+vpc-resource-controller-role                                           2023-11-19T11:19:19Z
+
+```
+
+
+
 
 ## Links
 
