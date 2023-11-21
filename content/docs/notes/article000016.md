@@ -20,9 +20,10 @@ Overview DDD.
 
 ## Links
 
- - Howto for EKS on AWS with Terraform https://auth0.com/blog/terraform-eks-java-microservices/
- - Fix https://veducate.co.uk/aws-console-permission-eks-cluster/
- - Howto for using federated roles with EKS console https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html
+ - <https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis>
+ - <https://learn.microsoft.com/en-us/azure/architecture/microservices/model/microservice-boundaries>
+ - <https://learn.microsoft.com/en-us/azure/architecture/microservices/model/tactical-ddd>
+ 
 
 
 
