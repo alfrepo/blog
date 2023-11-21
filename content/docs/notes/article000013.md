@@ -21,13 +21,13 @@ deploy a service in Spring-Boot
 When configuring the EKS with terraform I was following 
 https://auth0.com/blog/terraform-eks-java-microservices/
 
-### Resulting GitHub project
+## Resulting GitHub project
 
 My implementation is located here:
 https://github.com/alfrepo/kubernetes-eks-spring-boot-prototype/tree/main
 
 
-### Enabling IAM principal access to your cluster
+## Manually enabling IAM principal to access to your cluster
 
 "Current user or role does not have access to Kubernetes objects on this EKS Cluster"
 
@@ -67,7 +67,7 @@ AWSReservedSSO_AdministratorAccess-unrestricted_58c9bbf239970a34
 ```
 
 
-## Terraform ##
+## Via Terraform - enabling IAM principal to access to your cluster
 
 You can execute this script via terraform e.g. like this
 
@@ -130,9 +130,12 @@ resource "null_resource" "enable_federated_role_for_eksconsole_script" {
 
 ```
 
-And then it works
+And then it works. You can see cluster resources in the AWS console.
 
 ![Vision](article0003/../article00013/aws-console-eks-visible.png)
+
+
+## Check the AWS Auth Config Map
 
 
 And when checking the ``aws-auth config-map``, where <br>
