@@ -65,40 +65,44 @@ There are different types of requirements, based on the type of the system.
 ##### Non-Functional Requirements:
 
 1. **Security:**
-   - Compliance with PCI DSS (Payment Card Industry Data Security Standard).
+   - **Compliance** with PCI DSS (Payment Card Industry Data Security Standard).
    - **End-to-end encryption** for sensitive data (card numbers, CVV codes).
    - Regular security **audits** and vulnerability assessments.
 
 2. **Reliability and Availability:**
    - High **availability** with minimal downtime (99.99% uptime).
-   - Disaster recovery plan and backup systems in place.
+   - **Disaster recovery** plan and backup systems in place.
 
-3. **Performance:**
+3. **Performance and Scalability:**
    - **Low latency** for transaction processing (under a few seconds).
-   - Scalability to handle peak transaction loads during high-traffic periods.
+   - **Scalability** to handle peak transaction loads during high-traffic periods.
 
 4. **Regulatory Compliance:**
-   - Compliance with financial regulations and data protection laws (e.g., GDPR, CCPA).
-   - Reporting capabilities to meet regulatory requirements.
+   - **Reporting** capabilities to meet **regulatory requirements**.
 
 5. **Audit Trails and Logging:**
-   - Comprehensive logging of all system activities and transactions.
-   - Ability to generate audit reports for compliance and analysis.
+   - Comprehensive **logging of all system activities** and transactions.
+   - **Ability** to **generate audit reports** for compliance and analysis.
+
+6. **Extensibility:**
+    - The system is open for fast extensions, supporting low Time-To-Market, to enable experiments
 
 ##### Technical Requirements:
 
 1. **Technology Stack:**
-   - Secure and robust programming languages and frameworks (e.g., Java).
-   - Use of secure protocols (TLS/SSL) for data transmission.
-   - Database encryption and secure storage practices (encrypted at rest).
+   - Secure and **robust programming languages** and frameworks (e.g., Java).
+   - Use of **secure protocols** (TLS/SSL) for data transmission.
+   - **Database encryption** and secure storage practices (encrypted at rest).
 
 2. **Infrastructure and Hosting:**
-   - Use of secure and reliable cloud infrastructure (AWS, Azure, etc.).
-   - Redundant servers and load balancing for high availability.
+   - Use of **secure and reliable cloud infrastructure** (AWS, Azure, etc.).
+   - Redundant servers and load balancing for **high availability** to achieve **recovery time objective (RTO) of minutes**, utilizing **Hot-Standby** of **Multi-Site** approach.
 
 3. **Scalability and Performance Testing:**
-   - Conduct load testing to ensure the platform can handle peak transaction loads.
+   - Conduct **load testing** to ensure the platform can handle peak transaction loads.
    - Performance tuning and optimization of database queries and system components.
+
+**Summary:**
 
 The requirements for a financial credit card platform prioritize 
  - security, 
@@ -116,6 +120,42 @@ The requirements for a financial credit card platform prioritize
 ### 2. **Define the Problem Statement:**
    - Clearly articulate the problem you're solving.
    - Highlight pain points and challenges.
+
+
+#### Problem Statement:
+
+**Background:**
+The current financial landscape demands a robust and secure credit card platform that ensures seamless transactions, **safeguards sensitive user information**, and **complies with stringent regulatory requirements**. Existing systems lack the necessary scalability, real-time fraud detection, and comprehensive security measures, leading to vulnerabilities in transaction processing and data protection.
+
+**Key Challenges:**
+
+1. **Security Vulnerabilities:** The absence of end-to-end encryption and robust security protocols poses a significant risk to sensitive cardholder data, exposing our platform to potential breaches and compliance violations.
+  
+2. **Scalability Limitations:** The inability to efficiently handle surges in transaction volumes during peak periods hampers our ability to deliver seamless user experiences and maintain high availability.
+
+3. **Fraudulent Activities:** Current systems lack sophisticated fraud detection mechanisms, resulting in delayed identification and mitigation of fraudulent transactions, leading to financial losses and compromised trust among our user base.
+
+**Impact:**
+
+- *Security Risks:* Potential breaches could result in financial losses, reputational damage, and regulatory penalties, jeopardizing our standing within the industry.
+  
+- *User Experience:* Inadequate scalability and inefficient fraud detection impact user satisfaction, leading to potential attrition and loss of market share.
+
+**Objective:**
+
+Our objective is to design and develop a **cutting-edge credit card platform** that **prioritizes robust security** measures, **scalability** to handle **peak transaction loads**, and **real-time fraud detection capabilities**. 
+By addressing these challenges, we aim to ensure the integrity of transactions, safeguard user data, and comply with regulatory standards while enhancing user experience and maintaining a competitive edge within the financial services sector.
+
+---
+
+This problem statement sets the stage by highlighting the critical challenges faced by the current system, emphasizing the impact of these challenges, and clearly stating the objectives for the proposed credit card platform. It provides a comprehensive overview that justifies the need for the specified system requirements in addressing the identified problems.
+
+
+
+
+
+
+
 
 ### 3. **Craft the Solution:**
    - Design a solution that aligns with requirements.
