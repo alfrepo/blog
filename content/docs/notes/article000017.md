@@ -7,6 +7,7 @@ authors:
     - Alexander Friesen
 tags:
   - case-analysis
+  - hermes
 ---
 
 ## Intro
