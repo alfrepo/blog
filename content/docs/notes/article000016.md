@@ -1,5 +1,5 @@
 ---
-title: DDD DOmain Driven Design overview
+title: DDD Domain Driven Design overview
 time: 2023-11-21 21:00:00
 description: >
   DDD - Overview
