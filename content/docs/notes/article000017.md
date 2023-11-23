@@ -24,52 +24,52 @@ The institution intends to launch a digital platform to manage credit cards. The
 
 #### Requirements Emphasis:
 
-1. **Security**: Ensure the highest level of security to protect sensitive data.
-2. **Reliability**: Design a system that minimizes downtime and has a robust disaster recovery plan.
-3. **Compliance**: Adhere to industry regulations like PCI DSS, GDPR, and CCPA.
-4. **Performance**: Maintain low latency and high throughput, especially during peak transaction periods.
+ - **1. Security**: Ensure the highest level of security to protect sensitive data.
+ - **2. Reliability**: Design a system that minimizes downtime and has a robust disaster recovery plan.
+ - **3. Compliance**: Adhere to industry regulations like PCI DSS, GDPR, and CCPA.
+ - **4. Performance**: Maintain low latency and high throughput, especially during peak transaction periods.
 
 #### Candidate's Task:
 
 **Design the architecture of this credit card management system, considering the following aspects:**
 
-1. **Authentication and Authorization**:
+**1. Authentication and Authorization**:
 
-   - Outline a robust multi-factor authentication system for user login.
-   - Define role-based access control for both users and administrators.
+   * Outline a robust multi-factor authentication system for user login.
+   * Define role-based access control for both users and administrators.
 
-2. **Credit Card Management**:
+**2. Credit Card Management**:
 
-   - Detail the process for issuing, activating, deactivating, and canceling credit cards.
-   - Discuss how credit limits are set, adjusted, and monitored.
-   - Explain how statements are generated and transaction history is tracked.
+   * Detail the process for issuing, activating, deactivating, and canceling credit cards.
+   * Discuss how credit limits are set, adjusted, and monitored.
+   * Explain how statements are generated and transaction history is tracked.
 
-3. **Transaction Processing**:
+**3. Transaction Processing**:
 
    - Describe a real-time transaction processing system with support for various transaction types.
    - Discuss the integration with major card networks for authorization and clearing.
 
-4. **Fraud Detection and Prevention**:
+**4. Fraud Detection and Prevention**:
 
    - Present strategies for implementing advanced fraud detection algorithms.
    - Explain how real-time monitoring for suspicious activities and automated blockage of fraudulent transactions would work.
 
-5. **Billing and Payments**:
+**5. Billing and Payments**:
 
    - Define the billing cycle management process with automated billing generation.
    - Detail the secure processing of payments, supporting multiple methods and currencies.
 
-6. **Non-Functional Requirements Implementation**:
+**6. Non-Functional Requirements Implementation**:
 
    - Propose strategies to meet security standards like PCI DSS and GDPR.
    - Discuss how the system will ensure high availability, scalability, and performance.
 
-7. **Technical Stack and Infrastructure**:
+**7. Technical Stack and Infrastructure**:
 
    - Specify programming languages, frameworks, and secure protocols to be used.
    - Detail the infrastructure setup involving cloud services, redundancy, and load balancing.
 
-8. **Testing and Optimization**:
+**8. Testing and Optimization**:
 
    - Present plans for conducting scalability and performance testing.
    - Discuss strategies for optimizing database queries and system components.
@@ -96,63 +96,63 @@ There are different types of requirements, based on the type of the system:
 
 #### Functional Requirements:
 
-1. **User Authentication and Authorization:**
+**1. User Authentication and Authorization:**
    - Secure login with **multi-factor** authentication.
    - **Role-based access control RBAC** for users and administrators.
 
-2. **Credit Card Management:**
+**2. Credit Card Management:**
    - Ability to **issue, activate, deactivate, and cancel credit cards**.
    - **Credit limit** setting and adjustments.
    -** Statement generation** and **transaction history** tracking.
 
-3. **Transaction Processing:**
+**3. Transaction Processing:**
    - **Real-time transaction processing** with high throughput.
    - Support for **different transaction types** (purchases, refunds, cash advances).
    - **Integration with card networks** (Visa, Mastercard, etc.) for **authorization** and **clearing**.
 
-4. **Fraud Detection and Prevention:**
+**4. Fraud Detection and Prevention:**
    - Implement advanced fraud detection algorithms.
    - Real-time monitoring for suspicious activities and transactions.
    - Automated blockage of potentially fraudulent transactions.
 
-5. **Billing and Payments:**
+**5. Billing and Payments:**
    - Billing cycle management with automated billing generation.
    - Secure payment processing and reconciliation.
    - Support for different payment methods and currencies.
 
 #### Non-Functional Requirements:
-1. **Security:**
+**1. Security:**
    - Compliance with PCI DSS (Payment Card Industry Data Security Standard).
    - End-to-end encryption for sensitive data (card numbers, CVV codes).
    - Regular security audits and vulnerability assessments.
 
-2. **Reliability and Availability:**
+**2. Reliability and Availability:**
    - High availability with minimal downtime (99.99% uptime).
    - Disaster recovery plan and backup systems in place.
 
-3. **Performance:**
+**3. Performance:**
    - Low latency for transaction processing (under a few seconds).
    - Scalability to handle peak transaction loads during high-traffic periods.
 
-4. **Regulatory Compliance:**
+**4. Regulatory Compliance:**
    - Compliance with financial regulations and data protection laws (e.g., GDPR, CCPA).
    - Reporting capabilities to meet regulatory requirements.
 
-5. **Audit Trails and Logging:**
+**5. Audit Trails and Logging:**
    - Comprehensive logging of all system activities and transactions.
    - Ability to generate audit reports for compliance and analysis.
 
 #### Technical Requirements:
-1. **Technology Stack:**
+**1. Technology Stack:**
    - Secure and robust programming languages and frameworks (e.g., Java, .NET, Python).
    - Use of secure protocols (TLS/SSL) for data transmission.
    - Database encryption and secure storage practices (encrypted at rest).
 
-2. **Infrastructure and Hosting:**
+**2. Infrastructure and Hosting:**
    - Use of secure and reliable cloud infrastructure (AWS, Azure, etc.).
    - Redundant servers and load balancing for high availability.
 
-3. **Scalability and Performance Testing:**
+**3. Scalability and Performance Testing:**
    - Conduct load testing to ensure the platform can handle peak transaction loads.
    - Performance tuning and optimization of database queries and system components.
 
@@ -186,11 +186,11 @@ The current financial landscape demands a robust and secure credit card platform
 
 **Key Challenges:**
 
-1. **Security Vulnerabilities:** The absence of end-to-end encryption and robust security protocols poses a significant risk to sensitive cardholder data, exposing our platform to potential breaches and compliance violations.
+**1. Security Vulnerabilities:** The absence of end-to-end encryption and robust security protocols poses a significant risk to sensitive cardholder data, exposing our platform to potential breaches and compliance violations.
   
-2. **Scalability Limitations:** The inability to efficiently handle surges in transaction volumes during peak periods hampers our ability to deliver seamless user experiences and maintain high availability.
+**2. Scalability Limitations:** The inability to efficiently handle surges in transaction volumes during peak periods hampers our ability to deliver seamless user experiences and maintain high availability.
 
-3. **Fraudulent Activities:** Current systems lack sophisticated fraud detection mechanisms, resulting in delayed identification and mitigation of fraudulent transactions, leading to financial losses and compromised trust among our user base.
+**3. Fraudulent Activities:** Current systems lack sophisticated fraud detection mechanisms, resulting in delayed identification and mitigation of fraudulent transactions, leading to financial losses and compromised trust among our user base.
 
 **Impact:**
 
