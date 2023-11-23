@@ -1,6 +1,6 @@
 ---
 title: Functional requirements to software resulting from GDPR
-time: 2023-11-23 10:00:00
+time: 2023-11-23 10:30:00
 description: >
   Functional requirements from GDPR
 authors:
