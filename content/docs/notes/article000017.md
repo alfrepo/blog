@@ -130,7 +130,6 @@ There are different types of requirements, based on the type of the system:
 
 **1. Security:**
 
-   - Compliance with PCI DSS (Payment Card Industry Data Security Standard).
    - End-to-end encryption for sensitive data (card numbers, CVV codes).
    - Regular security audits and vulnerability assessments.
 
@@ -306,6 +305,35 @@ Your ability to communicate technical details effectively while addressing stake
 - mention automation, DevOps
 - add solution : block level
 - add some options for deployment, mention when to pick an option according to TOGAF (Opportunities&Solutions, Migration planing)
+
+
+
+## Helpful definitions
+
+#### Principles, Goals - to SMART Objectives
+
+```
+Principles: These are the fundamental guidelines or rules that form the foundation for decision-making in an organization's architecture development. 
+
+- data security is important (privacy by design in GDPR)
+- system must be reliable
+- system must be responsive
+```
+
+Derive clear goals from "Requirements" section.
+
+
+![smart-objectives](./article00017/definition-smart-objectives.png)
+
+#### Risk
+
+```
+Risk: is the ‘effect of uncertainty on objectives’. The effect of uncertainty is any deviation from what is expected - positive and negative.
+```
+
+![definition-risk](./article00017/definition-risk.png)
+
+
 
 ## Links
  - TOGAF ADM intro by visual paradigm <https://circle.visual-paradigm.com/docs/togaf-adm-guide-through/togaf-adm-introduction/>

@@ -15,7 +15,7 @@ tags:
 
 Overview DDD.
 
-![Vision](article0003/../article00016/ddd-process.drawio.png)
+![Vision](./article00016/ddd-process.drawio.png)
 
 
 ## Links
