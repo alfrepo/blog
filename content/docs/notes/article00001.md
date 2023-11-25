@@ -31,6 +31,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 
 ![Alt Text](article00001/zelda-light-world.png)
 
+## Image via HTML
+
+You can use HTML to embed images and e.g. customize the size
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Credit_card_terminal_in_Laos.jpg" alt="alt_text" width="100">
+
+
 ## Formatting
 
 Text can be {--deleted--} and replacement text {++added++}. This can also be

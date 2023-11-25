@@ -94,6 +94,15 @@ Gather detailed **requirements** from stakeholders.
 
 There are different types of requirements, based on the type of the system:
 
+To understand the context - ask questions to the interviewer. Interact. Threat him as a stake-holder:
+
+ - which **functionality** priority?
+ - how **many users** does the IT-system have?
+ - which **hardware-capacity** is available? Is **cloud** an option? Even cloud-first?
+ - what is the **tech-stack** of the company?
+ - what is the **baseline** architecture?
+ - is **mobile-first** the strategy, for which we build?
+
 
 #### Functional Requirements:
 
@@ -125,6 +134,8 @@ There are different types of requirements, based on the type of the system:
    - Billing cycle management with automated billing generation.
    - Secure payment processing and reconciliation.
    - Support for different payment methods and currencies.
+
+
 
 #### Non-Functional Requirements:
 
@@ -235,6 +246,19 @@ This problem statement sets the stage by highlighting the critical challenges fa
 
 
 
+#### You might add the vision for financial services
+
+Something like
+
+<https://www.youtube.com/watch?v=7WMtVj12W1U>
+
+[![Financial Services AWS](https://img.youtube.com/vi/7WMtVj12W1U/0.jpg)](http://www.youtube.com/watch?v=7WMtVj12W1U "Data+AI Data Mesh")
+
+
+![Vision](https://s3.eu-central-1.amazonaws.com/alf-digital-wiki-pics/sharex/xsaOvvL6j8.png)
+
+
+![Storage](https://s3.eu-central-1.amazonaws.com/alf-digital-wiki-pics/sharex/hP8p2SezDI.png)
 
 
 ### 3. **Craft the Solution:**
@@ -242,6 +266,19 @@ This problem statement sets the stage by highlighting the critical challenges fa
    - Design a solution that aligns with requirements.
    - Consider scalability, security, performance, and feasibility.
    - Choose appropriate technologies, frameworks, and methodologies.
+
+#### Goal: ind an approach to integrate on-prem/legacy and cloud
+
+Address approaches to hybrid architecture with legacy systems.
+
+- use legacy as **WRITE** system
+- **SYNC** legacy to cloud
+- use **cloud** as **READ** system for apps
+
+![Hybrid](https://s3.eu-central-1.amazonaws.com/alf-digital-wiki-pics/sharex/u9cuun73Th.png)
+
+Source: https://www.youtube.com/watch?time_continue=2449&v=7WMtVj12W1U
+
 
 
 ##### 3a. **Create the Architecture:**
@@ -339,7 +376,19 @@ Risk: is the ‘effect of uncertainty on objectives’. The effect of uncertaint
 ## Links
  - TOGAF ADM intro by visual paradigm <https://circle.visual-paradigm.com/docs/togaf-adm-guide-through/togaf-adm-introduction/>
  - Hermes Projekt <http://ec2-34-242-70-192.eu-west-1.compute.amazonaws.com/onlinepublikation/index.xhtml?element=kategorie_rollen.html>
+ - Reference Architecture payment processing AWS <https://aws.amazon.com/blogs/industries/credit-card-payment-processing-on-aws/>
+ - IBM capabilities banking <https://www.ibm.com/cloud/architecture/architectures/banking/reference-architecture/>
+ - FInancial services <https://aws.amazon.com/financial-services/>
  
+
+
+## Glossary
+
+| Term    | Details | Image |
+| -------- | ------- |  ------- | 
+| POS  | Point of Sale. The Payment terminal.     | <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Credit_card_terminal_in_Laos.jpg" alt="alt_text" width="100"> |
+| PAN  | Primary Account Number. (Credit) Card Number. | Visa: 5555555555554444 |
+
 
 
 
