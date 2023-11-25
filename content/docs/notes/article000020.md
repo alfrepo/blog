@@ -29,13 +29,21 @@ How to structure authorization systems of distributed systems
 ![](./article00020/authorization-xacml.drawio.png)
 
 
-Once doesnt have to use XACML Markup Language, 
+One doesnt have to use XACML Markup Language, 
 but structuring the authorization like PEP, PDP, PAP is extremely useful.
+
+
+#### In a service-mesh
+
+In a service mesh one can take this approach
+
+![](./article00020/Sidecar.png)
 
 
 ## Links
 
   - XACML https://en.wikipedia.org/wiki/XACML
+  - Microservice architecture for identity and access management - for service mesh https://patents.google.com/patent/US20190273746A1/en
 
 
 
