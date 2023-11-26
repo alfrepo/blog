@@ -29,7 +29,6 @@ The company aims to **transition to a cloud-based administration system** to opt
 
 #### 1. **Introduction**
 
-
    - Context Setting: Briefly introduce the organization, its industry, challenges, and objectives.
    - Case Overview: Outline the specific problem or opportunity the case addresses.
 
@@ -42,10 +41,11 @@ Example:
 
 #### 2. **Problem Analysis**
 
+Why are we doing what we doing? Why does the organization move to the cloud?
 
-   - Problem Identification: Discussion on scalability, resource management, and agility issues.
-   - Root Cause Analysis: Identifying the limitations of the current on-premises systems.
-   - Impact Assessment: Analyzing the consequences of these limitations on operations.
+   - Problem **Identification**: Discussion on scalability, resource management, and agility issues.
+   - **Root Cause** Analysis: Identifying the limitations of the current on-premises systems.
+   - **Impact Assessment**: Analyzing the consequences of these limitations on operations.
 
 
 Example:
@@ -58,14 +58,10 @@ Example:
 
 #### 3. **Solution Proposal**
 
-
-
-
    - **Strategic Framework**: Introduction of a hybrid cloud model and cloud orchestration.
    - **Architecture Design**: Detailed **design of the hybrid cloud** **architecture** and **orchestration** tool.
-   - **Implementation Plan**: Phased approach for **assessment**, **pilot**, **migration**, and **optimization**.
+   - **Implementation Plan**: Phased approach for **assessment**, **pilot**, **migration**, and **optimization**. <br> Plan details:
 
-   - **Implementation Plan Details:**
        - Phase 1: **Assess** current infrastructure and identify workloads suitable for the cloud.
        - Phase 2: **Pilot implementation** of the hybrid cloud model with a selected set of workloads.
        - Phase 3: **Full-scale migration** and integration of remaining systems.
@@ -76,26 +72,21 @@ Example:
 
 
 - **Strategic Framework:**
-    - Transition to a hybrid cloud model to combine the benefits of public and private clouds.
-    - Implement a cloud orchestration system for automated resource provisioning and scaling.
+    - **Transition to a hybrid cloud model** to combine the benefits of public and private clouds.
+    - **Implement a cloud orchestration system** for **automated resource provisioning** and **scaling**.
 
 - **Architecture Design:**
     - Hybrid Cloud Architecture:
         - Public Cloud for scalable workloads and burst demands.
         - Private Cloud for sensitive data and specific workloads.
     - Cloud Orchestration Tool:
-        - Automated provisioning, scaling, and management of resources.
-        - Integration with existing tools and systems for seamless operation.
+        - Automated **provisioning**, **scaling**, and **management of resources**.
+        - Integration with **existing tools** and **systems** for **seamless operation**.
 
-- **Implementation Plan:**
-    - Phase 1: Assess current infrastructure and identify workloads suitable for the cloud.
-    - Phase 2: Pilot implementation of the hybrid cloud model with a selected set of workloads.
-    - Phase 3: Full-scale migration and integration of remaining systems.
-    - Phase 4: Continuous monitoring and optimization for ongoing efficiency improvements.
+
 
 
 #### 4. **Risk Assessment**
-
 
 
    - **Risk** Analysis: Identifying data security and migration disruption risks.
@@ -114,6 +105,7 @@ Example:
 
 
 #### 5. **Financial and Business Impact**
+
    - **Cost-Benefit Analysis**: Evaluating costs vs. long-term savings and efficiency gains.
    - **Business Impact**: Assessing the impact on customer experience and operational efficiency.
 
@@ -128,7 +120,6 @@ Example:
 
 
 #### 6. **Recommendations and Next Steps**
-
 
 
 Typically include **suggestions derived from the analysis**. These could involve various actions or strategies to address the identified problems or capitalize on opportunities. 
