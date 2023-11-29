@@ -9,7 +9,7 @@ tags:
 ---
 
 
-# ADR-0000: Template
+# ADR-0000000: Template
 
 <!-- ADR_META_START -->
 
@@ -17,7 +17,7 @@ tags:
 - Status: <!-- {Draft | Proposed | Accepted | Rejected | Deprecated } -->
 - Dependency: <!-- {none | amends | amended by | supersedes | superseded by | related to} if dependency(ies) exist to other ADRs, put also [title](link) -->
 - Derived from: <!-- Put the link to the super ADR from which this one has been derived. 1 or many links, also as subordinate list possible-->
-- Decision for: <!-- Put the link to the Requirements (RTC/Jazz work items). Depending on level: Epic, capability, feature. 1 or many links, also as subordinate list possible-->
+- Decision for: <!-- Put the link to the Requirements (Backlog work items). Depending on level: Epic, capability, feature. 1 or many links, also as subordinate list possible-->
 
 <!-- ADR_META_END -->
 
@@ -27,7 +27,7 @@ tags:
 
 - *Why do we talk about this?*
 - *What is blocked if we do not decide?*
-- *How do the RTC features relate to this ADR?*
+- *How does the backlog relate to this ADR?*
 
 ### Who is affected
 
@@ -55,9 +55,9 @@ tags:
 
 ### Action Items
 
-- CloudApp: Link to RTC item including a brief description
-- Service: Link to RTC item including a brief description
-- System architecture: Link to RTC item including a brief description
+- CloudApp: Link to Backlog item including a brief description
+- Service: Link to Backlog item including a brief description
+- System architecture: Link to Backlog item including a brief description
 
 ## Decision Drivers
 
