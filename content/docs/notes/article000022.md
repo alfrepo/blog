@@ -99,5 +99,6 @@ One can use the Terraform module [AWS Control Tower Account Factory for Terrafor
 
 ## Links
 
-- 
+- https://developer.hashicorp.com/terraform/tutorials/aws/aws-control-tower-aft
 - <https://aws.amazon.com/de/blogs/mt/deploy-and-customize-aws-accounts-using-account-factory-for-terraform-in-aws-control-tower/>
+- https://docs.aws.amazon.com/controltower/latest/userguide/taf-account-provisioning.html
