@@ -1,12 +1,12 @@
 ---
-title: AWS provision accounts via organizations
+title: How to close AWS account, which is provisioned via AWS-organization
 time: 2023-11-30 23:00:00
 description: >
-  close AWS account, which is provisioned from organization
+  How to close AWS account, which is provisioned via AWS-organization
 authors:
     - Alexander Friesen
 tags:
-  - close AWS account, which is provisioned from organization
+  - AWS
 ---
 
 ## Intro
