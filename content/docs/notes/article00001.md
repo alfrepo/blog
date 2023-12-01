@@ -10,7 +10,7 @@ tags:
 
 MKDOCS examples.
 
-See [https://squidfunk.github.io/mkdocs-material/reference/admonitions/](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
+See link [https://squidfunk.github.io/mkdocs-material/reference/admonitions/](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
 
 ## Image left and right
 
