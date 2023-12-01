@@ -16,8 +16,24 @@ tags:
 
 Camunda ``Business Process Management System`` (BPMS) for SAGA pattern in micro-services.
 
+## Architecture
+
+<https://de.m.wikipedia.org/wiki/Camunda_BPM>
+
+![](./article00024/camunda_arch.png)
+
+
+
+## Presentation about Camunda
+
+ - [Presentation about Camunda for process automation](./article00024/Presentation_Process_ Automation-in_Modern_Architectures.pdf)
+
+
+
+
 
 ## Links
+
  - Micro service orchestration https://page.camunda.com/wb-orchestration-and-communication-patterns-between-microservices-success?submissionGuid=05ea482b-1882-4d9a-8975-86b433b5de31
  - <https://www.linkedin.com/pulse/implementing-saga-pattern-microservices-using-camunda-soares-m-sc-/>
  - <https://camunda.com/solutions/microservices-orchestration/>
