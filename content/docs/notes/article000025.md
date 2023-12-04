@@ -303,6 +303,45 @@ There are (different types)[https://docs.aws.amazon.com/greengrass/v2/developerg
 Depending on the type (plugin, generic, ..) Nucleus enforces different lifecycles on the components.
 
 
+
+
+## IoT events
+
+Iot Events - is a set of state-machines, where the state of the device is derived in form of a state-machine.
+
+With IoT events, allowing to transition between states.
+
+![](./article00025/iot_events_states.png)
+
+
+
+
+
+Architecture how the IoT events flow through the system.
+
+![](./article00025/iot_events.jpg)
+
+
+To feed the state machine with data - one confgures AWS IoT rules.
+
+The rule might look like this:
+
+``` json
+{
+  "sql": "SELECT * FROM 'your_topic' WHERE voltage > 100",
+  "ruleDisabled": false,
+  "actions": [
+    {
+      "iotEvents": {
+        "inputName": "your_InputName",
+        "messageId": "your_message_id"
+      }
+    }
+  ]
+}
+```
+
+
 ## Links
 
  - <https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html>
