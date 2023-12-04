@@ -17,6 +17,10 @@ tags:
 AWS Iot
 
 
+![](./article00025/iot_core_overview.png)
+
+<https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html>
+
 ## Pub Sub
 
 Pub-Sub is one possible way to communicate with the cloud-state of a "thing".
@@ -247,6 +251,56 @@ And this arrived in cloud
 
 ![](./article00025/shadowcloud1.jpg)
 ![](./article00025/shadowcloud2.jpg)
+
+
+### Greengrass
+
+The "Gateway" solution of AWS, which allows deploying components on edge.
+
+![](./article00025/greengrass_overview.jpg)
+
+
+#### Core device - the Gateway "Nucleus"
+
+In AWS Greengrass, the Nucleus is a **core component** of the Greengrass Core software. It serves as the foundational piece that enables local execution of AWS Lambda functions, device shadows, and manages communications between the devices and the AWS cloud.
+
+
+
+The Nucleus handles several critical functions:
+
+1. **Local Execution:** It allows for the deployment and execution of AWS Lambda functions on edge devices. This enables computation and processing to occur closer to the data source, reducing latency and reliance on cloud services.
+
+2. **Device Shadows:** Nucleus manages the synchronization of device shadows. Device shadows are representations of devices and their state in the cloud, allowing interactions and synchronization even when devices are offline or have intermittent connectivity.
+
+3. **Communication and Coordination:** It facilitates communication between the edge devices and AWS services. This involves managing connections, handling messaging, and ensuring secure communication between the edge and the cloud.
+
+4. **Security:** The Nucleus plays a vital role in enforcing security protocols and policies, ensuring that communications and interactions between the devices and the cloud are secure.
+
+Essentially, the **Nucleus in AWS Greengrass is the core engine that empowers edge computing by extending AWS services** to the edge, enabling local processing, and facilitating communication between edge devices and the AWS Cloud.
+
+
+#### Components
+
+In AWS Greengrass, alongside the core functionality provided by the Nucleus, there are several **non-core components** that extend the capabilities and functionalities of the Greengrass Core software. These non-core components include:
+
+1. **Connectors:** These enable integration with third-party services and protocols, allowing Greengrass to interact with a wide range of devices and systems beyond the AWS ecosystem.
+
+2. **ML Inference:** Machine Learning (ML) inference components enable running machine learning models at the edge, allowing for real-time inference without relying heavily on cloud-based services.
+
+3. **Stream Manager:** This component assists in managing data streams, offering functionalities such as buffering, aggregation, and managing data flows to and from the edge devices.
+
+4. **Local Resource Access:** Provides secure access to local resources such as files, hardware interfaces, or other peripherals connected to the edge device, allowing for efficient utilization of local resources in Greengrass applications.
+
+5. **OTA (Over-The-Air) Updates:** These components handle firmware and software updates for devices connected to Greengrass, allowing remote management and updating of software on edge devices.
+
+6. **Security Add-ons:** Additional security components and protocols can be integrated to enhance security measures beyond the core security features provided by the Nucleus.
+
+These non-core components augment the capabilities of Greengrass, allowing for greater customization, integration with diverse systems, and extending functionalities to cater to specific edge computing requirements.
+
+
+There are (different types)[https://docs.aws.amazon.com/greengrass/v2/developerguide/develop-greengrass-components.html#component-types] of coponents
+
+Depending on the type (plugin, generic, ..) Nucleus enforces different lifecycles on the components.
 
 
 ## Links
