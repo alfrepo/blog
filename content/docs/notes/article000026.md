@@ -1,14 +1,14 @@
 ---
-title: AWS IoT
+title: AWS centralized governance
 
 time: 2023-12-03 11:00:00
 description: >
-  AWS Iot
+  AWS governance
 
 authors:
     - Alexander Friesen
 tags:
-  - IoT
+  - aws
 
 ---
 
