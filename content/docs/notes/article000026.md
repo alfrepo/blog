@@ -51,6 +51,8 @@ AWS CloudTrail is a service that records AWS API calls made from your AWS accoun
 * **AWS Inspector**
 ![](./article00026/inspector.png)
 
+![](./article00026/inspector-console.png)
+
 AWS Inspector is a service that can scan your AWS infrastructure for security vulnerabilities. Inspector can scan your EC2 instances, your S3 buckets, and your VPCs, and it can also scan your network traffic for suspicious activity.
 
 * **AWS Security Hub**
