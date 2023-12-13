@@ -1,7 +1,7 @@
 ---
 title: AWS centralized governance
 
-time: 2023-12-03 11:00:00
+time: 2023-12-13 11:00:00
 description: >
   AWS governance
 
@@ -84,6 +84,29 @@ These are just a few of the many AWS services that can help you to centralize go
 <https://aws.amazon.com/de/blogs/security/use-aws-firewall-manager-to-deploy-protection-at-scale-in-aws-organizations/>
 
 Centralized rule management: You can define firewall rules in a centralized location, and FMS will automatically deploy them to your VPCs. This can help you to avoid the need to manage firewall rules in multiple accounts and VPCs or accounts.
+
+
+AWS Consolidated Billing is a feature of AWS Organizations that allows you to consolidate billing and payment for multiple AWS accounts into a single invoice. This can be helpful for organizations with a large number of AWS accounts, as it can simplify billing management and make it easier to track costs.
+
+
+
+* **AWS Consolidated Billing**
+![](./article00026/consolidatedbilling.png)
+
+To use AWS Consolidated Billing, you must create a management account in AWS Organizations and add your member accounts to the organization. You can then enable consolidated billing for the organization. Once consolidated billing is enabled, AWS will automatically consolidate the usage and costs of all member accounts into a single invoice.
+
+
+
+To enable consolidated billing, follow these steps:
+
+1. Go to the **AWS Organizations** console and select the management account for which you want to enable consolidated billing.
+2. In the **Accounts** section, select the **Member accounts** link.
+3. Select the check box for the account that you want to add to consolidated billing.
+4. Click the **Add to consolidated billing** button.
+5. On the **Enable consolidated billing** page, select the **Enable consolidated billing** button.
+
+
+
 
 
 ## Links
