@@ -6,7 +6,7 @@ description: >
 authors:
     - Alexander Friesen
 tags:
-  - AWS
+  - aws
 ---
 
 ## Intro
