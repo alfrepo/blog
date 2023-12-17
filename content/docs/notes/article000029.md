@@ -42,6 +42,6 @@ In these scenarios, the data is often read or written in **larger sequential chu
 
 It is typically measured in IOPS (Input/Output Operations Per Second). IOPS intensity is a measure of the responsiveness of a storage device, and it is important for applications that require a **large number of small, random I/O operations**, such as web servers and transactional databases.
 
-
 ## Links
 
+- <https://aws.amazon.com/ebs/features/>
