@@ -26,7 +26,9 @@ Here is a comparison of four AWS services that are used for disaster recovery an
 | AWS CloudEndure Disaster Recovery | A fully managed disaster recovery service that replicates your on-premises and cloud workloads to AWS. | Minutes | Minutes | Protects against unplanned outages, reduces RTO, simplifies DR planning.  |
 | AWS Transfer family | A family of services that allows you to transfer data between on-premises and AWS. | Varies | Varies | Seamless data transfer between on-premises and AWS. |
 | AWS Backup | A fully managed backup service that replicates your data to AWS S3. | Days or weeks | Days or weeks | Protects against accidental deletions, ransomware, and other data loss events. |
+| RDS - cross-Region automated backups - Disaster Recovery DR | A fully managed backup service that replicates your DB snapshots, transaction logs cross region. ![](./article00027/rds-region-replication.png) | 0 | Minutes | Protects against RDS database from data loss  |
 
 ## Links
 
 - Disaster recovery strategies on AWS <https://cloudian.com/guides/disaster-recovery/disaster-recovery-on-aws-4-strategies-and-how-to-deploy-them/>
+- <https://aws.amazon.com/de/blogs/database/managed-disaster-recovery-with-amazon-rds-for-sql-server-using-cross-region-automated-backups/>
