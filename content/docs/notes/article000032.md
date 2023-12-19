@@ -63,7 +63,27 @@ Out of scope:
 
 ![Alt text](https://s3.eu-central-1.amazonaws.com/alf-digital-wiki-pics/sharex/zm3sCzuMwz.png)
 
-### Fargate -  managed Container-runtime, container-panel for orchestration. **Load Balancing out of scope** And **deploying out of scope**
+### ECS Ec2 -  managed panel to oversee Ec2 instances
+
+New container abstraction came in: **Container Runtime**.
+
+But you pay the price of managing the Ec2 instances of the Ec2 cluster.
+
+Owned by AWS:
+- Hypervisor
+- **Container Runtime** - hides OS, Language runtime
+
+Out of scope:
+
+- **install ECS agent**
+- **Autoscaling of EC2 instances** (autoscaling groups)
+- Deployment
+- Load balancing
+
+![Alt text](https://s3.eu-central-1.amazonaws.com/alf-digital-wiki-pics/sharex/uXRKDkvDjm.png)
+
+
+### ECS Fargate -  managed Container-runtime, container-panel for orchestration. **Load Balancing out of scope** And **deploying out of scope**
 
 New container abstraction came in: **Container Runtime**
 
