@@ -68,4 +68,4 @@ Amazon CloudWatch Real User Monitoring (RUM) and Google Analytics are both power
 ## Links
 
  - Reinvent <https://www.youtube.com/watch?v=NMaeujY9A9Y&t=679s>
- - <https://aws.amazon.com/de/blogs/aws/cloudwatch-rum/>
+ - Demo <https://www.youtube.com/watch?v=NMaeujY9A9Y&t=679s>
