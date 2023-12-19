@@ -65,11 +65,11 @@ Out of scope:
 
 ### Fargate -  managed Container-runtime, container-panel for orchestration. **Load Balancing out of scope** And **deploying out of scope**
 
-New container abstraction came in.
+New container abstraction came in: **Container Runtime**
 
 Owned by AWS:
 - Hypervisor
-- **Container Runtime**
+- **Container Runtime** - hides OS, Language runtime
 
 Out of scope:
 
@@ -82,9 +82,9 @@ Out of scope:
 
 Owned by AWS:
 - Hypervisor
-- **Container Runtime**
-- Deployment
-- Load balancing
+- Container Runtime
+- **Deployment**
+- **Load balancing**
 
 Out of scope:
 - only web-app-code (container or code)
