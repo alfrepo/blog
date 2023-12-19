@@ -81,6 +81,7 @@ Out of scope:
 ### App Runner - code/container to app. **Load Balancing IN scope**
 
 Owned by AWS:
+
 - Hypervisor
 - Container Runtime
 - **Deployment**
@@ -97,3 +98,4 @@ This is what **AWS deploys behind the scenes**.
 ## Links
 
 - Re invent App runner and other compute <https://www.youtube.com/watch?v=MZBbhqt6bQs>
+- <https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html>
