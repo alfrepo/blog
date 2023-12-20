@@ -35,7 +35,7 @@ Sure, here are the Machine Learning and AI services provided by AWS with direct 
  -  [Amazon Transcribe](https://aws.amazon.com/transcribe/): Enhances applications and workflows with automatic speech recognition.
  -  [Amazon Polly](https://aws.amazon.com/polly/): Converts text into life-like speech.
  -  [Amazon Kendra](https://aws.amazon.com/kendra/): **Search queries** in natural language, like "where can I get tested for COVID19", usable on websites and applications.
- -  [Amazon Personalize](https://aws.amazon.com/personalize/): Uses ML to customize applications and websites to each individual user.
+ -  [Amazon Personalize](https://aws.amazon.com/personalize/): Uses ML to customize applications and websites to each individual user. <https://www.youtube.com/watch?v=y7crGW6zLao>
  -  [Amazon Translate](https://aws.amazon.com/translate/): Expands your reach and accessibility with fast, accurate, and customizable translation.
  -  [Amazon Forecast](https://aws.amazon.com/forecast/): Harnesses unique data types and time series data to create accurate end-to-end prediction models.
  -  [Amazon Fraud Detector](https://aws.amazon.com/fraud-detector/): Stops adversaries and identifies potential attacks.
