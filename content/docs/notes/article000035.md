@@ -41,7 +41,8 @@ AWS offers a wide range of analytics services, each designed for specific use ca
 | **Amazon Kinesis Data Streams** | Real-time data movement | A massively scalable and durable real-time data streaming service. |
 | **Amazon Kinesis Data Firehose** | Real-time data movement | The easiest way to reliably load streaming data into data lakes, data stores, and analytics services. |
 | **Amazon Kinesis Video Streams** | Real-time data movement | Securely streams video from connected devices to AWS for analytics, machine learning (ML), and other processing. |
-| **AWS Glue** | Data management | A fully managed extract, transform, and load (ETL) service that makes it easy to prepare and load your data for analytics. |
+| **AWS Glue** | Data management | A fully managed extract, transform, and load (ETL) service that makes it easy to prepare and load your data for analytics. <https://www.youtube.com/watch?v=cDDPg_XxPqc&t=2079s> |
+| **AWS Data Exchange** | Data sharing | A data-market. |
 
 See <https://aws.amazon.com/getting-started/decision-guides/analytics-on-aws-how-to-choose/?nc1=h_ls>
 
