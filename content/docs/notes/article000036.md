@@ -46,4 +46,36 @@ Sure, here are the Machine Learning and AI services provided by AWS with direct 
 These services are designed to provide ready-made intelligence for your applications and workflows, and they easily integrate with your applications to address common use cases. They are continuously learning and improving, providing you with quality and accuracy.
 
 
+### AWS Fraud detection
+
+
+#### Part A
+
+* Build, 
+* train, and 
+* deploy 
+
+an Amazon **Fraud Detector model**.
+
+**Reference:** [https://docs.aws.amazon.com/frauddetector/latest/ug/part-a.html](https://docs.aws.amazon.com/frauddetector/latest/ug/part-a.html)
+
+
+#### Part B
+
+Generate fraud predictions.
+
+The steps :
+
+*   Build Detector
+*   Add model
+*   Add rules `e.g. inference>=80 = high_fraud_probability, 80>inference && inference>20 = medium_fraud_probability`
+*   Configure rule execution and rule order
+*   Review and create detector version
+*   Test and activate detector version
+
+**Reference:** [https://docs.aws.amazon.com/frauddetector/latest/ug/part-b.html](https://docs.aws.amazon.com/frauddetector/latest/ug/part-b.html)
+
+Example:
+<https://aws.amazon.com/blogs/machine-learning/prevent-fake-account-sign-ups-in-real-time-with-ai-using-amazon-fraud-detector/>
+
 ## Links
