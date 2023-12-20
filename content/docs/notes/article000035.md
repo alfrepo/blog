@@ -56,8 +56,91 @@ Each service is designed with specific use cases in mind, so the best one for yo
 https://aws.amazon.com/getting-started/decision-guides/analytics-on-aws-how-to-choose/?nc1=h_ls
 
 
-![Alt text](https://d1.awsstatic.com/dc-analytics-pillars-j.1a7dd27f4ef241d050790eb4d72e4a90cffe6a85.JPG)
 
+
+
+
+
+## AWS Lake Formation:
+
+
+AWS Lake Formation can be used to build, secure, and manage data lakes. It helps in centralized access management for data in data lakes.
+
+
+![Alt text](https://s3.eu-central-1.amazonaws.com/alf-digital-wiki-pics/sharex/WalM6RHDCZ.png)
+Built on top of GLue to add permissions
+
+
+
+### Coarse graned authorization: IAM
+
+Important to note that using Lake Formation security model does not mean that we do not need to use IAM.
+The lake formation permissions model actually works in conjunction with IAM.
+We use IAM to still grant the coarse-grain permissions to access the catalog, but we use Lake formation to provide all of the fine-grained permissions on the databases tables and columns.
+
+### Fine graned authorization: tags and named resources
+
+In AWS Lake Formation, the units that are shareable via **LF-tags** or named resources are **Data Catalog resources**, which include 
+
+ - **databases**, 
+ - **tables in database**,  
+  - **columns in table**. 
+
+
+
+The following **two options** are available to share the resources in the data lakes with other accounts.
+
+- **LF-Tags**: To use the Lake Formation tag-based access control (LF-TBAC) method to secure Data Catalog resources, you create LF-Tags, assign them to resources, and grant LF-Tag permissions to principals¹. Only a data lake administrator or a principal with LF-Tag creator permissions can create LF-Tags.
+
+- **Named Resources**: The Lake Formation named resource method is an authorization strategy that defines permissions for resources². Data lake administrators can assign and revoke permissions on Lake Formation resources².
+
+Both methods allow for **fine-grained access control** and secure sharing of data within a data lake.
+
+![Alt text](https://aws.github.io/aws-lakeformation-best-practices/lf-tags/images/lf-tags-vs-named-resources-example.png)
+
+With tags one has less management effort of permissions.
+Permissions are attached to tags.
+
+![Alt text](https://aws.github.io/aws-lakeformation-best-practices/lf-tags/images/lf-tags-example.png)
+
+
+see
+
+- https://aws.github.io/aws-lakeformation-best-practices/lf-tags/basics/
+- Managing LF-Tags for metadata access control - AWS Lake Formation. <https://docs.aws.amazon.com/lake-formation/latest/dg/managing-tags.html>
+- Sharing a data lake using Lake Formation tag-based access control and <https://docs.aws.amazon.com/lake-formation/latest/dg/share-dl-tbac-tutorial.html>
+
+
+
+#### 1 LF-TBAC.  Lake Formation - tag based access control
+
+1.  Lake Formation **tag-based** access control (**LF-TBAC**): This defines lake formation permission using attributes. In lake formation, tags are called LF-tags which grant permission to access databases with external principals, accounts, and AWS Organization. This is a recommended option for **sharing databases** with external accounts.
+
+#### 2 Named resources
+
+2.  Lake Formation **named resources**:  This grants Lake Formation permissions with a grant option on **Data Catalog tables** and databases to **external AWS accounts, IAM principals, organizations**, or organizational units.
+
+### Sharing Lake Formation catalog with AWS services
+
+**A resource link** is a **data catalog object** which is linked to a local or shared database. 
+
+
+Creating a resource link **allows integrating with AWS services in other accounts** such as **Amazon Athena or Amazon Redshift Spectrum** to run **queries on the shared database**. 
+
+These AWS services will NOT be able to access directly across cross accounts but using resource links, services can run queries on shared databases in **other accounts**.
+
+
+### Summary 
+| Option | Use case |
+|---|---|
+| Named resources | Create easily identifiable and reusable references to Data Catalog entities. |
+| LF-TBAC | Grant cross-account access to Data Catalog entities. |
+| Resource links | Create references to Data Catalog entities in other services. |
+
+For more information on cross account permissions with AWS Lake Formation, refer to the following URLs,
+
+*   [https://docs.aws.amazon.com/lake-formation/latest/dg/cross-account-permissions.html](https://docs.aws.amazon.com/lake-formation/latest/dg/cross-account-permissions.html)
+*   [https://docs.aws.amazon.com/lake-formation/latest/dg/resource-links-about.html](https://docs.aws.amazon.com/lake-formation/latest/dg/resource-links-about.html)
 
 
 
@@ -69,3 +152,9 @@ https://aws.amazon.com/getting-started/decision-guides/analytics-on-aws-how-to-c
 - (4) AWS, Azure and GCP Service Comparison for Data Science & AI. https://www.datacamp.com/cheat-sheet/aws-azure-and-gcp-service-comparison-for-data-science-and-ai.
 - (5) AWS Data Analytics: Choosing the Best Option for You - NetApp. https://bluexp.netapp.com/blog/aws-cvo-blg-aws-data-analytics-choosing-the-best-option-for-you.
 - (6) Compare AWS Trusted Advisor vs. Azure Analysis Services | G2. https://www.g2.com/compare/aws-trusted-advisor-vs-azure-analysis-services.
+- Data lake with Cloud Formation - https://medium.com/@sukul.teradata/data-lakes-and-data-integration-with-aws-lake-formation-6bf39416990b
+- https://aws.github.io/aws-lakeformation-best-practices/lf-tags/basics/
+- Managing LF-Tags for metadata access control - AWS Lake Formation. <https://docs.aws.amazon.com/lake-formation/latest/dg/managing-tags.html>
+- Sharing a data lake using Lake Formation tag-based access control and <https://docs.aws.amazon.com/lake-formation/latest/dg/share-dl-tbac-tutorial.html>
+- https://aws.amazon.com/getting-started/decision-guides/analytics-on-aws-how-to-choose/
+- https://aws.amazon.com/getting-started/decision-guides/analytics-on-aws-how-to-choose/?nc1=h_ls
