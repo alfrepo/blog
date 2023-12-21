@@ -44,7 +44,72 @@ AWS Control Tower is a service that provides a fully managed way to set up and m
 
 ![](./article00026/awsconfig.png)
 
-AWS Config is a service that tracks and records changes to your AWS resources. This information can be used to detect and troubleshoot configuration drift, and it can also be used to audit your AWS environment for compliance with your security and compliance standards.
+Reinvent demo 
+<https://youtu.be/kErRv4YB_T4?si=Kzc6VwbmZkApz5mR&t=2036>
+
+AWS Config is a service that **tracks and records changes to your AWS resources**. 
+
+This information can be used to **detect and troubleshoot configuration drift**, and it can also be used to **audit your AWS environment for compliance** with your security and compliance standards.
+
+#### Conformance pack
+
+A **conformance pack** is a collection of AWS Config rules and remediation actions that can be deployed as a single entity in a single account or multiple accounts in an AWS Organizations.
+
+#### Global service - single region
+
+AWS IAM is a **global service**. For global services, AWS Config should be enabled **only in a single region** to avoid getting duplicate copies of configuration items and in turn, minimize cost. 
+
+#### Aggregator
+
+Demo <https://youtu.be/kErRv4YB_T4?si=fdcoFiOHjKJcVLwD&t=2067>
+
+An **Aggregator** is an AWS Config resource that collects configuration data from multiple accounts across multiple regions. There are two types of Aggregators,
+
+1.  **Individual accounts** aggregator: Authorization will be required for each of the source accounts from which configuration data is to be collected.
+2.  **Organization aggregator**: Authorization is not required for member accounts in AWS Organization as authorization is integrated with the Organization service.
+
+
+
+For more information on AWS Config, refer to the following URLs,
+
+*   [https://aws.amazon.com/blogs/mt/aws-config-best-practices/](https://aws.amazon.com/blogs/mt/aws-config-best-practices/)
+*   [https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html](https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html)
+*   [https://docs.aws.amazon.com/config/latest/developerguide/aggregate-data.html](https://docs.aws.amazon.com/config/latest/developerguide/aggregate-data.html)
+
+
+### AWS Proton
+
+![](https://s3.eu-central-1.amazonaws.com/alf-digital-wiki-pics/sharex/8JCaHLE9yh.png)
+
+
+AWS Proton is designed to increase the impact of platform engineering by implementing scalable **self-service capabilities for developers**². It empowers developers to move faster with a **self-service tool** to provision **infrastructure** and **manage code deployment**.
+
+It provides **automated infrastructure as code provisioning** and deployment for serverless and container-based applications¹. 
+
+Its for 
+
+ - infrastructure admins
+ - developers
+
+As an **administrator**, you can create versioned service templates that define standardized infrastructure and deployment tooling for **serverless** and **container-based applications**¹. AWS Proton identifies all existing service instances that are using an outdated template version and allows you to upgrade them with one click¹.
+
+As an **application developer**, you can select from the **available service templates** to automate your application or service deployments¹. AWS Proton automatically 
+
+- provisions the resources, 
+- configures the CI/CD pipeline, and 
+- deploys the code into the defined infrastructure¹.
+
+[![Proton_demo](https://img.youtube.com/vi/uQDmHRjQpTU/0.jpg)](http://www.youtube.com/watch?v=uQDmHRjQpTU "Proton Demo")
+
+
+(1) What is AWS Proton? - AWS Proton. https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html.
+(2) Application Delivery Service - AWS Proton - AWS. https://aws.amazon.com/proton/.
+(3) AWS Announces General Availability of AWS Proton - Press Center. https://press.aboutamazon.com/2021/6/aws-announces-general-availability-of-aws-proton.
+(4) What you need to know about the new AWS Proton service - Pluralsight. https://www.pluralsight.com/resources/blog/cloud/what-you-need-to-know-about-the-new-aws-proton-service.
+(5) AWS Introduces Proton - a New Container Management Service in ... - InfoQ. https://www.infoq.com/news/2020/12/aws-proton-container-serverless/.
+(6) AWS Proton: A first look | Containers. https://aws.amazon.com/blogs/containers/intro-to-aws-proton/.
+(7) Tutorial: using the AWS Proton plugins for Backstage - GitHub. https://github.com/awslabs/aws-proton-plugins-for-backstage/blob/main/docs/tutorial.md.
+
 
 ### AWS CloudTrail
 
@@ -77,15 +142,6 @@ AWS Secrets Manager is a service that securely stores and manages sensitive data
 ![](./article00026/lakeformation.png)
 
 AWS Lake Formation is a service that helps you to build, manage, and secure data lakes in AWS. Lake Formation provides a centralized platform for managing your data lake, and it can also help you to enforce data governance policies.
-
-### AWS X-Ray
-
-![](./article00026/xray.png)
-
-AWS X-Ray is a service that helps you to debug and troubleshoot distributed applications. X-Ray can trace requests as they flow through your application and across multiple AWS services, and it can also help you to identify performance bottlenecks and identify potential security vulnerabilities.
-
-These are just a few of the many AWS services that can help you to centralize governance in AWS. With the right combination of services, you can create a secure, compliant, and efficient AWS environment.
-
 
 ### AWS Firewall Manager (FMS)
 
