@@ -18,7 +18,13 @@ Kubernetes basic architecture. Notes.
 
 https://medium.com/techbeatly/kubernetes-architecture-deep-dive-520218da0a26
 
+
+Architecture
 ![Vision](article0003/../article00012/kubernetes.drawio.png)
+
+Workload and Infrastructure and some tools perspective
+![Vision](article0003/../article00012/kubernetes-overview.png)
+
 
 ### Master components
 
