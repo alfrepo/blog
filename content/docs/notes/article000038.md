@@ -10,6 +10,8 @@ authors:
 tags:
   - aws
   - RAM
+  - trusted_access
+  - trusted_service
 
 ---
 
@@ -24,16 +26,46 @@ Demo
 
 ## Description
 
-AWS Resource Access Manager (AWS RAM) is a service that helps you securely share your AWS resources across multiple AWS accounts, within your organization or organizational units (OUs), and with AWS Identity and Access Management (IAM) roles and users for supported resource types³. 
+AWS Resource Access Manager (AWS RAM) is a service that helps you securely share your AWS resources across multiple AWS accounts, 
 
-Here are some of its key features:
-- **Simplify security and access controls**: AWS RAM allows you to streamline your security and access controls across shared resources¹.
-- **Centralized resource management**: You can manage AWS resources within your organization from a central account, reducing overhead and costs by creating resources once and sharing them across multiple accounts¹.
-- **Resource sharing in multi-account environments**: AWS RAM enables you to share foundational infrastructure like Amazon VPC subnets across accounts, allowing multiple accounts to deploy application resources to the same subnet¹.
-- **Centralized access control**: You can centrally manage resources like private certificate authorities, allowing certificate issuance across multiple accounts to manage cost and reduce operational overhead¹.
-- **Least privilege on shared resources**: AWS RAM uses managed permissions to grant only the permissions required to perform tasks on resources shared using AWS RAM¹.
+ - within your organization or organizational units (OUs), and
+ 
 
-For more detailed information, you can refer to the [official AWS RAM documentation](https://docs.aws.amazon.com/ram/latest/userguide/what-is.html).
+### trusted service / trusted access
+
+
+You MUST use **trusted access** to enable **AWS RAM service**,  (called the **trusted service**) to access your OU for sharing.
+
+Trusted service AWS RAM will **perform tasks** in your **organization** and its **accounts** . 
+
+![Alt text](https://s3.eu-central-1.amazonaws.com/alf-digital-wiki-pics/sharex/KlYmgUmetQ.png)
+
+See 
+- <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html>
+- <https://docs.aws.amazon.com/accounts/latest/reference/using-orgs-trusted-access.html>
+- RAM <https://docs.aws.amazon.com/cli/latest/reference/ram/enable-sharing-with-aws-organization.html>
+
+
+This involves **granting permissions to the trusted service** but does not otherwise affect the permissions for IAM users or roles.
+
+When you enable access, the **trusted service** can create an IAM role called a **service-linked role** in **every account** in your organization.
+
+#### service-linked role in every account
+
+That **service-linked role** has a permissions policy that allows the **trusted service** to do tasks. 
+
+This enables you to specify settings and configuration details that you would like the **trusted service** to maintain in your organization’s accounts on your behalf.
+
+
+### enabling trusted access for trusted service via service-linked role
+
+To enable **trusted access** with AWS Organizations:
+
+ - From the AWS RAM CLI, use the `enable-sharing-with-aws-organizations` command.
+ - Name of the `IAM service-linked role` that can be created in accounts when trusted access is enabled: 
+`AWSResourceAccessManagerServiceRolePolicy`.
+
+
 
 ## Links
 
