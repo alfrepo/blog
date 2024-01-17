@@ -102,13 +102,14 @@ As an **application developer**, you can select from the **available service tem
 [![Proton_demo](https://img.youtube.com/vi/uQDmHRjQpTU/0.jpg)](http://www.youtube.com/watch?v=uQDmHRjQpTU "Proton Demo")
 
 
-(1) What is AWS Proton? - AWS Proton. https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html.
-(2) Application Delivery Service - AWS Proton - AWS. https://aws.amazon.com/proton/.
-(3) AWS Announces General Availability of AWS Proton - Press Center. https://press.aboutamazon.com/2021/6/aws-announces-general-availability-of-aws-proton.
-(4) What you need to know about the new AWS Proton service - Pluralsight. https://www.pluralsight.com/resources/blog/cloud/what-you-need-to-know-about-the-new-aws-proton-service.
-(5) AWS Introduces Proton - a New Container Management Service in ... - InfoQ. https://www.infoq.com/news/2020/12/aws-proton-container-serverless/.
-(6) AWS Proton: A first look | Containers. https://aws.amazon.com/blogs/containers/intro-to-aws-proton/.
-(7) Tutorial: using the AWS Proton plugins for Backstage - GitHub. https://github.com/awslabs/aws-proton-plugins-for-backstage/blob/main/docs/tutorial.md.
+1. [What is AWS Proton? - AWS Proton](<https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html>)
+2. [Application Delivery Service - AWS Proton - AWS](<https://aws.amazon.com/proton/>)
+3. [AWS Announces General Availability of AWS Proton - Press Center](<https://press.aboutamazon.com/2021/6/aws-announces-general-availability-of-aws-proton>)
+4. [What you need to know about the new AWS Proton service - Pluralsight](<https://www.pluralsight.com/resources/blog/cloud/what-you-need-to-know-about-the-new-aws-proton-service>)
+5. [AWS Introduces Proton - a New Container Management Service in... - InfoQ](<https://www.infoq.com/news/2020/12/aws-proton-container-serverless/>)
+6. [AWS Proton: A first look | Containers](<https://aws.amazon.com/blogs/containers/intro-to-aws-proton/>)
+7. [Tutorial: using the AWS Proton plugins for Backstage - GitHub](<https://github.com/awslabs/aws-proton-plugins-for-backstage/blob/main/docs/tutorial.md>)
+
 
 
 ### AWS CloudTrail
