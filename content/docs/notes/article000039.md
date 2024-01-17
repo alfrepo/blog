@@ -1,8 +1,8 @@
 ---
-title: AWS Firewalls
-time: 2023-12-21 11:00:00
+title: AWS Firewalls - overview
+time: 2023-01-17 11:00:00
 description: >
-  AWS Ressource Access Manager RAM
+  AWS Firewalls - overview
 
 authors:
     - Alexander Friesen
@@ -14,7 +14,7 @@ tags:
 
 ## Intro
 
-AWS Firewalls overview
+AWS Firewalls - overview
 
 
 
