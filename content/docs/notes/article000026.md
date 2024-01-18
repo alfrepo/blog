@@ -97,15 +97,28 @@ As an **application developer**, you can select from the **available service tem
 
 - provisions the resources, 
 - configures the CI/CD pipeline, and 
-- deploys the code into the defined infrastructure¹.
+- deploys the code into the defined infrastructure.
+
+
+#### Difference to CloudFormation
+
+Some people may wonder what the **difference between Proton and AWS CloudFormation** is. While both can be used for templated infrastructure as code Proton has a few key differences that users should be aware of.
+
+The first difference: Proton provides a **self-service web interface where users can easily discover and deploy the latest templates** directly from within the AWS console.
+
+Second is Proton's ownership model we discussed earlier. Users who deploy services and environments don't need **IAM permission because ownership of the stacks remains with Proton**. This simplifies what permissions are given to users and how updates to stacks can be handled.
+
+The third difference is that Proton can be used as a **generic templating engine**. Support is planned to add other infrastructure as code template options besides just **CloudFormation, such as HashiCorp Terraform and AWS CDK**.
+
+#### Demo Proton
 
 [![Proton_demo](https://img.youtube.com/vi/uQDmHRjQpTU/0.jpg)](http://www.youtube.com/watch?v=uQDmHRjQpTU "Proton Demo")
 
 
-1. [What is AWS Proton? - AWS Proton](<https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html>)
+1. [What you need to know about the new AWS Proton service - Pluralsight](<https://www.pluralsight.com/resources/blog/cloud/what-you-need-to-know-about-the-new-aws-proton-service>)
 2. [Application Delivery Service - AWS Proton - AWS](<https://aws.amazon.com/proton/>)
 3. [AWS Announces General Availability of AWS Proton - Press Center](<https://press.aboutamazon.com/2021/6/aws-announces-general-availability-of-aws-proton>)
-4. [What you need to know about the new AWS Proton service - Pluralsight](<https://www.pluralsight.com/resources/blog/cloud/what-you-need-to-know-about-the-new-aws-proton-service>)
+4. [What is AWS Proton? - AWS Proton](<https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html>)
 5. [AWS Introduces Proton - a New Container Management Service in... - InfoQ](<https://www.infoq.com/news/2020/12/aws-proton-container-serverless/>)
 6. [AWS Proton: A first look | Containers](<https://aws.amazon.com/blogs/containers/intro-to-aws-proton/>)
 7. [Tutorial: using the AWS Proton plugins for Backstage - GitHub](<https://github.com/awslabs/aws-proton-plugins-for-backstage/blob/main/docs/tutorial.md>)
