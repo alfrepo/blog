@@ -31,7 +31,6 @@ AWS offers a wide range of analytics services, each designed for specific use ca
 | AWS Service | Optimized For | Description |
 | --- | --- | --- |
 | **Amazon Athena** | Interactive analytics | Allows users to analyze data in Amazon S3 using standard SQL. |
-
 | **Amazon Redshift** | Data warehousing | A fully managed, petabyte-scale data warehouse service in the cloud. |
 | **Amazon Managed Service for Apache Flink** | Real-time analytics | Fully managed service that makes it easy to build and run applications using Apache Flink. |
 | **Amazon OpenSearch Service** | Operational analytics | Makes it easy to deploy, secure, and operate OpenSearch clusters at scale. |
@@ -48,7 +47,7 @@ AWS offers a wide range of analytics services, each designed for specific use ca
 | **AWS Data Exchange** | Data sharing | A data-market. |
 | **AWS Data Pipeline** | A **fully managed data orchestration service** that simplifies the process of building, scheduling, and monitoring data pipelines. It eliminates the need to manually provision, manage, and scale resources for data movement and transformation. | **Data integration, data warehousing, data lake creation, data quality checks, data migration** |
 | **AWS Lake Formation** | A **fully managed service** that makes it easy to set up and manage secure data lakes in Amazon S3. It provides centralized governance and management capabilities for your data lake, including access control, data quality, and data lineage. | **Data lake management, data governance, data quality** |
-| **Amazon Managed Streaming for Apache Kafka** | A **fully managed service** for Apache Kafka, a popular open-source stream processing platform. It allows you to build and manage Kafka clusters in the cloud without having to set up or manage servers. | **Real-time data ingestion, data processing, event streaming** |
+
 
 
 
