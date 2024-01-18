@@ -31,18 +31,26 @@ AWS offers a wide range of analytics services, each designed for specific use ca
 | AWS Service | Optimized For | Description |
 | --- | --- | --- |
 | **Amazon Athena** | Interactive analytics | Allows users to analyze data in Amazon S3 using standard SQL. |
-| **Amazon EMR** | Big data processing | Provides a managed Hadoop framework to process vast amounts of data across dynamically scalable Amazon EC2 instances. |
+
 | **Amazon Redshift** | Data warehousing | A fully managed, petabyte-scale data warehouse service in the cloud. |
 | **Amazon Managed Service for Apache Flink** | Real-time analytics | Fully managed service that makes it easy to build and run applications using Apache Flink. |
 | **Amazon OpenSearch Service** | Operational analytics | Makes it easy to deploy, secure, and operate OpenSearch clusters at scale. |
 | **Amazon QuickSight** | Dashboards and visualizations | A fast, cloud-powered business intelligence service that makes it easy to deliver insights to everyone in your organization. |
 | **Amazon Glue DataBrew** | Visual data preparation | A visual data preparation tool that makes it easy to clean and normalize data for analytics and machine learning. |
 | **Amazon Managed Streaming for Apache Kafka (Amazon MSK)** | Real-time data movement | A fully managed service that makes it easy to build and run applications that use Apache Kafka to process streaming data. |
-| **Amazon Kinesis Data Streams** | Real-time data movement | A massively scalable and durable real-time data streaming service. |
-| **Amazon Kinesis Data Firehose** | Real-time data movement | The easiest way to reliably load streaming data into data lakes, data stores, and analytics services. |
+| **Amazon Kinesis Data Streams** | **Real-time** data movement | A massively scalable and durable real-time data streaming service. |
+| **Amazon Kinesis Data Firehose** | **NEAR-Real-time** data movement | The easiest way to reliably load streaming data into data lakes, data stores, and analytics services. |
+| **Amazon Kinesis Data Analytics** | An **on-demand data analytics service** that allows you to process and analyze streaming data in real time. It provides a serverless experience, so you don't have to provision or manage resources. | **Real-time data processing, real-time analytics, IoT data analysis, fraud detection** |
 | **Amazon Kinesis Video Streams** | Real-time data movement | Securely streams video from connected devices to AWS for analytics, machine learning (ML), and other processing. |
-| **AWS Glue** | Data management | A fully managed extract, transform, and load (ETL) service that makes it easy to prepare and load your data for analytics. <https://www.youtube.com/watch?v=cDDPg_XxPqc&t=2079s> |
+| **Amazon Kinesis Data Streams** | A **fully managed service** for real-time data ingestion and processing. It's designed to handle high-volume, low-latency data streams from thousands of sources. | **Real-time data ingestion, data processing, data streaming** |
+| **AWS Glue** | Big data processing | A **fully managed extract**, transform, and load (ETL) service that makes it easy to prepare and load your data for analytics. <https://www.youtube.com/watch?v=cDDPg_XxPqc&t=2079s> |
+| **Amazon EMR** | Big data processing | Like Glue, but more complex, open-source. Need more flexibility and control over their data processing environment. Provides a managed Hadoop framework to process vast amounts of data across dynamically scalable Amazon EC2 instances. |
 | **AWS Data Exchange** | Data sharing | A data-market. |
+| **AWS Data Pipeline** | A **fully managed data orchestration service** that simplifies the process of building, scheduling, and monitoring data pipelines. It eliminates the need to manually provision, manage, and scale resources for data movement and transformation. | **Data integration, data warehousing, data lake creation, data quality checks, data migration** |
+| **AWS Lake Formation** | A **fully managed service** that makes it easy to set up and manage secure data lakes in Amazon S3. It provides centralized governance and management capabilities for your data lake, including access control, data quality, and data lineage. | **Data lake management, data governance, data quality** |
+| **Amazon Managed Streaming for Apache Kafka** | A **fully managed service** for Apache Kafka, a popular open-source stream processing platform. It allows you to build and manage Kafka clusters in the cloud without having to set up or manage servers. | **Real-time data ingestion, data processing, event streaming** |
+
+
 
 See <https://aws.amazon.com/getting-started/decision-guides/analytics-on-aws-how-to-choose/?nc1=h_ls>
 
