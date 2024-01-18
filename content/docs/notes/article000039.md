@@ -44,7 +44,12 @@ and in details
 | Route 53 Resolver Firewall | Layer 3 | Filter traffic to/from Route 53 | Traffic to/from Route 53 | Managed | Moderate | Large traffic | Route 53 resolver endpoints | Route 53 traffic filtering |
 
 
+and cost
 
+
+| Feature | Web Application Firewall (WAF) | Shield Advanced | Security Groups | Network Firewall | Route 53 Resolver Firewall |
+|---|---|---|---|---|---|
+| **Cost** | Based on the number of rules you use | Based on the number of resources you protect | Based on the number of EC2 instances and network interfaces you protect | Based on the number of VPCs you protect | Based on the number of Amazon Route 53 resolver endpoints you protect |
 
 
 * **AWS Firewall Manager**
