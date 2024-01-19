@@ -39,6 +39,9 @@ Here is a list of AWS data migration services:
 
 ### **AWS Database Migration Service (AWS DMS) && AWS Schema Conversion Tool (SCT):** 
 
+- it can **continuosly replicate DB data**, keeping source fully operational. E.g. to sync one DB with another.
+  - With AWS Database Migration Service, you can continuously replicate your data with high availability and consolidate databases into a petabyte-scale data warehouse by streaming data to Amazon Redshift and Amazon S3.
+
 AWS Database Migration Service (AWS DMS) is a fully managed service that helps you migrate your on-premises databases to the AWS Cloud. It supports a variety of database engines, includ
 
 **AWS Schema Conversion Tool (SCT)** is a tool that can be used to convert the schema of an on-premises database to a compatible schema for an AWS database. This can be helpful if you need to migrate a database to a different database platform.
