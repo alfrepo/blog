@@ -19,21 +19,80 @@ Here is a list of AWS data migration services:
 
 ## Description
 
-### **AWS Database Migration Service (DMS):** 
 
-AWS Database Migration Service (DMS) is a fully managed service that can be used to migrate databases from on-premises to AWS. It can be used to migrate a variety of databases, including Oracle, SQL Server, MySQL, and PostgreSQL.
 
-### **AWS Glue:** 
 
-AWS Glue is a fully managed ETL service that simplifies the data ingestion, transformation, and loading process. It can be used to move data from a variety of sources, including databases, file systems, and SaaS applications, to Amazon S3, Amazon Redshift, or other AWS services. Glue provides several features that make it easy to use, including:
-    * A visual interface for creating and monitoring data flows
-    * A library of pre-built connectors for popular data sources
-    * A flexible schema registry for managing data formats
-    * A built-in ETL engine for performing data transformations
-    * Integrated support for Amazon S3, Amazon Redshift, and other AWS services
-    * Glue has an AppFlow connector
+| Feature | SMS | MGN |
+|---|---|---|
+| Type of workload | Servers, VMs | Applications |
+| Replication method | Incremental | Full or incremental |
+| Downtime | Can minimize downtime | Can migrate with minimal downtime |
 
-Demo <https://www.youtube.com/watch?v=cDDPg_XxPqc&t=2079s>
+**Here is a table summarizing the use cases for SMS and MGN:**
+
+| Use case | SMS | MGN |
+|---|---|---|
+| Migrating physical servers | Yes | No |
+| Migrating VMs | Yes | No |
+| applications | No | Yes |
+
+
+### **AWS Database Migration Service (AWS DMS) && AWS Schema Conversion Tool (SCT):** 
+
+AWS Database Migration Service (AWS DMS) is a fully managed service that helps you migrate your on-premises databases to the AWS Cloud. It supports a variety of database engines, includ
+
+**AWS Schema Conversion Tool (SCT)** is a tool that can be used to convert the schema of an on-premises database to a compatible schema for an AWS database. This can be helpful if you need to migrate a database to a different database platform.
+
+
+
+
+### **AWS Server Migration Service (SMS):** 
+
+Replatforming service.
+
+ - SMS discovers and replicates the server to be migrated.
+ - SMS takes a **snapshot of the replicated server**.
+ - SMS stores the snapshot in an **S3 bucket**.
+ - SMS **creates an AMI** from the snapshot.
+ - SMS tags the AMI with information about the source server.
+
+
+AWS Server Migration Service (SMS) is a fully managed service that makes it easy to migrate on-premises **servers to AWS**. It automates the process of replicating your on-premises servers to Amazon EC2 instances in the cloud
+
+Replatform and use capabilities such as **Amazon Elastic Block Store (Amazon EBS) snapshots**. <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html>
+
+Or cloning an **EC2 instance to create an AMI**: <https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/tkv-create-ami-from-instance.html>
+
+<https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-replatforming-cots-applications/welcome.html>
+
+
+### **AWS Application Migration Service (MGN):** 
+
+AWS Application Migration Service (MGN) is a **highly automated lift-and-shift (rehost) solution**
+
+
+AWS Application Migration Service is a tool that helps you migrate your **on-premises applications** to the AWS Cloud. 
+
+  - Initialize AWS Application Migration Service.
+  - Set up the staging area server configuration and reporting, including staging area resources. 
+  - Install agents on source servers, and use continuous block-level data replication (compressed and encrypted).
+  - Automate orchestration and system conversion to shorten the cutover window.
+
+
+<https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/migrate-an-on-premises-vm-to-amazon-ec2-by-using-aws-application-migration-service.html?did=pg_card&trk=pg_card>
+
+
+[![mgm0](https://docs.aws.amazon.com/images/prescriptive-guidance/latest/patterns/images/pattern-img/58c8bafd-9a6d-42d4-a5ce-08c4b9a286a3/images/f8396fad-7ee9-4f75-800f-e819f509e151.png)](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/migrate-an-on-premises-vm-to-amazon-ec2-by-using-aws-application-migration-service.html?did=pg_card&trk=pg_card "MGM Demo")
+
+
+
+[![mgm1](https://img.youtube.com/vi/tB0sAR3aCb4/0.jpg)](https://youtu.be/tB0sAR3aCb4?si=oSe3Vcjhax3s9cEe&t=248 "MGM Demo")
+
+https://eu-central-1.console.aws.amazon.com/mgn/home?region=eu-central-1#/welcome
+
+[![mgm2](https://hidekazu-konishi.com/images/aws_mgn_architecture_lifecycle_usage_notes_003.png)](https://hidekazu-konishi.com/entry/aws_mgn_architecture_lifecycle_usage_notes.html "MGM Demo2")
+
+
 
 ### **AWS AppFlow:** 
 
@@ -62,13 +121,10 @@ AWS Snowmobile is a service that allows you to transport petabytes of data to an
 
 AWS DataSync is a service that can be used to copy files between on-premises storage and AWS storage services, such as Amazon S3, Amazon FSx for Windows File Server, and Amazon FSx for Lustre. DataSync can be used to copy large amounts of data quickly and efficiently.
 
-### **AWS Schema Conversion Tool (SCT):** 
-
-AWS Schema Conversion Tool (SCT) is a tool that can be used to convert the schema of an on-premises database to a compatible schema for an AWS database. This can be helpful if you need to migrate a database to a different database platform.
 
 ### **AWS Data Pipeline:** 
 
-AWS Data Pipeline is a service that can be used to automate theETL process. It can be used to schedule and monitor data flows that move data from one AWS service to another.
+AWS Data Pipeline is a service that can be used to automate the ETL process. It can be used to schedule and monitor data flows that move data from one AWS service to another.
 
 
 ## Links
