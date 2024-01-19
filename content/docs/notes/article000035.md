@@ -97,11 +97,16 @@ In AWS Lake Formation, the units that are shareable via **LF-tags** or named res
 
 The following **two options** are available to share the resources in the data lakes with other accounts.
 
-- **LF-Tags**: To use the Lake Formation tag-based access control (LF-TBAC) method to secure Data Catalog resources, you create LF-Tags, assign them to resources, and grant LF-Tag permissions to principals¹. Only a data lake administrator or a principal with LF-Tag creator permissions can create LF-Tags.
+- **LF-Tags**: **Recommended** way to manage permissions. To use the Lake Formation tag-based access control (LF-TBAC) method to secure Data Catalog resources, you create LF-Tags, assign them to resources, and grant LF-Tag permissions to principals¹. Only a data lake administrator or a principal with LF-Tag creator permissions can create LF-Tags.
 
 - **Named Resources**: The Lake Formation named resource method is an authorization strategy that defines permissions for resources². Data lake administrators can assign and revoke permissions on Lake Formation resources².
 
 Both methods allow for **fine-grained access control** and secure sharing of data within a data lake.
+
+Additional **on method**
+
+- **Data location permissions** - required by the AWS Glue Crawlers to access data in data lakes from other accounts. You can use Data location permissions to **grant read, write, or execute access** to **users and roles**. For example, you could grant **read access to the S3 bucket that contains your data lake** to a group of users who need to access the data.
+- BUT: For integrated services like Amazon Athena and Amazon Redshift Spectrum, **a resource link** is required.
 
 ![Alt text](https://aws.github.io/aws-lakeformation-best-practices/lf-tags/images/lf-tags-vs-named-resources-example.png)
 
