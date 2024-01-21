@@ -17,9 +17,17 @@ tags:
 
 Here is a list of AWS data migration services:
 
+## Summary
+
+- Use **AWS DataSync** to migrate existing data to Amazon S3, and subsequently use the File Gateway configuration of AWS Storage Gateway to retain access to the migrated data and for ongoing updates from your on-premises file-based applications.
+- use **AWS Snowball Edge** for offline data transfers
+- use **S3 Replication** for continuous replication of data to a specific destination bucket.
+- use **AWS Storage Gateway** provides seamless access to data in **hybrid architectures**.
+- 
+
+<https://aws.amazon.com/datasync/faqs/>
+
 ## Description
-
-
 
 
 | Feature | SMS | MGN |
@@ -122,7 +130,31 @@ AWS Snowmobile is a service that allows you to transport petabytes of data to an
 
 ### **AWS DataSync:** 
 
-AWS DataSync is a service that can be used to copy files between on-premises storage and AWS storage services, such as Amazon S3, Amazon FSx for Windows File Server, and Amazon FSx for Lustre. DataSync can be used to copy large amounts of data quickly and efficiently.
+
+AWS DataSync is a service that can be used to copy files **between on-premises** storage and **AWS storage services**, such as 
+
+  - Amazon S3, 
+  - Amazon FSx for Windows File Server, 
+  - and Amazon FSx for Lustre. 
+
+DataSync can be used to copy **large amounts of data quickly** and efficiently.
+
+- Uses agents.
+- connects into VPC. VPC endpoints for DataSync are **powered by AWS PrivateLink**
+
+
+![Alt Text](article00034/datasync.png)
+
+
+See
+https://docs.aws.amazon.com/datasync/latest/userguide/datasync-in-vpc.html
+
+
+When to use: <https://aws.amazon.com/datasync/faqs/>
+
+#### Compare to AWS Storage Gateway
+
+**AWS Storage Gateway** provides seamless access to data in **hybrid architectures**.
 
 
 ### **AWS Data Pipeline:** 

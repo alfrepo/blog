@@ -37,7 +37,7 @@ AWS offers a wide range of analytics services, each designed for specific use ca
 | **Amazon QuickSight** | Dashboards and visualizations | A fast, cloud-powered business intelligence service that makes it easy to deliver insights to everyone in your organization. |
 | **Amazon Glue DataBrew** | Visual data preparation | A visual data preparation tool that makes it easy to clean and normalize data for analytics and machine learning. |
 | **Amazon Managed Streaming for Apache Kafka (Amazon MSK)** | Real-time data movement | A fully managed service that makes it easy to build and run applications that use Apache Kafka to process streaming data. |
-| **Amazon Kinesis Data Streams** | **Real-time** data movement | A massively scalable and durable real-time data streaming service. |
+| **Amazon Kinesis Data Streams** | **Real-time** data movement | A massively scalable and durable real-time data streaming service. ![Vision](article0003/../article00035/kinesis.png)|
 | **Amazon Kinesis Data Firehose** | **NEAR-Real-time** data movement | The easiest way to reliably load streaming data into data lakes, data stores, and analytics services. |
 | **Amazon Kinesis Data Analytics** | An **on-demand data analytics service** that allows you to process and analyze streaming data in real time. It provides a serverless experience, so you don't have to provision or manage resources. | **Real-time data processing, real-time analytics, IoT data analysis, fraud detection** |
 | **Amazon Kinesis Video Streams** | Real-time data movement | Securely streams video from connected devices to AWS for analytics, machine learning (ML), and other processing. |
