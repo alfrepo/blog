@@ -131,6 +131,39 @@ As soon as you are connectedon behalf of "my_thing" *(`clientId` is set to  `my_
 ![](./article00025/thing_is_connected.png)
 
 
+### "AWS IoT Rules Engine" service 
+
+Rules Engine enables continuous processing of data sent by connected devices.
+
+Rules can be configured to filter and transform the data using an intuitive, **SQL-like syntax**.
+
+
+Integratable with:
+
+ - **Apache** Kafka	Sends a message to an Apache Kafka cluster.	kafka
+ - **CloudWatch** alarms	Changes the state of an Amazon CloudWatch alarm.	cloudwatchAlarm
+ - **CloudWatch** Logs	Sends a message to Amazon CloudWatch Logs.	cloudwatchLogs
+ - **CloudWatch** metrics	Sends a message to a CloudWatch metric.	cloudwatchMetric
+ - **DynamoDB**	Sends a message to a DynamoDB table.	dynamoDB
+ - **DynamoDBv2**	Sends message data to multiple columns in a DynamoDB table.	dynamoDBv2
+ - **Elasticsearch**	Sends a message to an OpenSearch endpoint.	OpenSearch
+ - **HTTP**	Posts a message to an HTTPS endpoint.	http
+ - **IoT** Analytics	Sends a message to an AWS IoT Analytics channel.	iotAnalytics
+ - **AWS** IoT Events	Sends a message to an AWS IoT Events input.	iotEvents
+ - **AWS** IoT SiteWise	Sends message data to AWS IoT SiteWise asset properties.	iotSiteWise
+ - **Kinesis** Data Firehose	Sends a message to a Kinesis Data Firehose delivery stream.	firehose
+ - **Kinesis** Data Streams	Sends a message to a Kinesis data stream.	kinesis
+ - **Lambda**	Invokes a Lambda function with message data as input.	lambda
+ - **Location**	Sends location data to Amazon Location Service.	location
+ - **OpenSearch**	Sends a message to an Amazon OpenSearch Service endpoint.	OpenSearch
+ - **Republish**	Republishes a message to another MQTT topic.	republish
+ - **S3**	Stores a message in an Amazon Simple Storage Service (Amazon S3) bucket.	s3
+ - **Salesforce** IoT	Sends a message to a Salesforce IoT input stream.	salesforce
+ - **SNS**	Publishes a message as an Amazon Simple Notification Service (Amazon SNS) push notification.	sns
+ - **SQS**	Sends a message to an Amazon Simple Queue Service (Amazon SQS) queue.	sqs
+ - **Step** Functions	Starts an AWS Step Functions state machine.	stepFunctions
+ - **Timestream**	Sends a message to an Amazon Timestream database table.	timestream
+
 
 ## Device Shadow
 
