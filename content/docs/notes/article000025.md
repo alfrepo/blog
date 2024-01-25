@@ -137,6 +137,19 @@ Rules Engine enables continuous processing of data sent by connected devices.
 
 Rules can be configured to filter and transform the data using an intuitive, **SQL-like syntax**.
 
+AWS IoT SQL reference: 
+<https://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-reference.html?icmpid=docs_iot_hp_act>
+
+
+e.g. 
+
+``SELECT color AS rgb FROM 'topic/subtopic' WHERE temperature > 50``
+
+To filter single message or one property by 
+- topic
+- value
+
+
 
 Integratable with:
 
@@ -148,8 +161,8 @@ Integratable with:
  - **DynamoDBv2**	Sends message data to multiple columns in a DynamoDB table.	dynamoDBv2
  - **Elasticsearch**	Sends a message to an OpenSearch endpoint.	OpenSearch
  - **HTTP**	Posts a message to an HTTPS endpoint.	http
- - **IoT** Analytics	Sends a message to an AWS IoT Analytics channel.	iotAnalytics
- - **AWS** IoT Events	Sends a message to an AWS IoT Events input.	iotEvents
+ - **IoT Analytics**	Sends a message to an AWS IoT Analytics channel.	iotAnalytics
+ - **AWS IoT Events**	Sends a message to an AWS IoT Events input.	iotEvents
  - **AWS** IoT SiteWise	Sends message data to AWS IoT SiteWise asset properties.	iotSiteWise
  - **Kinesis** Data Firehose	Sends a message to a Kinesis Data Firehose delivery stream.	firehose
  - **Kinesis** Data Streams	Sends a message to a Kinesis data stream.	kinesis
@@ -340,7 +353,7 @@ Depending on the type (plugin, generic, ..) Nucleus enforces different lifecycle
 
 
 
-## "AWS IoT events" service 
+## AWS IoT events - service 
 
 Iot Events - is a set of state-machines, where the state of the device is derived in form of a state-machine.
 
