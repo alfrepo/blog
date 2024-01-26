@@ -26,3 +26,6 @@ pip install mkdocs-glightbox
 
 # table of content 
 pip install mkdocs-toc-sidebar-plugin
+
+# second level lists indent
+pip install  mdx_truly_sane_lists

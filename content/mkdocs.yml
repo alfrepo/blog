@@ -47,6 +47,7 @@ markdown_extensions:
   - footnotes
   - codehilite
   - pymdownx.superfences
+  - mdx_truly_sane_lists # indent lists https://github.com/radude/mdx_truly_sane_lists
   - markdown_include.include:
       base_path: docs
 theme:
