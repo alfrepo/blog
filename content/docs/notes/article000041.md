@@ -49,13 +49,8 @@ Types:
      - when **some network delay** accessing files is OK
 
 
+![Vision](article0003/../article00041/filegateway.png)
 
-
-![Data_AI_Data_Mesh](https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2020/06/22/How-File-Gateway-and-AWS-Transfer-Family-can-be-used-together-for-your-reporting-workflow.-1.png)
-
-
-
-Example of File GW usage with Transfer Family.
 
 #### Volume Based Gateway
 
@@ -65,8 +60,6 @@ Types:
 - Gateway CACHED Volumes
 
 Summary:
-
-
 
   - Purpose:
      - provides access to objects in S3 as files or file share mount points. It can be considered as a file system mount on S3
@@ -112,6 +105,26 @@ Summary:
      - wanna migrate tape
 
 ![Vision](article0003/../article00041/tape.png)
+
+
+### AWS Transfer Family
+
+  - Purpose:
+    - secure transfer service that helps transfer files into and out of AWS storage services
+
+	- How:
+		- Runs in cloud
+		- Opens up **SFTP**, **FTPS** access.
+		- Stores on **S3**
+
+  - When to use:
+     - wanna upload via **FTPS**
+
+![Data_AI_Data_Mesh](https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2020/06/22/How-File-Gateway-and-AWS-Transfer-Family-can-be-used-together-for-your-reporting-workflow.-1.png)
+
+
+
+Example of File GW usage with Transfer Family.
 
 
 ## Links
