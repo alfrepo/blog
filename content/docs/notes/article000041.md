@@ -1,6 +1,6 @@
 ---
 title: AWS Storage Gateway and AWS Transfer
-time: 2023-01-17 11:00:00
+time: 2023-01-26 11:00:00
 description: >
   AWS Storage Gateway and AWS Transfer
 
