@@ -102,17 +102,17 @@ Summary:
 
   - Purpose:
     - secure transfer service that helps transfer files into and out of AWS storage services
-			
-	- UseCase: 
-	  - cost-effective alternative to on-premises storage.
-			
+
 	- How:
 	  - Runs in cloud
-		- Opens up SFTP, FTPS access.
-		- Stores on **S3** or **EFS**
+    - Offers **Virtual Tape**, **Virtual Tape Library (VTL)** interfaces
+		- Stores on **S3 Glacier** 
 
   - When to use:
-     - wanna offer upload interface for files via FTPS, SFTP
+     - wanna migrate tape
+
+![Vision](article0003/../article00041/tape.png)
+
 
 ## Links
 
