@@ -96,6 +96,9 @@ Summary:
   - Purpose:
     - secure transfer service that helps transfer files into and out of AWS storage services
 
+  - UseCase:
+    - on prem - store up to 1 PB TAPE
+
 	- How:
 	  - Runs in cloud
     - Offers **Virtual Tape**, **Virtual Tape Library (VTL)** interfaces
