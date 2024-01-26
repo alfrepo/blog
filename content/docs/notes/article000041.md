@@ -26,8 +26,8 @@ Types:
 
 - File Gateway
 - Volume Based Gateway
-  - using Gateway **STORED** Volumes
-  - using Gateway **CACHED** Volumes
+    - using Gateway **STORED** Volumes
+    - using Gateway **CACHED** Volumes
 - Tape Based Gateway
 
 
