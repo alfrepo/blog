@@ -70,22 +70,22 @@ Summary:
 
 
 
-##### Volume Based Gateway Type: Gateway STORED Volumes
+##### Volume Based Gateway Type: Gateway CACHED Volumes
 
 *  UseCase: 
   *   store up to 1 PB. But only most popular files are available / cached locally in cloud
 
+![Vision](article0003/../article00041/storagegw_cached.png)
 
-![Vision](article0003/../article00041/storagegw_stored.png)
 
-##### Volume Based Gateway Type: Gateway CACHED Volumes
+##### Volume Based Gateway Type: Gateway STORED Volumes
 
 
 *  UseCase:
-  *   on prem - store up to 512 TiB on the Gateway. 
+  *  on prem - store up to 512 TiB on the Gateway. 
   *  and **asynchronously backs up point-in-time snapshots** (in the form of **EBS snapshots**) of the **data to S3** which provides **durable off-site backups**
 	
-![Vision](article0003/../article00041/storagegw_cached.png)
+![Vision](article0003/../article00041/storagegw_stored.png)
 
 
 
