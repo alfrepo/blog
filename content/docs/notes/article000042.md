@@ -91,7 +91,7 @@ Let's delve into the purpose and comparison of **Azure Defender**, **Azure Senti
 
 - <https://techcommunity.microsoft.com/t5/itops-talk-blog/what-s-the-difference-between-azure-security-center-azure/ba-p/2155188>
 
-(1) What's the difference between Azure Security Center, Azure Defender and .... https://techcommunity.microsoft.com/t5/itops-talk-blog/what-s-the-difference-between-azure-security-center-azure/ba-p/2155188.
-(2) Microsoft Sentinel vs. Azure Security Center: Features & Benefits .... https://www.softlanding.ca/blog/microsoft-sentinel-vs-azure-security-center/.
-(3) Microsoft Defender for Cloud vs Microsoft Sentinel | TrustRadius. https://www.trustradius.com/compare-products/microsoft-defender-for-cloud-vs-microsoft-sentinel.
-(4) What's the difference between Azure Security Center, Azure Defender and .... https://argonsys.com/microsoft-cloud/library/whats-the-difference-between-azure-security-center-azure-defender-and-azure-sentinel/.
+- (1) What's the difference between Azure Security Center, Azure Defender and .... <https://techcommunity.microsoft.com/t5/itops-talk-blog/what-s-the-difference-between-azure-security-center-azure/ba-p/2155188>
+- (2) Microsoft Sentinel vs. Azure Security Center: Features & Benefits .... <https://www.softlanding.ca/blog/microsoft-sentinel-vs-azure-security-center/>
+- (3) Microsoft Defender for Cloud vs Microsoft Sentinel | TrustRadius. <https://www.trustradius.com/compare-products/microsoft-defender-for-cloud-vs-microsoft-sentinel>
+- (4) What's the difference between Azure Security Center, Azure Defender and .... <https://argonsys.com/microsoft-cloud/library/whats-the-difference-between-azure-security-center-azure-defender-and-azure-sentinel/>
