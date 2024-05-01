@@ -99,7 +99,11 @@ def servicebus_trigger(azservicebus: func.ServiceBusMessage):
 
 ## Links
 
-- 
+- https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions
+- <https://learn.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#session-features>
+- <https://learn.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber>
+- <https://learn.microsoft.com/en-us/azure/architecture/patterns/priority-queue>
+- <https://learn.microsoft.com/en-us/azure/service-bus-messaging/authenticate-application#resource-scope>
 - <https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview#transactions>
 - <https://learn.microsoft.com/en-us/azure/service-bus-messaging/message-sessions>
 
