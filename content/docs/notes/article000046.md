@@ -1,6 +1,6 @@
 ---
 title: Creating a PCI-DSS compliant environment in cloud
-time: 2024-03-02 11:00:00
+time: 2024-04-30 11:00:00
 description: >
   Creating a PCI-DSS compliant environment in cloud
 
