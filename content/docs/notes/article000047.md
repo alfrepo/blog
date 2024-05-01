@@ -60,12 +60,14 @@ can be solved by using
 
 ![Network](./article00047/maptoazure.drawio.png)
 
-The concepts of 
+The concepts of Azure Service Bus in one picture and their relationships / cardinality.
 
 ![Network](./article00047/classdiagram.drawio.png)
 
 ![Network](./article00047/Screenshot1.png)
 
+
+Some example code in python for the Publishier / Consumer.
 
 Publisher
 ``` python
