@@ -8,6 +8,12 @@ tags:
   - architecture
 ---
 
+# Intro
+
+ - How to Build and Run a Decision-Making Architecture Board <https://ozimmer.ch/guest/2023/05/17/ArchBoardHPH.html>
+ - MADR template https://github.com/adr/madr/blob/develop/template/adr-template.md
+ - Y-Statements <https://medium.com/olzzio/y-statements-10eb07b5a177>
+
 
 # ADR-0000000: Template
 
@@ -69,11 +75,11 @@ For the decision outcome, please mark the options in the header row, for which i
 - decided for: unicode char `&#9989;` visualizes as &#9989;
 - not decided for: unicode char `&#10060;` visualizes as &#10060;
 
-| Quality Attribute | Stakeholder | Context | Decision Driver                | AS-IS     | &#10060; O1: Name | &#9989; O2: Name  |
-| ---               | ---         | ---     | ---                            | :---:     | :---:     | :---:     |
-| Availability      | Who?        | Where?  | What? (only brief description) | - / O / + | - / O / + | - / O / + |
-| Compatibility     |             |         |                                |           |           |           |
-| Complexity        |             |         |                                |           |           |           |
+| Quality Attribute | Stakeholder | Context | Decision Driver                |   AS-IS   | &#10060; O1: Name | &#9989; O2: Name |
+|-------------------|-------------|---------|--------------------------------|:---------:|:-----------------:|:----------------:|
+| Availability      | Who?        | Where?  | What? (only brief description) | - / O / + |     - / O / +     |    - / O / +     |
+| Compatibility     |             |         |                                |           |                   |                  |
+| Complexity        |             |         |                                |           |                   |                  |
 | Configurability
 | Cost
 | Evolvability
@@ -117,7 +123,7 @@ For the decision outcome, please mark the options in the header row, for which i
 *Description of option with its details Based on the quality attributes, evaluate the option and add rating.*
 
 | Quality Attribute | Rating | Evaluation                                                                                      |
-| ---               | ---    | ---                                                                                             |
+|-------------------|--------|-------------------------------------------------------------------------------------------------|
 | Complexity        | 0      | Many tables to maintain is cumbersome. But it helps to structure the thoughts and presentation. |
 
 ### Option 2: Name
