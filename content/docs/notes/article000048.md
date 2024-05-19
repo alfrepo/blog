@@ -103,6 +103,8 @@ Also martialler might become a bottleneck.
 The most stable variant is probably to use the "auto-forwarding".
 
 - <https://techcommunity.microsoft.com/t5/apps-on-azure-blog/robust-messaging-using-azure-service-bus/ba-p/3275225>
+- <https://learn.microsoft.com/en-us/azure/service-bus-messaging/enable-auto-forward>
+- <https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding>
 
 By regrouping the messages 
 - by partitions, as expected by consumer-instances
