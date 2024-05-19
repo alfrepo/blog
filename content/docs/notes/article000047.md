@@ -23,28 +23,25 @@ making sure, that
  - **"FIFO" guarantee** with the Azure Service Bus is used
 
 
-Goal:
+### Goal
 
- - There are 2 Producer Services: A and B
+ - There are **2 Producer** Services **A and B**
    - **Service A** produces events of type: **T1, T2**
    - **Service B** produces events of type: **T3, T4**
 
- - There are 2 Consumer Services: C and D
-   - Consumer services scale horizontally, so each of them has multiple instances
+ - There are **2 Consumer** Services: **C and D**
+   - Consumer services **scale horizontally**, so each of them has **multiple instances**
    - Each instance will consume those types of events from the message bus, in which its interested in
-   - Each instance can fail after a while and put back the event, for reprocessing. That must NOT affect the order.
+   - Each **instance can fail** after a while and put back the event, for reprocessing. That must NOT affect the event processing order.
+
+### Constraints
+
+ - The  **FIFO ORDER** MUST be enforced within a **single message-type**
+
+
+        That's to simulate the situation, where each service is sending its own events and is not aware of what others are doing, which is realistic.
 
 ![Network](./article00047/target.drawio.png)
-
-
-## Constraint 1
-
-Site constraint:
-
-Let the consumer process the events 
-- in the FIFO order
-
-  - order is relevant, only within a single message-type
 
 
 ### Description
@@ -60,41 +57,23 @@ can be solved by using
 
 ![Network](./article00047/maptoazure.drawio.png)
 
-The concepts of Azure Service Bus in one picture and their relationships / cardinality.
 
-![Network](./article00047/classdiagram.drawio.png)
+### Conclusion
 
-![Network](./article00047/Screenshot1.png)
+Downsides:
 
+- Separate service-instances by event-types is probably not realistic. As a single service-instance will have to work with multiple event-types simultaniously.
+- this scaling approach is pretty static.
+  - the producer must provision topics, for consumer to scale on it.
+    So producer and consumer are not decoupled.
+  - the **scaling is bound to topics**, which are **created at deployment time**.
 
-Some example code in python for the Publishier / Consumer.
+Possible improvements
 
-Publisher
-``` python
+- Instead the scaling concept should allow horizontal scaling, where **each service-instance can consume MULTIPLE event-types**.
+- Instead the horizontal scaling of consumers - should be possible at runtime, on demand
+- Instead producers should NOT be involved into how consumers do scale out
 
-@app.route(route="http_trigger_topic", auth_level=func.AuthLevel.ANONYMOUS)
-@app.service_bus_topic_output(arg_name="message",
-                              connection="ServiceBusConnection",
-                              topic_name="T1")
-def http_trigger_topic(req: func.HttpRequest, message: func.Out[str]) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
-
-...
-
-```
-
-
-Consumer
-``` python
-@app.service_bus_topic_trigger(arg_name="azservicebus", 
-                               connection="ServiceBusConnection",
-                               topic_name="T1",
-                               subscription_name="ServiceC_T1"
-                               ) 
-def servicebus_trigger(azservicebus: func.ServiceBusMessage):
-    logging.warn('Python ServiceBus Queue trigger processed a message: %s',
-                azservicebus.get_body().decode('utf-8'))
-```
 
 
 ## Links
