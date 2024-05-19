@@ -1,8 +1,8 @@
 ---
-title: Using Azure Service Bus achieving FIFO guarantee at scale
+title: Using Azure Service Bus. Terms. Intro.
 Vztime: 2024-05-01 11:00:00
 description: >
-  Using Azure Service Bus achieving FIFO guarantee at scale
+  Using Azure Service Bus. Terms. Intro.
 
 authors:
     - Alexander Friesen
