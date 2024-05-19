@@ -1,6 +1,6 @@
 ---
 title: Using Azure Service Bus achieving FIFO guarantee at scale
-Vztime: 2024-05-01 11:00:00
+Vztime: 2024-05-19 21:00:00
 description: >
   Using Azure Service Bus achieving FIFO guarantee at scale
 
