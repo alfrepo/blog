@@ -1,8 +1,8 @@
 ---
-title: Using Azure Service Bus achieving FIFO guarantee at scale
+title: Using Azure Service Bus achieving FIFO guarantee at scale. Part 1. 
 Vztime: 2024-05-01 13:00:00
 description: >
-  Using Azure Service Bus achieving FIFO guarantee at scale
+  Using Azure Service Bus achieving FIFO guarantee at scale. Part 1. 
 
 authors:
     - Alexander Friesen
