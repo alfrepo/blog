@@ -1,6 +1,6 @@
 ---
 title: Using Azure Service Bus. Terms. Intro.
-Vztime: 2024-05-01 11:00:00
+time: 2024-05-01 11:00:00
 description: >
   Using Azure Service Bus. Terms. Intro.
 

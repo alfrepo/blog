@@ -1,6 +1,6 @@
 ---
 title: Using Azure Service Bus achieving FIFO guarantee at scale. Part 2. Multiple message types per instance.
-Vztime: 2024-05-19 21:00:00
+time: 2024-05-19 21:00:00
 description: >
   Using Azure Service Bus achieving FIFO guarantee at scale. Part 2. Multiple message types per instance.
 
