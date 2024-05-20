@@ -107,6 +107,7 @@ Also Redirecting Proxy might become a bottleneck.
 
 The most stable variant is probably to use the "auto-forwarding".
 
+- <https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding>
 - <https://techcommunity.microsoft.com/t5/apps-on-azure-blog/robust-messaging-using-azure-service-bus/ba-p/3275225>
 - <https://learn.microsoft.com/en-us/azure/service-bus-messaging/enable-auto-forward>
 - <https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding>
@@ -114,9 +115,31 @@ The most stable variant is probably to use the "auto-forwarding".
 By regrouping the messages 
 - by partitions, as expected by consumer-instances
 
-One can probably achiev the effect of stable horizontal scaling.
+One can **probably** achieve the effect of stable horizontal scaling.
 
-![Network](./article00048/partitioningToOneService-multiinstance-redirecting.png)
+Just express the redirect-condition to be group messages, as expected by consumer instances.
+
+![Network](./article00048/redirectCondition.png)
+
+
+
+#### Try use subscription-filters
+
+You can just generate dedicated subscriptions, <br>
+which will **filter out** messages <br>
+from **partitions, relevant to a consumer-instance**.
+
+The instances will have to subscribe to different subscriptions then.
+
+
+![Network](./article00048/partitioningToOneService-multiinstance-subscriptionfilters.png)
+
+This is how to apply the **session-filters**.
+
+<https://learn.microsoft.com/en-us/azure/service-bus-messaging/topic-filters>
+
+
+![Network](./article00048/sessionFilters.png)
 
 
 ### Conclusion
