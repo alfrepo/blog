@@ -142,6 +142,36 @@ This is how to apply the **session-filters**.
 ![Network](./article00048/sessionFilters.png)
 
 
+#### Try use Azure-service-bus-namespace with partitioning enabled
+
+When a message is enqueued into a partitioned queue or topic, Service Bus checks for the presence of a **partition key**. If it finds one, it **selects the partition based on that key**.
+
+Scenario SessionId based Partitions
+
+    SessionId: If a message has the session ID property set, then Service Bus uses it as the partition key. This way, all messages that belong to the same session are handled by the same message broker. Sessions enable Service Bus to guarantee message ordering as well as the consistency of session states.
+
+
+Question: how to define a partition key, with **multiple sessionIds** ?
+
+See:
+<https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-partitioning#use-of-partition-keys>
+
+To create a namespace with partitioning enabled, set partitions to a number larger than 1 in the namespace properties section. In the example below a partitioned namespace is created with 4 partitions, and 1 messaging unit assigned to each partition. For more information, see Microsoft.ServiceBus namespaces template reference.
+
+
+<https://learn.microsoft.com/en-us/azure/service-bus-messaging/enable-partitions-premium>
+
+
+**Why this variant wont work!**
+
+- In Azure Service Bus, it’s **not possible to subscribe to a single partition only**. 
+- Hence one instance **can will not be able to choose**, which partition / sessionIds to consume.
+
+See 
+<https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-partitioning>
+
+
+
 ### Conclusion
 
 TODO
