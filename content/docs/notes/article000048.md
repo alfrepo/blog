@@ -79,21 +79,26 @@ So consumer  would scale horizontally.
 
 ![Network](./article00048/partitioningToOneService-multiinstance.png)
 
-#### Try use martialler
+#### Try use a "Redirecting Proxy"
 
-You could try implement a martialing azure function.
+You could try implement a Redirecting Proxy Azure-function.
+
+Which would redirect the messages from the original queues
+over all available consumer instances.
+
+But this task has a lot of challenges.
 
 - When **horizontal scaling of consumer happens**
-martialler would have to pause and wait for successful processing of all messages.
+Redirecting Proxy would have to pause and wait for successful processing of all messages.
 Otherwise it could happen, that partition-message would be distributed to another instance and finish earlier than predecessor.
 
-- martialler would have to **wait
+- Redirecting Proxy would have to **wait
 with marking the message as "succesful"**,
 till the consumer-instance reported successful processing. Otherwise the message might be lost, when the consumer-instance fails.
 
 Its difficult to implement.
 
-Also martialler might become a bottleneck.
+Also Redirecting Proxy might become a bottleneck.
 
 ![Network](./article00048/partitioningToOneService-multiinstance-marshaller.png)
 
