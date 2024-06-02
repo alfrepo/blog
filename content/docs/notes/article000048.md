@@ -165,7 +165,7 @@ To create a namespace with partitioning enabled, set partitions to a number larg
 **Why this variant wont work!**
 
 - In Azure Service Bus, it’s **not possible to subscribe to a single partition only**. 
-- Hence one instance **can will not be able to choose**, which partition / sessionIds to consume.
+- Hence one instance **will not be able to choose** the partition / sessionIds to consume.
 
 See 
 <https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-partitioning>
