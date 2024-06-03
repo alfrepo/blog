@@ -33,11 +33,23 @@ Source Martin Fowler, Evan Bottcher: <https://martinfowler.com/articles/talk-abo
 
 #### Which models have I seen?
 
-
-
+##### Only the platform
 
 ![Network](./article00049/platformteam_model1.drawio.png)
 Source: <https://internalplatforms.com/>
+
+##### Unified business service layery
+
+![Network](./article00049/platformteam_model2.png)
+
+
+#### How to measure Platform-as-a-Product?
+
+Bei einem Platform-as-a-Product-Ansatz sollten vier Elemente berücksichtigt werden: 
+ - Plattform Value (Strategie), 
+ - Plattform Customers, 
+ - Plattform/Developer Experience 
+ - Adoption Cycle.
 
 
 
