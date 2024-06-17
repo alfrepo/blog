@@ -1,5 +1,5 @@
 ---
-title: What are platform teams.
+title: IoT Architecture. AWS vs CNCF Cloud Native Compute Foundation
 time: 2024-06-16 20:00:00
 description: >
   IoT Architecture. AWS vs CNCF Cloud Native Compute Foundation
