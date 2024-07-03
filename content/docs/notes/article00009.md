@@ -10,6 +10,13 @@ authors:
 tags:
   - example_case
   - view4+1_documentation
+  - layers
+  - diagram
+  - architecture
+  - integration
+  - interaction
+  - intelligence
+  - information
 ---
 
 
