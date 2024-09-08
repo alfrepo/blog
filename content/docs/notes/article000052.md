@@ -1,6 +1,6 @@
 ---
 title: Zededa
-time: 2024-07-03 20:00:00
+time: 2024-09-08 20:00:00
 description: >
   zededa.com
 
