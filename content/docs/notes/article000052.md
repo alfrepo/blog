@@ -57,7 +57,8 @@ https://integrated-controls.com/what-are-the-5-levels-of-automation/
 - available apps for local GUIs?
 
 
-## Glossary 
+### List relevant norms
+
 
 
 
