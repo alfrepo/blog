@@ -15,6 +15,9 @@ tags:
 
 ## Intro
 
+
+![Network](./article00055/itvsot.drawio.png)
+
 ### Purdue Model
 
 What’s the Purpose of the Purdue Model?
@@ -61,4 +64,20 @@ Finally, in a converged IT and OT environment, security teams need to reconsider
 ### Fieldbus
 
 [![Financial Services AWS](https://img.youtube.com/vi/ndc6at_d7uQ/0.jpg)](https://youtu.be/ndc6at_d7uQ?si=Xl9-fGEMvtFqE-hu&t=48 "Data+AI Data Mesh")
+
+
+### Fieldbus Protocol "ControlNet"
+ControlNet is an open industrial network protocol belonging to the Common Industrial Protocol (CIP) family.
+
+ControlNet is included in the EN 50170 and IEC 61158 standards.
+
+### Fieldbus Protocol "Profibus"
+
+Is a standard for fieldbus communication in automation technology and was first promoted in 1989 by BMBF (German department of education and research) and then used by Siemens.
+
+Profibus is openly published as type 3 of IEC 61158/61784-1.
+
+### Fieldbus Protocol "MQTT"
+
+IoT Native protocol.
 
