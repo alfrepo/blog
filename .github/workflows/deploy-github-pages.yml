@@ -26,36 +26,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v3
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
       - name: ls
         run: ls
       - name: Install MkDocs and Material for MkDocs via script
         run: bash ./shell/installmkdocs.sh
-
-# not needed anymore . Using install.sh
-#      - name: Install MkDocs and Material for MkDocs
-#        run: pip install mkdocs[i18n] mkdocs-material markdown-include mkdocs-awesome-pages-plugin mkdocs-material-extensions mkdocs-blogging-plugin mkdocs-glightbox mkdocs-toc-sidebar-plugin mkdocs-mermaid2-plugin
-
       - name: Install Pillow and CairoSVG (required for social card generation)
         run: pip install pillow cairosvg
       - name: Setup caching
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           key: ${{ github.sha }}
           path: .cache
-      - name: Build site (_site directory name is used for Jekyll compatiblity)
+      - name: Build site (_site directory name is used for Jekyll compatibility)
         run: mkdocs build --config-file ./content/mkdocs.yml --site-dir $GITHUB_WORKSPACE/_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-
-
-
+        uses: actions/upload-pages-artifact@v2
 
   # Deployment job
   deploy:
@@ -67,4 +59,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
