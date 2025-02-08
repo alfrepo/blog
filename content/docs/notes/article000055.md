@@ -18,6 +18,16 @@ tags:
 
 ![Network](./article00055/itvsot.drawio.png)
 
+Safety is paramount in OT.
+"Physical safety" outweight "confidentiality".
+This is what makes OT security different from IT.
+
+Why do we have to anonymize surveillance videos then?
+What does it mean for data confidentiality? GDPR? Datenschutzgesetz?
+
+Do someone know, what the law say about it?
+
+
 ### Purdue Model
 
 What’s the Purpose of the Purdue Model?
@@ -51,6 +61,23 @@ The first step toward that goal is by establishing comprehensive visibility into
 Finally, in a converged IT and OT environment, security teams need to reconsider their management and reporting structure. Siloed physical security, OT security, IT security and supply chain teams need to be reorganized to ensure an effective security strategy that spans IT and OT environments. 
 
  - <https://www.forbes.com/councils/forbestechcouncil/2022/01/18/a-reimagined-purdue-model-for-industrial-security-is-possible/>
+
+
+## Protocols in the OT world
+
+Sure, here is the table you requested:
+
+| Category                    | Protocols                                               |
+|-----------------------------|---------------------------------------------------------|
+| Process Automation          | CIP, Modbus, DNP3, EtherNet/IP, HART, PROFINET, GE SRTP |
+| Industrial Control Systems  | OPC, OPC UA, OMG DDS, MTConnect, Modbus                 |
+| Building Management Systems | BACnet, LonTalk, Modbus, ZigBee                         |
+| Power System Automation     | DNP3, IEC-60870-5, IEC-61850, ICCP                      |
+| Automatic Meter Reading     | IEC-61107, ZigBee, Modbus                               |
+| Automotive Vehicle          | CAN, FlexRay, LIN                                       |
+
+I hope this is helpful! Let me know if you have any other questions.
+
 
 ## Links
 

@@ -1,6 +1,6 @@
 ---
 title:  Intro AI for Java Dev
-time: 2024-10-13 20:00:00
+time: 2025-02-08 20:00:00
 description: >
    Intro into AI for Java Developers. My path into the AI.
 
