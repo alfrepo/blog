@@ -149,3 +149,28 @@ Like
 <https://www.zendesk.de/pricing/>
 
 
+## Option4: Use the "Gemini kill RAG" alternative
+
+
+
+
+```
+Google Just Killed RAG 🤯
+I just parsed 6,000 pages with >99% accuracy—for just $1.
+```
+<https://www.linkedin.com/feed/update/urn:li:activity:7295488197940166656/>
+
+
+But teh DB is still needed
+
+```
+“what’s the lifespan of the context cache”? As far as I can tell, it’s only a few hours at best. 
+````
+
+But there is a solution, which actually replaces the load, split, embed part 
+
+- Use Gemini 2.0 Flash to convert PDF pages directly into chunked text.
+- Store chunks in KDB.AI for vector search.
+- Tie it all together in a RAG workflow.
+
+See <https://ai.gopubby.com/10x-cheaper-pdf-processing-ingesting-and-rag-on-millions-of-documents-with-gemini-2-0-flash-8a93dbbb3b54>
