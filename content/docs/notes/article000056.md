@@ -29,7 +29,7 @@ Helpful comprehensive courses
 
 - [Building an In-House LLM Application with Spring AI and Ollama: A Comprehensive Tutorial](https://delta-dev-software.fr/building-an-in-house-llm-application-with-spring-ai-and-ollama-a-comprehensive-tutorial)
 - [Detect objects with Raspberry Pi using Google Coral Edge TPU](https://anttihavanko.medium.com/detect-objects-with-raspberry-pi-using-google-coral-edge-tpu-15f9a46c317a)
-
+- [ML AI Models](https://viso.ai/deep-learning/ml-ai-models/)
 
 
 ## How to execute models
@@ -47,11 +47,11 @@ The tools in the table (Llama.cpp, TensorFlow Lite, etc.) are the **engines**. T
 
 ### Tools Potentially Suitable for Resource-Constrained/Edge Deployments
 
-| Tool                | Description                                                                       | Key Features                                                                                                                | OS Support                                                    | LLM Format Support                                           | Comparison Criteria                                                                                                                                                                                                                                                             |
-|---------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Llama.cpp**       | Open-source tool for running Llama-based models efficiently on local hardware.    | - Works on GPUs and CPUs<br> - Lightweight and resource-friendly                                                            | Linux, macOS, Windows                                         | GGML (GGML quantizations), potentially others via conversion | - **Hardware compatibility:** Excellent (GPUs and CPUs)<br> - **Ease of use:** Moderate (requires some technical knowledge)<br> - **Model support:** Primarily Llama-based, but expanding<br> - **Performance:** Efficient<br> - **Customization:** High                        |
-| **GPT4All**         | Tool for running GPT models locally.                                              | - Pre-trained GPT models<br> - Efficient on standard hardware (even CPUs)                                                   | Windows, macOS, Linux                                         | GPT4All format, often based on GGML                          | - **Hardware compatibility:** Excellent (CPUs and GPUs)<br> - **Ease of use:** Moderate<br> - **Model support:** GPT models<br> - **Performance:** Good<br> - **Customization:** Moderate                                                                                       |
-| **TensorFlow Lite** | TensorFlow's framework for deploying models on mobile, embedded, and IoT devices. | - Model optimization and quantization<br> - Supports various hardware accelerators<br> - Designed for low latency inference | Android, iOS, Linux, macOS, Windows (and other embedded OSes) | TensorFlow Lite (.tflite)                                    | - **Hardware compatibility:** Excellent (mobile, embedded, and desktop)<br> - **Ease of use:** Moderate (requires TensorFlow knowledge)<br> - **Model support:** TensorFlow models (converted to .tflite)<br> - **Performance:** Highly optimized<br> - **Customization:** High |
+| Tool                             | Description                                                                       | Key Features                                                                                                                | OS Support                                                    | LLM Format Support                                           | Comparison Criteria                                                                                                                                                                                                                                                             |
+|----------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Llama.cpp**                    | Open-source tool for running Llama-based models efficiently on local hardware.    | - Works on GPUs and CPUs<br> - Lightweight and resource-friendly                                                            | Linux, macOS, Windows                                         | GGML (GGML quantizations), potentially others via conversion | - **Hardware compatibility:** Excellent (GPUs and CPUs)<br> - **Ease of use:** Moderate (requires some technical knowledge)<br> - **Model support:** Primarily Llama-based, but expanding<br> - **Performance:** Efficient<br> - **Customization:** High                        |
+| **GPT4All**                      | Tool for running GPT models locally.                                              | - Pre-trained GPT models<br> - Efficient on standard hardware (even CPUs)                                                   | Windows, macOS, Linux                                         | GPT4All format, often based on GGML                          | - **Hardware compatibility:** Excellent (CPUs and GPUs)<br> - **Ease of use:** Moderate<br> - **Model support:** GPT models<br> - **Performance:** Good<br> - **Customization:** Moderate                                                                                       |
+| **TensorFlow Lite (now LiteRT)** | TensorFlow's framework for deploying models on mobile, embedded, and IoT devices. | - Model optimization and quantization<br> - Supports various hardware accelerators<br> - Designed for low latency inference | Android, iOS, Linux, macOS, Windows (and other embedded OSes) | TensorFlow Lite (.tflite)                                    | - **Hardware compatibility:** Excellent (mobile, embedded, and desktop)<br> - **Ease of use:** Moderate (requires TensorFlow knowledge)<br> - **Model support:** TensorFlow models (converted to .tflite)<br> - **Performance:** Highly optimized<br> - **Customization:** High |
 
 ### Formats of models
 
@@ -87,7 +87,7 @@ The tools in the table (Llama.cpp, TensorFlow Lite, etc.) are the **engines**. T
 
 ## The Hardware
 
-### For Tensorflow ### 
+### For Tensorflow
 A USB accessory that brings accelerated ML inferencing to existing systems. Works with Linux, Mac, and Windows systems.
 
 <https://coral.ai/products/accelerator/>
@@ -100,7 +100,7 @@ PyTorch's ecosystem: PyTorch has its own ecosystem and model formats. Different 
 ![Vision](https://www.pi-shop.ch/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/a/c/accelerator-inhand.jpg)
 
 
-### For Tensorflow ### 
+### For PyTorch
 The NVIDIA® Jetson Nano™ 2GB Developer Kit
 
 Can run **PyTorch** models more directly, especially with its powerful GPU. Especially **EdgeFace**.
