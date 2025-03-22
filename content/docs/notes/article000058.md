@@ -67,6 +67,18 @@ AI-powered coding assistants have become increasingly popular. GitHub Copilot, d
 
 Has Idea Community integration.
 
+```
+Set-Location ~
+docker run -it --gpus all -p 8080:8080 -v $HOME/.tabby:/data tabbyml/tabby serve --model StarCoder-1B --device cuda --chat-model Qwen2-1.5B-Instruct
+```
+
+Then use the URI in browser to set up the server
+
+ ![Network](./article00058/tabby.png)
+ ![Network](./article00058/tabbyui.png)
+ ![Network](./article00058/tabbytoken.png)
+
+
 <https://github.com/TabbyML/tabby>
 
 ##### Llama Coder
