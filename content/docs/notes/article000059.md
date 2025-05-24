@@ -79,21 +79,19 @@ The API should expose a clear and intuitive set of functions for retrieving and 
 
 Examples of such API methods include:
 
-
--   `getFloorplanGeometry(floorId: string)` : Promise<GeoJSONFeatureCollection>`: Retrieves the geometric data for all elements on a specified floor, perhaps as a GeoJSON FeatureCollection.
--   `getElementProperties(elementId: string): Promise<Object>`: Fetches all semantic properties for a given space or asset ID from the knowledge graph.
--   `getRelatedElements(elementId: string, relationshipType: string, direction: 'incoming' | 'outgoing' | 'both'): Promise<Array<Object>>`: Finds elements connected to a given element by a specific relationship type (e.g., `fp:containsElement`, `fp:connectedTo`).
--   `findElementsBySemanticType(typeURI: string): Promise<Array<Object>>`: Returns all elements (spaces or assets) of a given semantic type.
--   `findElementsByPropertyValue(propertyURI: string, value: any): Promise<Array<Object>>`: Searches for elements that have a specific property with a given value.
--   `getShortestPath(startElementId: string, endElementId: string): Promise<Array<string>>`: If a navigation graph is pre-calculated or can be queried, this returns a sequence of space/node IDs representing the shortest path.
+  -   `getFloorplanGeometry(floorId: string)` : Promise<GeoJSONFeatureCollection>`: Retrieves the geometric data for all elements on a specified floor, perhaps as a GeoJSON FeatureCollection.
+  -   `getElementProperties(elementId: string): Promise<Object>`: Fetches all semantic properties for a given space or asset ID from the knowledge graph.
+  -   `getRelatedElements(elementId: string, relationshipType: string, direction: 'incoming' | 'outgoing' | 'both'): Promise<Array<Object>>`: Finds elements connected to a given element by a specific relationship type (e.g., `fp:containsElement`, `fp:connectedTo`).
+  -   `findElementsBySemanticType(typeURI: string): Promise<Array<Object>>`: Returns all elements (spaces or assets) of a given semantic type.
+  -   `findElementsByPropertyValue(propertyURI: string, value: any): Promise<Array<Object>>`: Searches for elements that have a specific property with a given value.
+  -   `getShortestPath(startElementId: string, endElementId: string): Promise<Array<string>>`: If a navigation graph is pre-calculated or can be queried, this returns a sequence of space/node IDs representing the shortest path.
 
 Internally, these API methods would construct and execute appropriate QUERY LANGUAGE queries (potentially using recursive Common Table Expressions for graph traversals like pathfinding or hierarchical queries against the SQLite tables within the GeoPackage. 
 
 
  ![assetManagementSymanticWeb](./article00059/assetManagementSymanticWeb.drawio.png)
 
-
-
+ 
 ## Solutions Space
 
 
@@ -105,7 +103,39 @@ TODO
 ###  Offline Floorplan Export and Programmatic Access
 
 
-Option1: 
+#### Option1: archilogic.com
+
+<https://www.archilogic.com/>
+
+![assetManagementSymanticWeb](./article00059/archilogic_editor.png)
+
+
+#### Option2: smplrspace
+
+
+#### Option3: situm
+
+Situm is an indoor and outdoor positioning platform that makes it really easy to build mapping and location based solutions for smartphones, websites and kiosks.
+
+<https://situm.com/docs/introduction-to-situm/>
+
+
+
+#### Option4: mappedin
+
+- OFFLINE capable. Offline Loading from MVF Files <https://developer.mappedin.com/docs/demo-keys-and-maps>
+- WayFinding YES. <https://developer.mappedin.com/showcase/item?itemSlug=qr-code-to-mappedin-viewer>
+- Demo Maps: <https://developer.mappedin.com/docs/demo-keys-and-maps>
+- 
+
+
+![mappedIn_viewer_wayfinding](./article00059/mappedIn_viewer_wayfinding.png)
+
+
+
+
+
+
 
 
 ###  Maintenance of Semantic 2D Floorplans (Online / Offline)
@@ -137,6 +167,10 @@ Option1:
 
 
 ###  Offline Viewer
+
+#### Option2: smplrspace
+
+<https://www.smplrspace.com/>
 
 
 
