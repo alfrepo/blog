@@ -35,10 +35,10 @@ Comparison 2D geometry.
 ##### Metadata. Integrating the Knowledge Graph with Floorplan Visualizations
   The true power of the semantic floorplan system is realized when the **knowledge graph is seamlessly integrated with the visual representation**, allowing users to interact with and understand the data intuitively.
 
-  *   Linking Visual Elements (e.g., SVG IDs, GeoJSON Feature IDs) to Knowledge Graph Nodes
-      A robust and consistent linking mechanism between the visual elements on the floorplan and their corresponding semantic entities in the knowledge graph is fundamental.
-      
-  *   **Knowledge Graph Node IDs:** The nodes in the knowledge graph representing these building elements (spaces, assets) must also use these same unique identifiers.
+  - Linking Visual Elements (e.g., SVG IDs, GeoJSON Feature IDs) to Knowledge Graph Nodes
+    A robust and consistent linking mechanism between the visual elements on the floorplan and their corresponding semantic entities in the knowledge graph is fundamental.
+    
+  - **Knowledge Graph Node IDs:** The nodes in the knowledge graph representing these building elements (spaces, assets) must also use these same unique identifiers.
 
   This consistent use of identifiers creates a direct bridge: a click on an SVG element yields its ID, which is then used to query the knowledge graph for associated semantic information. 
   
@@ -80,17 +80,17 @@ The API should expose a clear and intuitive set of functions for retrieving and 
 Examples of such API methods include:
 
 
-  *   `getFloorplanGeometry(floorId: string)` : Promise<GeoJSONFeatureCollection>`: Retrieves the geometric data for all elements on a specified floor, perhaps as a GeoJSON FeatureCollection.
-  *   `getElementProperties(elementId: string): Promise<Object>`: Fetches all semantic properties for a given space or asset ID from the knowledge graph.
-  *   `getRelatedElements(elementId: string, relationshipType: string, direction: 'incoming' | 'outgoing' | 'both'): Promise<Array<Object>>`: Finds elements connected to a given element by a specific relationship type (e.g., `fp:containsElement`, `fp:connectedTo`).
-  *   `findElementsBySemanticType(typeURI: string): Promise<Array<Object>>`: Returns all elements (spaces or assets) of a given semantic type.
-  *   `findElementsByPropertyValue(propertyURI: string, value: any): Promise<Array<Object>>`: Searches for elements that have a specific property with a given value.
-  *   `getShortestPath(startElementId: string, endElementId: string): Promise<Array<string>>`: If a navigation graph is pre-calculated or can be queried, this returns a sequence of space/node IDs representing the shortest path.
+-   `getFloorplanGeometry(floorId: string)` : Promise<GeoJSONFeatureCollection>`: Retrieves the geometric data for all elements on a specified floor, perhaps as a GeoJSON FeatureCollection.
+-   `getElementProperties(elementId: string): Promise<Object>`: Fetches all semantic properties for a given space or asset ID from the knowledge graph.
+-   `getRelatedElements(elementId: string, relationshipType: string, direction: 'incoming' | 'outgoing' | 'both'): Promise<Array<Object>>`: Finds elements connected to a given element by a specific relationship type (e.g., `fp:containsElement`, `fp:connectedTo`).
+-   `findElementsBySemanticType(typeURI: string): Promise<Array<Object>>`: Returns all elements (spaces or assets) of a given semantic type.
+-   `findElementsByPropertyValue(propertyURI: string, value: any): Promise<Array<Object>>`: Searches for elements that have a specific property with a given value.
+-   `getShortestPath(startElementId: string, endElementId: string): Promise<Array<string>>`: If a navigation graph is pre-calculated or can be queried, this returns a sequence of space/node IDs representing the shortest path.
 
 Internally, these API methods would construct and execute appropriate QUERY LANGUAGE queries (potentially using recursive Common Table Expressions for graph traversals like pathfinding or hierarchical queries against the SQLite tables within the GeoPackage. 
 
 
- ![Network](./article00059/assetManagementSymanticWeb.drawio.png)
+ ![assetManagementSymanticWeb](./article00059/assetManagementSymanticWeb.drawio.png)
 
 
 
