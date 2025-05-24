@@ -1,6 +1,6 @@
 ---
 title:  Comparison AI assistants
-time: 2025-02-33 20:00:00
+time: 2025-02-20 20:00:00
 description: >
    Notes about AI and AI coding assistant assistants
 
