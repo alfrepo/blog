@@ -25,6 +25,16 @@ Comparison 2D geometry.
 
 ## Problem
 
+
+###  Seeding of Maps
+
+- Popular map standards must be accepted
+- Various quality levels must be supported
+  - from simple as images
+  - over vectorized floorplans
+  - to semantically annotated DWG floorplan files
+
+
 ###  Maintenance of Semantic 2D Floorplans (Online / Offline)
 
 - Data acquisition methods (including digitization and AI-powered semantic annotation)
@@ -92,12 +102,39 @@ Internally, these API methods would construct and execute appropriate QUERY LANG
  ![assetManagementSymanticWeb](./article00059/assetManagementSymanticWeb.drawio.png)
 
  
+
 ## Solutions Space
+
+
+###  Seeding of Maps
+
+#### Option4: mappedin
+
+Supports 
+
+Below is a table outlining common floorplan file formats and a key advantage of each:
+
+| Format | Advantage                                                                                  |
+|:-------|:-------------------------------------------------------------------------------------------|
+| JPG    | Offers good compression for smaller file sizes, making it easy to share and view quickly.  |
+| PNG    | Supports lossless compression and transparency, ideal for high-quality web display.        |
+| PDF    | Ensures consistent document appearance and printability across different devices and OS.   |
+| DXF    | Provides wide compatibility for exchanging vector-based drawing data between CAD programs. |
+| DWG    | Is the native format for AutoCAD, offering full fidelity and advanced features within it.  |
+
 
 
 
 ###  Maintenance of Semantic 2D Floorplans (Online / Offline)
-TODO
+
+
+#### Option4: mappedin
+
+Must be done in a dedicated Graph DB.
+With references to the IDs in the geometry file.
+
+The online Editor allow to maintain maps
+![mappedIn_viewer_wayfinding](./article00059/mappedIn_wayfindingAnnotation.png)
 
 
 ###  Offline Floorplan Export and Programmatic Access
@@ -123,16 +160,9 @@ Situm is an indoor and outdoor positioning platform that makes it really easy to
 
 #### Option4: mappedin
 
-- OFFLINE capable. Offline Loading from MVF Files <https://developer.mappedin.com/docs/demo-keys-and-maps>
-- WayFinding YES. <https://developer.mappedin.com/showcase/item?itemSlug=qr-code-to-mappedin-viewer>
-- Demo Maps: <https://developer.mappedin.com/docs/demo-keys-and-maps>
-- 
+- OFFLINE YES. Offline Loading from MVF Files <https://developer.mappedin.com/docs/demo-keys-and-maps>
 
-
-![mappedIn_viewer_wayfinding](./article00059/mappedIn_viewer_wayfinding.png)
-
-
-
+The Mappedin Venue Format (MVF) bundle contains a number of GeoJSON and JSON files which describe the geometry of the map and suggest how it should be rendered. These files are grouped into Core (necessary geometry) and Extensions (render styles).
 
 
 
@@ -141,29 +171,19 @@ Situm is an indoor and outdoor positioning platform that makes it really easy to
 ###  Maintenance of Semantic 2D Floorplans (Online / Offline)
 
 
+#### Option4: mappedin
+Happens Online, in the mappedIn portal.
 
-### Metadata. 
 
-
-#### Metadata. Integrating the Knowledge Graph with Floorplan Visualizations
+### Metadata. Integrating the Knowledge Graph with Floorplan Visualizations
   
-  
 
+#### Option4: mappedin
 
-##### Metadata. Spatial Graph.
+MVF is a rich format.
 
-
-
-##### Metadata. Assets
-
-
-
-##### Metadata. Spaces
-
-
-
-###  Offline Floorplan Export and Programmatic Access
-
+- Has Assets, Spaces, Relationships <https://docs.mappedin.com/web/v6/latest/types/TMVF.html>
+- has a rich Data Model: <https://developer.mappedin.com/docs/mvf/v2/data-model>
 
 
 ###  Offline Viewer
@@ -174,4 +194,39 @@ Situm is an indoor and outdoor positioning platform that makes it really easy to
 
 
 
+#### Option4: mappedin
+
+- Demo Maps: <https://developer.mappedin.com/docs/demo-keys-and-maps>
+
+
+
+
+##### INTERACTIVE: YES
+
+
+Interactive maps are rendered in "deck.gl"
+Example:
+<https://app.mappedin.com/map/64ef49e662fd90fe020bee61?category=cat_7e1d3e2c075dcd2f&accessible=true>
+
+![mappedIn_viewer_wayfinding](./article00059/mappedIn_viewer_interactiveoffice.png)
+
+
+
+##### WayFinding YES
+
+Can support wayfinding.
+
+TODO Requirements?
+
+Example:
+<https://developer.mappedin.com/showcase/item?itemSlug=qr-code-to-mappedin-viewer>
+
+![mappedIn_viewer_wayfinding](./article00059/mappedIn_viewer_wayfinding.png)
+
+
 ### Traversable Knowledge Graph for Enhanced Floorplan Intelligence
+
+
+#### Option4: mappedin
+
+Requires an own graph in a graph DB.
