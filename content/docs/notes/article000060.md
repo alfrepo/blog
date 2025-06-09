@@ -126,20 +126,6 @@ And "web-push"
 
 <https://www.youtube.com/watch?v=M5sbGvW3S4I>
 
-<https://ntfy.sh/>
-
-
-Der ntfy.sh-Dienst selbst ist ein Server. Er ist dafür zuständig, Nachrichten von Absendern (Publishers) entgegenzunehmen, sie zu speichern und an die entsprechenden Abonnenten (Subscribers) weiterzuleiten.
-Wenn Sie den öffentlichen ntfy.sh-Server nutzen (also ntfy.sh als URL für Ihre Nachrichten), dann senden Sie Ihre Daten an diesen Server.
-
-Sie haben aber auch die Möglichkeit, Ihren eigenen ntfy-Server zu hosten. Das ist der "Serverseite"-Aspekt, der Ihnen volle Kontrolle über Ihre Daten und die Funktionsweise des Dienstes gibt. Dies ist besonders bei sensiblen Informationen oder hohen Anforderungen an die Zuverlässigkeit und Leistung empfehlenswert. Der ntfy-Server ist als Binärdatei, Docker-Image oder über Pakete installierbar.
-
-Absender (Publishers): Wenn Sie eine Benachrichtigung senden, agieren Sie als Client. Das kann ein Skript (z.B. Bash, Python), eine Anwendung oder einfach ein curl-Befehl auf Ihrer Kommandozeile sein. Dieser Client sendet eine HTTP POST/PUT-Anfrage mit der Nachricht an den ntfy-Server.
-
-
-<https://github.com/gotify/server>
-
-We wanted a simple server for sending and receiving messages (in real time per WebSocket). For this, not many open source projects existed and most of the existing ones were abandoned. Also, a requirement was that it can be self-hosted. We know there are many free and commercial push services out there.
 
 
 ##### Requirement5: reduced operations effort
