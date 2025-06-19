@@ -170,8 +170,18 @@ def bubble_sort(items):
 
 ## Table
 
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| `GET`       | :material-check:     Fetch resource  |
-| `PUT`       | :material-check-all: Update resource |
-| `DELETE`    | :material-close:     Delete resource |
+| Method   | Description                          |
+|----------|--------------------------------------|
+| `GET`    | :material-check:     Fetch resource  |
+| `PUT`    | :material-check-all: Update resource |
+| `DELETE` | :material-close:     Delete resource |
+
+
+## List
+
+
+- the first  **list level can contain frmating** <br>
+  and new lines <br>
+  and <br>
+  - can 
+  - have a second layer of the list
