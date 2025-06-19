@@ -1,8 +1,8 @@
 ---
-title: self hosted push notifications
+title: Self hosted push notifications
 time: 2025-06-09 23:00:00
 description: >
-   self hosted push notifications
+   Self hosted push notifications
 
 authors:
     - Alexander Friesen
