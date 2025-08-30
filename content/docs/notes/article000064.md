@@ -1,13 +1,18 @@
 ---
-title: Data Protection Regulation
+title: Cell experiments project
 time: 2025-08-30 11:00:00
 description: >
-   Data Protection Regulation
+   Cell experiments project
 
 authors:
     - Alexander Friesen
 tags:
-  - portable cells project
+  - portable 
+  - cells
+  - cell architecture
+  - architecture
+  - code
+  - experiments
 
 
 
