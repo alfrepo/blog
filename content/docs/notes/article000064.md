@@ -160,6 +160,7 @@ Hello World to access my API and
 |-----------------------|----------------|--------------------------|
 | Delivery package      | Docker Cpmpose | Simplicity of deployment |
 | Delivery inside of VM | Ansible        | Simplicity of deployment |
+| CICD                  | GitHub CICD    |                          |
 
 ## Quality Requirements
 
