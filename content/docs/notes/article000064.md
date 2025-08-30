@@ -34,6 +34,7 @@ The goal:
  - use as many modern methods as possible
  - vibe coding
  - ai agents
+ - define common dockerization patterns
 
 
  ![Network](./article00064/1.png)
@@ -58,6 +59,38 @@ Demonstrating some of
     - Moderation
 
 <https://spring.io/projects/spring-ai>
+
+
+
+```text
+cell-spring-boot/
+├── .mvn/                      # Maven wrapper files
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── cellproject/
+│   │   │               ├── Application.java         # Main Spring Boot application class
+│   │   │               ├── config/                  # Spring configuration (e.g., SecurityConfig)
+│   │   │               ├── controller/              # REST APIs (e.g., ChatController)
+│   │   │               ├── model/                   # Data Transfer Objects (DTOs) and Entities
+│   │   │               ├── repository/              # Data access layer (e.g., Spring Data JPA)
+│   │   │               └── service/                 # Business logic (e.g., AiService)
+│   │   └── resources/
+│   │       ├── static/                # Static assets (not typical for a backend service)
+│   │       ├── templates/             # Server-side templates (if any)
+│   │       └── application.yml        # Spring Boot configuration
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── example/
+│                   └── cellproject/   # Unit and integration tests
+├── Dockerfile                 # Builds the Docker image for this cell
+├── mvnw                       # Maven wrapper executable (Linux/macOS)
+├── mvnw.cmd                   # Maven wrapper executable (Windows)
+└── pom.xml                    # Maven project configuration and dependencies
+```
 
 
 ### Cell: Angular PrimeNG based UI & Progressive Web App
@@ -105,7 +138,11 @@ Hello World to access my API and
 
 
 ## Constraints
-NONE
+
+
+
+
+
 
 ## Solution Strategy
 
@@ -118,6 +155,11 @@ NONE
 ## Cross-cutting Concepts
 
 ## Architectural Decisions
+
+| Problem               | Decision       | Optimize for attribute   |
+|-----------------------|----------------|--------------------------|
+| Delivery package      | Docker Cpmpose | Simplicity of deployment |
+| Delivery inside of VM | Ansible        | Simplicity of deployment |
 
 ## Quality Requirements
 
