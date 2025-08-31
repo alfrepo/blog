@@ -133,8 +133,39 @@ Clickhouse
 AI Dashboard
 
 
+### Cell: local RAG
+
+Deployment overview
+<https://medium.com/@miroslavmerreider/unlocking-the-power-of-local-offline-retrieval-augmented-generation-with-ollama-and-open-webui-19cd0bc67e81>
+
+
+Example with RAG
+<https://github.com/alexandrainst/alex-rag-webui>
+
+
+ ![Network](./article00064/3.webp)
+
+
+
+ - Start Ollama: The user initiates the Ollama application, which acts as the server for the local LLM.
+
+- Pull & Serve Llama 3: Ollama connects to the internet to download the Llama 3 model from Meta's repository and loads it onto the user's machine, making it ready for processing requests. 3.  Open WebUI Docker: The user runs Open WebUI as a Docker container, isolating the application and its dependencies.
+
+- User Interaction: The user opens a browser, navigates to the Open WebUI interface, and enters a question.
+
+- Process UI Requests: The Open WebUI container receives the user's question. It then sends this request to the Ollama server.
+
+- Process Model Answer: Ollama receives the question, processes it using the Llama 3 model, and generates a response.
+
+- Render Answer: The generated answer is sent back from Ollama to the Open WebUI container, which then displays the final response to the user's browser.
+
+- Web Search for RAG: Perform web searches using providers like SearXNG, Google PSE, Brave Search, serpstack, serper, Serply, DuckDuckGo, TavilySearch, SearchApi and Bing and inject the results directly into your chat experience.
+
 ### Flutter Mobile App.
 Hello World to access my API and 
+
+
+
 
 
 ## Constraints
