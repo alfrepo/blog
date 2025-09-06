@@ -63,33 +63,40 @@ Demonstrating some of
 
 
 ```text
-cell-spring-boot/
-├── .mvn/                      # Maven wrapper files
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── example/
-│   │   │           └── cellproject/
-│   │   │               ├── Application.java         # Main Spring Boot application class
-│   │   │               ├── config/                  # Spring configuration (e.g., SecurityConfig)
-│   │   │               ├── controller/              # REST APIs (e.g., ChatController)
-│   │   │               ├── model/                   # Data Transfer Objects (DTOs) and Entities
-│   │   │               ├── repository/              # Data access layer (e.g., Spring Data JPA)
-│   │   │               └── service/                 # Business logic (e.g., AiService)
-│   │   └── resources/
-│   │       ├── static/                # Static assets (not typical for a backend service)
-│   │       ├── templates/             # Server-side templates (if any)
-│   │       └── application.yml        # Spring Boot configuration
-│   └── test/
-│       └── java/
-│           └── com/
-│               └── example/
-│                   └── cellproject/   # Unit and integration tests
-├── Dockerfile                 # Builds the Docker image for this cell
-├── mvnw                       # Maven wrapper executable (Linux/macOS)
-├── mvnw.cmd                   # Maven wrapper executable (Windows)
-└── pom.xml                    # Maven project configuration and dependencies
+projects-root/
+├── digital.alf.customsbs/
+│   ├── .gradle/
+│   │   └── ...
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── digital/
+│   │   │   │       └── alf/
+│   │   │   │           └── customsbs/
+│   │   │   │               ├── CustomSbsApplication.java
+│   │   │   │               ├── config/
+│   │   │   │               ├── controller/
+│   │   │   │               ├── model/
+│   │   │   │               ├── repository/
+│   │   │   │               └── service/
+│   │   │   └── resources/
+│   │   │       ├── static/
+│   │   │       └── application.yml
+│   │   └── test/
+│   │       └── java/
+│   │           └── digital/
+│   │               └── alf/
+│   │                   └── customsbs/
+│   ├── build.gradle
+│   ├── Dockerfile
+│   ├── gradlew
+│   ├── gradlew.bat
+│   └── settings.gradle
+│
+├── another-project/
+│   └── ...
+│
+└── docker-compose.yml 
 ```
 
 
@@ -162,7 +169,22 @@ Example with RAG
 - Web Search for RAG: Perform web searches using providers like SearXNG, Google PSE, Brave Search, serpstack, serper, Serply, DuckDuckGo, TavilySearch, SearchApi and Bing and inject the results directly into your chat experience.
 
 ### Flutter Mobile App.
-Hello World to access my API and 
+Hello World to access my API.
+
+
+
+#### Business Case of App
+Use AI on Edge.
+Recognize hand written code (KLeiderbörse).
+Append to a Google Docs file, written in configured online store.
+
+Columns
+
+- code
+- price
+- date time
+- complete recognized string
+
 
 
 
