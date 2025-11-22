@@ -137,6 +137,12 @@ Should calculate physical access
 
 #### ACL
 
+- Principal
+- Action
+- Resource
+- Condition
+
+
 
 | Scenario                                    | Principal              | Action     | Resource                     | Condition                                                                   |
 |:--------------------------------------------|:-----------------------|:-----------|:-----------------------------|:----------------------------------------------------------------------------|
@@ -151,6 +157,8 @@ Should calculate physical access
 
 
 #### ABAC
+
+Format for the PIP.
 
 ``` yaml
 
@@ -216,6 +224,37 @@ spec:
 
 ```
 
+Additional information for PIP.
+About "training-vde-available-group".
+
+``` yaml
+employees:
+  - name: Anya Sharma
+    id: ES-4902
+    groups:
+      employee-group: true
+      training-vde-available-group: true
+  - name: Ben Carter
+    id: BC-3115
+    groups:
+      employee-group: true
+      training-vde-available-group: false
+  - name: Chloe Davis
+    id: CD-8877
+    groups:
+      employee-group: true
+      training-vde-available-group: false
+  - name: David Lee
+    id: DL-1020
+    groups:
+      employee-group: true
+      training-vde-available-group: true
+  - name: Eve Rodriguez
+    id: ER-5566
+    groups:
+      employee-group: true
+      training-vde-available-group: false
+```
 
 
 ### Cell:  BPM
