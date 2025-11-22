@@ -45,7 +45,7 @@ The goal:
 
 
 ### Cell: Custom Spring Boot service
-Spring Boot applicaiton
+Spring Boot application
 
 
 #### Feature: Spring AI
@@ -105,6 +105,116 @@ projects-root/
 The UI with
  - desktop
  - mobile experience
+
+### Cell: Physical access control
+
+Should calculate physical access 
+
+- implementing "PIP" using ABAC
+- interpreting into "PDP" using ACL
+- and making decisions in "PEP"
+
+
+
+ ![Network](./article00064/pep-pdp-pip.png)
+
+
+#### **Access Control Model Comparison: ACL vs. RBAC vs. ABAC**
+
+   * ACLs are the oldest and simplest model. They attach a list of permissions directly to a resource (like a file or a network port).  
+
+   * RBAC solves the scalability problem of ACLs by introducing an abstraction layer: the **Role**. You assign permissions to a role, and then assign users to that role.  
+
+   * ABAC is the most modern and flexible. It removes the reliance on static roles and makes access decisions based on evaluating a policy against a set of real-time attributes.  
+
+| Feature                       | Access Control Lists (ACL)                                                                                                   | Role-Based Access Control (RBAC)                                                                                                    | Attribute-Based Access Control (ABAC)                                                                                                                                                                    |
+|:------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Core Principle**            | **Resource-Centric:** Explicitly lists *who* (user/group) can do *what* on *this specific resource*.                         | **Role-Centric:** Access is granted based on a user's *job function* (Role).                                                        | **Policy-Centric:** Access is granted based on a dynamic set of **attributes**.                                                                                                                          |
+| **Key Question Asked**        | "Can *this specific user* (or group) read this file?"                                                                        | "What permissions does the *role* of 'Manager' have?"                                                                               | "Can a user from the 'Sales' department, located in 'NY' (User Attribute), 'Write' (Action Attribute) to a file tagged 'Confidential' (Resource Attribute) between 9am and 5pm (Environment Attribute)?" |
+| **Granularity & Flexibility** | **Fine-grained but static:** Great for a single resource, but cannot easily incorporate external context (like time of day). | **Medium:** Excellent for defining access based on functional duties, but poor at handling exceptions or dynamic, contextual rules. | **Highly Granular and Dynamic:** Supports complex, contextual rules that change in real-time based on any combination of attributes.                                                                     |
+
+
+
+#### ACL
+
+
+| Scenario                                    | Principal              | Action     | Resource                     | Condition                                                                   |
+|:--------------------------------------------|:-----------------------|:-----------|:-----------------------------|:----------------------------------------------------------------------------|
+| **1\. Standard Employee Site Access**       | Group: Employees       | Enter      | Site: Main Campus Building A | Authentication: Successful Badge Swipe                                      |
+| **2\. Management Office Zone Access**       | Group: Managers        | Enter/Exit | Zone: Executive Wing         | Time: 08:00 to 18:00 (Weekdays)                                             |
+| **3\. Restricted Data Center Access**       | User: ID: 87654        | Enter      | Zone: Data Center \- Rack 5  | Certification: "Server Admin L3" is true $\\wedge$ 2FA: Successful Bio-scan |
+| **4\. Maintenance Zone Access (Off-Hours)** | Group: Facilities Team | Enter/Exit | Zone: HVAC Mechanical Room   | Time: Outside 07:00 to 19:00                                                |
+| **5\. Visitor Access to Common Areas**      | Group: Visitors        | Enter      | Zone: Lobby & Cafeteria      | Escort: Employee ID: 12345 (must be present) $\\wedge$ Time: Before 17:00   |
+| **6\. Emergency Exit Usage**                | Group: All Users       | Exit       | Site: Any Exit Door          | Alarm: Fire Alarm is Active                                                 |
+| **7\. Contractor Access to Site**           | Group: Contractors     | Enter      | Site: Main Campus Building A | Date: Today is before Contract End Date $\\wedge$ Time: 09:00 to 16:00      |
+
+
+
+#### ABAC
+
+``` yaml
+
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: abac-enroll-restriction-time-bound
+  annotations:
+    policies.kyverno.io/description: |
+      Restricts the 'ENTER' operation on 'Facility' resources labeled 'location: 
+      "production-room"' to users possessing the 'training-vde-available-group' attribute. 
+      This restriction is only enforced during a critical, 
+      specific time window (2025-10-20T08:00:00Z to 2025-10-20T09:00:00Z) for members of the 'employee-group'.
+spec:
+  validationFailureAction: Enforce # Immediately block request
+  background: false
+  rules:
+    - name: deny-enroll-without-training-vde
+      match:
+        # 1. Subject Attribute: The group must be 'employee-group'
+        subjects:
+          - kind: Group
+            name: employee-group
+
+        # 2. Resource Attribute: The target resource must be one of the locations
+        resources:
+          kinds:
+            - Facility # Example: A Custom Resource for physical facilities
+          selector:
+            matchLabels:
+              location: "production-room"
+              # NOTE: A second rule or a more complex match for 'storage-room' would have to follow here.
+
+        # 3. Operation Attribute: The operation 'Enroll' (assumed as UPDATE)
+        operations:
+          - ENTER
+          - EXIT
+
+      # TEMPORAL PRECONDITION: The rule is ONLY executed if the time is within the window.
+      preconditions:
+        all:
+          # Define the 1-hour window
+          - key: "{{ time_between('{{ time_now_utc() }}', '2025-10-20T08:00:00Z', '2025-10-20T09:00:00Z') }}"
+            operator: Equals
+            value: true
+
+      # The ABAC logic (is only executed if the time condition is TRUE)
+      deny:
+        conditions:
+          all:
+            # Condition 1 (Positive Group): User is in the main group (Redundancy/Clarity)
+            - key: employee-group
+              operator: AnyIn
+              value: "{{ request.userInfo.groups }}"
+
+            # Condition 2 (Negative Attribute Check): The training attribute is missing
+            - key: "training-vde-available-group"
+              operator: AnyNotIn
+              value: "{{ request.userInfo.groups }}"
+
+      validate:
+        message: "ATTENTION: The 'Enroll' operation is only allowed for qualified personnel ('training-vde-available') during the critical time window (08:00-09:00 UTC).
+
+```
 
 
 ### Cell: IAM KeyCloack
