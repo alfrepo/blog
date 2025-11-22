@@ -217,6 +217,15 @@ spec:
 ```
 
 
+
+### Cell:  BPM
+
+Similar to Camunda BPM, or forks
+https://cibseven.org/preise/ - 71 forks and 219 stars
+
+
+
+
 ### Cell: IAM KeyCloack
 
 Should provide IAM for upper service.
@@ -224,6 +233,12 @@ Should provide IAM for upper service.
 Outcome:
 understand multi-tenancy, realms
 
+Integrate "Keycloack"
+
+
+### Cell: Authorization and Policy Decision Point 
+Integrate "Kyverno" as "POlicy Decision POint"
+https://www.strongdm.com/what-is/policy-decision-point-pdp
 
 ### Cell Analytics 
 
