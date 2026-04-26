@@ -27,6 +27,7 @@ For engineering organizations, this changes everything: how teams are structured
 - Define most important approaches to adoption of "Agentic AI coding" in software writing organizations
 - Define the techniques to manage an army of AI agents and ensure secure and well maintained software
 - Define the techniques to do SECURE coding with AI
+- Concretely establishing "Claude Code" as the best model for coding
 
 
 ## Approaches to Adopting Agentic AI Coding
@@ -234,6 +235,144 @@ For regulated industries, AI-generated code must be auditable:
 - Map agent contributions to compliance controls (e.g., PCI DSS, SOC 2, HIPAA)
 - Include agent identity in change management records
 - Periodically review retained logs for anomalies and policy violations
+
+---
+
+## Establishing Claude Code as the Best Model for Coding
+
+# Claude Code Deployment Proposal — 70 Developers
+
+## 1. Cost Model
+
+### Recommended Plan: Enterprise (Self-Serve or Sales-Assisted)
+
+With 70 developers who all need coding capabilities, the **Enterprise plan** is the right fit over Team.
+
+The Enterprise seat fee starts at **$20/seat/month**, billed annually. Usage is then billed separately at standard API rates on top of that, based on what your team actually consumes.
+
+There are no per-seat usage limits and no included token allowance. Admins can set spend limits at the organization and individual user levels to manage costs.
+
+**For 70 developers:**
+
+| Component | Detail | Est. Monthly Cost |
+|---|---|---|
+| Seat fee | 70 × $20/seat/month (annual) | **$1,400/month** |
+| API usage | Variable — depends on usage intensity | **$500–$3,000/month** typical |
+| **Total estimate** | | **~$2,000–$4,500/month** |
+
+**Why Enterprise over Team:**
+
+Claude Enterprise is the right choice for organizations that have engineering teams using Claude Code across large codebases and need centralized governance over how AI is used, accessed, and audited. It also provides SSO, SCIM, audit logs, and a **500K token context window** (vs 200K on Team) — critical for large codebase navigation.
+
+**Cost control levers available to you:**
+- Admins can set spending limits at the organization and individual user level to stay within budget while maintaining flexibility for essential work. Self-serve seat management lets you purchase new seats and provision users through the admin panel.
+- Use the **Compliance API** to monitor consumption per team or project and proactively cut waste.
+- Route background/batch agentic tasks through the **API directly** at lower cost, reserving subscriptions for interactive coding sessions.
+
+---
+
+## 2. Interaction Methods: IDEs + Console
+
+Your team uses **IntelliJ IDEA** and **VS Code** on Windows — both are natively supported.
+
+### VS Code Extension
+
+A native VS Code extension is available, providing a native panel, inline edits, and IDE-style diff reviews, including plan mode and edit review. This is the most seamless experience: Claude appears as a panel inside VS Code, proposes changes as diffs, and the developer reviews and applies them without leaving the editor.
+
+**Recommended for:** most developers; lowest friction; best for feature implementation, refactoring, and in-context questions.
+
+### IntelliJ IDEA (JetBrains Plugin)
+
+The JetBrains plugin is installed via the JetBrains Marketplace (Settings → Plugins → search "Claude Code"). It uses the same credentials as the CLI. The plugin provides a chat experience with file references and conversation history, and configuration is shared via `~/.claude/settings.json`.
+
+Claude Code supports JetBrains IDEs through terminal integration. When you have TypeScript errors, ESLint warnings, or other diagnostics, there is no need to copy-paste error messages — Claude reads them from your IDE. Claude understands the IDE's file structure and can reference files directly.
+
+**Recommended for:** Java/Kotlin/backend developers on IntelliJ; effectively the same experience as VS Code.
+
+### Terminal / Console (CLI)
+
+The terminal is Claude Code's native surface and the most powerful one for agentic work. Developers run `claude` in any integrated terminal or standalone shell. This is essential for:
+- Long-running multi-file tasks
+- Script-driven automation
+- Headless/CI pipeline usage
+- Situations where the IDE plugin is insufficient
+
+**Recommended workflow:** Use IDE plugins for day-to-day coding assistance, and drop into the terminal for complex, multi-step tasks or when triggering agentic workflows.
+
+### Windows-Specific Note
+
+Claude Code runs on Windows via **WSL (Windows Subsystem for Linux)** or natively. If using JetBrains Remote Development or WSL, some extra configuration may be needed to ensure the plugin is installed in the right place and can communicate with the IDE properly. Plan for an IT-managed setup script to handle Node.js, WSL, and PATH configuration consistently across all 70 machines.
+
+---
+
+## 3. Agentic Workflows — Most Efficient Approaches
+
+This is where Claude Code delivers the highest ROI at scale, especially combined with **GitLab Ultimate**.
+
+### GitLab CI/CD Native Integration
+
+Claude Code's GitLab CI/CD integration is built on the Claude Code CLI and Agent SDK, enabling programmatic use of Claude in CI/CD jobs and custom automation workflows. It supports instant MR creation, automated implementation of issues into working code, project-aware behavior via `CLAUDE.md` guidelines, and it runs in your GitLab runners with your branch protection and approvals.
+
+**The trigger model works like this:** a developer comments `@claude` on an issue or MR, Claude picks up the event via the CI pipeline, reads the codebase, writes a branch, and opens a Merge Request for human review. The setup is minimal: add one job to `.gitlab-ci.yml` and a masked CI/CD variable for the API key.
+
+**High-value automations to implement:**
+
+| Workflow | Description | Effort |
+|---|---|---|
+| **MR from issue** | `@claude` on an issue → Claude opens a complete MR | Low |
+| **Automated code review** | Claude reviews every MR for bugs, security, style | Low |
+| **Bug fix from failing test** | Claude sees the CI failure, diagnoses and patches | Medium |
+| **Dependency update PRs** | Scheduled agent opens MRs for outdated packages | Medium |
+| **Doc generation** | Agent updates docs when API code changes merge | Medium |
+
+### GitLab Duo Agent Platform (Strategic Path)
+
+GitLab Duo Agent Platform with external agents enables seamless integration with Claude directly into GitLab workflows, enabling agents to understand full project context, adhere to organizational standards, and autonomously handle complex tasks across the entire development lifecycle. Since you're on **GitLab Ultimate**, this platform is available to you and allows Claude to be set up as a named external agent that developers can @mention across any project.
+
+### CLAUDE.md — The Foundation of Consistent Agentic Behavior
+
+Every repository should have a `CLAUDE.md` file at the root. This is the single most important configuration for getting consistent, high-quality agentic output. It should define:
+- Code style and conventions
+- Which files/directories Claude should and should not touch
+- Testing requirements (must run tests before proposing MR)
+- Branch naming conventions
+- Review criteria and security constraints
+
+The agent reads these instructions before starting any task. Any CI pipeline that can run a shell command can run an AI agent — the platform-specific features add convenience, but the underlying pattern works everywhere.
+
+### The Five Agentic Patterns (by complexity)
+
+Claude Code supports five core workflow patterns: sequential (one agent, all steps in order), operator (a controlling Claude plans and delegates to sub-agents), split-and-merge (parallel work recombined), agent teams (multiple agents with shared coordination), and headless (fully automated, event-driven, no human in the loop). Most teams should start with sequential and add complexity only when the simpler pattern breaks down.
+
+**For 70 developers, the practical progression is:**
+
+1. **Month 1–2:** All developers use IDE plugins interactively. Establish `CLAUDE.md` standards.
+2. **Month 2–3:** Enable GitLab CI trigger for `@claude` on MRs. Start with code review automation.
+3. **Month 3+:** Build headless pipelines — scheduled agents, automated MRs from issues, regression analysis on CI failures.
+
+### Cost Discipline for Agents
+
+Route simple, frequent requests to lighter models to keep costs down, and reserve complex requests for more capable models via the CI pipeline. This keeps the cheap things cheap. For your 70 developers, consider using **Claude Sonnet** for interactive coding sessions and **Claude Opus** only for complex architectural reasoning or agentic multi-step pipelines.
+
+---
+
+## Summary Recommendation
+
+| Dimension | Recommendation |
+|---|---|
+| **Plan** | Enterprise ($20/seat/month + usage) |
+| **Seats** | 70 × Enterprise seats |
+| **VS Code users** | Claude Code extension from VS Marketplace |
+| **IntelliJ users** | Claude Code plugin from JetBrains Marketplace |
+| **Console** | WSL + Claude CLI for agentic/complex tasks |
+| **GitLab** | CI/CD integration + GitLab Duo Agent Platform |
+| **First automation** | `@claude` MR review on all merge requests |
+| **Cost controls** | Per-user spend caps via Admin panel |
+| **Governance** | Managed policy settings for tool permissions, file access, MCP server config |
+
+For pricing specifics and a custom contract (which makes sense at 70 seats), I'd recommend contacting Anthropic's sales team directly at [anthropic.com/contact-sales](https://www.anthropic.com/contact-sales). They can offer volume commitments, invoicing in CHF, and tailored support.
+
+Would you like me to draft a one-page executive summary, a cost comparison table, or a technical setup guide for your IT team?
 
 ---
 
