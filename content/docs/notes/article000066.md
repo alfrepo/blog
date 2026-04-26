@@ -254,11 +254,11 @@ There are no per-seat usage limits and no included token allowance. Admins can s
 
 **For 70 developers:**
 
-| Component | Detail | Est. Monthly Cost |
-|---|---|---|
-| Seat fee | 70 × $20/seat/month (annual) | **$1,400/month** |
-| API usage | Variable — depends on usage intensity | **$500–$3,000/month** typical |
-| **Total estimate** | | **~$2,000–$4,500/month** |
+| Component          | Detail                                | Est. Monthly Cost             |
+|--------------------|---------------------------------------|-------------------------------|
+| Seat fee           | 70 × $20/seat/month (annual)          | **$1,400/month**              |
+| API usage          | Variable — depends on usage intensity | **$500–$3,000/month** typical |
+| **Total estimate** |                                       | **~$2,000–$4,500/month**      |
 
 **Why Enterprise over Team:**
 
@@ -317,13 +317,13 @@ Claude Code's GitLab CI/CD integration is built on the Claude Code CLI and Agent
 
 **High-value automations to implement:**
 
-| Workflow | Description | Effort |
-|---|---|---|
-| **MR from issue** | `@claude` on an issue → Claude opens a complete MR | Low |
-| **Automated code review** | Claude reviews every MR for bugs, security, style | Low |
-| **Bug fix from failing test** | Claude sees the CI failure, diagnoses and patches | Medium |
-| **Dependency update PRs** | Scheduled agent opens MRs for outdated packages | Medium |
-| **Doc generation** | Agent updates docs when API code changes merge | Medium |
+| Workflow                      | Description                                        | Effort |
+|-------------------------------|----------------------------------------------------|--------|
+| **MR from issue**             | `@claude` on an issue → Claude opens a complete MR | Low    |
+| **Automated code review**     | Claude reviews every MR for bugs, security, style  | Low    |
+| **Bug fix from failing test** | Claude sees the CI failure, diagnoses and patches  | Medium |
+| **Dependency update PRs**     | Scheduled agent opens MRs for outdated packages    | Medium |
+| **Doc generation**            | Agent updates docs when API code changes merge     | Medium |
 
 ### GitLab Duo Agent Platform (Strategic Path)
 
@@ -358,17 +358,17 @@ Route simple, frequent requests to lighter models to keep costs down, and reserv
 
 ## Summary Recommendation
 
-| Dimension | Recommendation |
-|---|---|
-| **Plan** | Enterprise ($20/seat/month + usage) |
-| **Seats** | 70 × Enterprise seats |
-| **VS Code users** | Claude Code extension from VS Marketplace |
-| **IntelliJ users** | Claude Code plugin from JetBrains Marketplace |
-| **Console** | WSL + Claude CLI for agentic/complex tasks |
-| **GitLab** | CI/CD integration + GitLab Duo Agent Platform |
-| **First automation** | `@claude` MR review on all merge requests |
-| **Cost controls** | Per-user spend caps via Admin panel |
-| **Governance** | Managed policy settings for tool permissions, file access, MCP server config |
+| Dimension            | Recommendation                                                               |
+|----------------------|------------------------------------------------------------------------------|
+| **Plan**             | Enterprise ($20/seat/month + usage)                                          |
+| **Seats**            | 70 × Enterprise seats                                                        |
+| **VS Code users**    | Claude Code extension from VS Marketplace                                    |
+| **IntelliJ users**   | Claude Code plugin from JetBrains Marketplace                                |
+| **Console**          | WSL + Claude CLI for agentic/complex tasks                                   |
+| **GitLab**           | CI/CD integration + GitLab Duo Agent Platform                                |
+| **First automation** | `@claude` MR review on all merge requests                                    |
+| **Cost controls**    | Per-user spend caps via Admin panel                                          |
+| **Governance**       | Managed policy settings for tool permissions, file access, MCP server config |
 
 For pricing specifics and a custom contract (which makes sense at 70 seats), I'd recommend contacting Anthropic's sales team directly at [anthropic.com/contact-sales](https://www.anthropic.com/contact-sales). They can offer volume commitments, invoicing in CHF, and tailored support.
 
