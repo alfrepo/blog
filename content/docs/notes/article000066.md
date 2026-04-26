@@ -1,6 +1,6 @@
 ---
 title: Agentic AI code generation
-time: 2025-08-30 11:00:00
+time: 2026-04-26 11:00:00
 description: >
    Agentic AI code generation
 
